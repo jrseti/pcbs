@@ -13,3 +13,8 @@ During development if a part is not in this library, add it. See directions in t
 Make sure it is always updated to the latest:
 
 - git submodule update --init --recursive
+
+# mcu_test_board
+
+This is a PCB project to create a board that has a STM32 MCU that runs a PID loop. Once this is debugged and working the design will be inproved in a more encompaing board.
+
