@@ -1,0 +1,14 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "cef63061-e367-4060-8681-292ca2cb294a")
+	(paper "A4")
+	(title_block
+		(title "MCU Test PCB for PID Loop Development")
+		(date "2025-12-24")
+		(rev "1.1")
+		(company "JRDish")
+	)
+	(lib_symbols)
+)
