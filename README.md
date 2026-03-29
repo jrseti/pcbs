@@ -6,8 +6,10 @@ This repository contains various printed circuit board projects. Also includes a
 
 This is a git submodule pointing to https://github.com/jrseti/parts.
 
-The contains psc related symbols, footprints and 3d files for KiCad PCB projects
+The contains pcb related symbols, footprints and 3d files for KiCad PCB projects. All KiCAD projects in this repository will use parts that are in these libraries. 
 
-Make sure it is always updated to the latest :
+During development if a part is not in this library, add it. See directions in the parts/READM.md file.
+
+Make sure it is always updated to the latest:
 
 - git submodule update --init --recursive
