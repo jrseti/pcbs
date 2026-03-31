@@ -1,0 +1,202 @@
+(footprint "LTV817S"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "<b>Dual  In Line SMD</b> 4 pol.<p>Source: LITE-ON ELECTRONICS, LTV816.pdf")
+	(property "Reference" "REF**"
+		(at -3.175 0 180)
+		(layer "F.SilkS")
+		(uuid "3f0a32c9-c6fb-4824-bf10-5533fbafda98")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "DIL4-SMD"
+		(at 3.175 -1.905 180)
+		(layer "F.Fab")
+		(uuid "665ce79e-719b-474e-bbbf-fa3d7509b32c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "bdef9f79-ee71-4d48-9a39-4fd4f5cf1d40")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "50895f90-f126-4127-9f45-aa5633203c35")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -2.315 -3.18)
+		(end 2.315 -3.18)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "250a2996-949f-4f12-a341-ef1980bd0876")
+	)
+	(fp_line
+		(start -2.315 3.18)
+		(end -2.315 -3.18)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "dc8fb090-7909-4418-96e5-c9fb7e5bd222")
+	)
+	(fp_line
+		(start 2.315 -3.18)
+		(end 2.315 2.164)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "77c16c40-7c12-418c-9eea-0061890f05cb")
+	)
+	(fp_line
+		(start 2.315 2.164)
+		(end -2.315 2.164)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "eab35d48-3814-4ae7-950a-4f4af472ad6a")
+	)
+	(fp_line
+		(start 2.315 2.164)
+		(end 2.315 3.18)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7f0bca20-1923-4a29-96ae-1e6e493f06ae")
+	)
+	(fp_line
+		(start 2.315 3.18)
+		(end -2.315 3.18)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d6c478fb-70f9-4ac5-8b6f-98f5a87eb21b")
+	)
+	(fp_poly
+		(pts
+			(xy -1.875 3.2) (xy -0.65 3.2) (xy -0.65 5.15) (xy -1.875 5.15)
+		)
+		(stroke
+			(width 0.01)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.Fab")
+		(uuid "a661c207-0aba-4f43-8459-a7a3060131b3")
+	)
+	(fp_poly
+		(pts
+			(xy -0.665 -3.2) (xy -1.89 -3.2) (xy -1.89 -5.15) (xy -0.665 -5.15)
+		)
+		(stroke
+			(width 0.01)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.Fab")
+		(uuid "b74b9743-1978-43f5-8f26-40285421741c")
+	)
+	(fp_poly
+		(pts
+			(xy 0.665 3.2) (xy 1.89 3.2) (xy 1.89 5.15) (xy 0.665 5.15)
+		)
+		(stroke
+			(width 0.01)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.Fab")
+		(uuid "01d44df5-e0cc-4225-8145-51b9312a5186")
+	)
+	(fp_poly
+		(pts
+			(xy 1.875 -3.2) (xy 0.65 -3.2) (xy 0.65 -5.15) (xy 1.875 -5.15)
+		)
+		(stroke
+			(width 0.01)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.Fab")
+		(uuid "9c8e7d8c-73c0-48e3-b96c-7a2a6945eb11")
+	)
+	(pad "1" smd rect
+		(at -1.27 4.77)
+		(size 1.6 2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.102)
+		(uuid "52aa8660-9dbe-4406-b91b-3e31f6907178")
+	)
+	(pad "2" smd rect
+		(at 1.27 4.77)
+		(size 1.6 2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.102)
+		(uuid "14d04c2d-a4cc-4e46-bf2c-f5a5bd178db4")
+	)
+	(pad "3" smd rect
+		(at 1.27 -4.77)
+		(size 1.6 2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.102)
+		(uuid "9a160978-e9cc-4c9f-8070-c442f40acb17")
+	)
+	(pad "4" smd rect
+		(at -1.27 -4.77)
+		(size 1.6 2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.102)
+		(uuid "55cb48b7-9b85-4573-9ed0-63035dd9a275")
+	)
+	(embedded_fonts no)
+	(model "C:/Users/jrset/Downloads/LTV817S/LTV817S.step"
+		(offset
+			(xyz 0 0 2.5)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 -0)
+		)
+	)
+)

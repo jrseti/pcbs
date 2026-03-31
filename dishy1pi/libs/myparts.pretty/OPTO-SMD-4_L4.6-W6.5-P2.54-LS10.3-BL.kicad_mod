@@ -1,0 +1,173 @@
+(footprint "OPTO-SMD-4_L4.6-W6.5-P2.54-LS10.3-BL"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -9 0)
+		(layer "F.SilkS")
+		(uuid "f90fee28-c5d2-45b1-a62a-a6d507705897")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "OPTO-SMD-4_L4.6-W6.5-P2.54-LS10.3-BL"
+		(at 0 9 0)
+		(layer "F.Fab")
+		(uuid "69cc375b-65ab-4e5d-8853-fa4361386cfe")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "46f34c43-3267-4e92-962f-645df0b136a8")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d9cfd1db-0758-4d32-842a-537c5b2ac105")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -2.3 -3.3)
+		(end 2.3 -3.3)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "82d658b3-3913-45af-9e2c-a6b339ffb8b5")
+	)
+	(fp_line
+		(start -2.3 3.3)
+		(end -2.3 -3.3)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3220dcd7-12d2-46be-865f-9c7e8c85dbcc")
+	)
+	(fp_line
+		(start 2.3 -3.3)
+		(end 2.3 3.3)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f7848e5e-2995-49e2-a612-7b3ab43c6242")
+	)
+	(fp_line
+		(start 2.3 3.3)
+		(end -2.3 3.3)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b9b09d83-624d-43f8-b2bd-0a1ec8dd1bf8")
+	)
+	(fp_circle
+		(center -2.54 4.83)
+		(end -2.29 4.83)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "b58ca22b-95a5-43db-947f-f451fed02a2f")
+	)
+	(fp_circle
+		(center -1.4 5.97)
+		(end -1.1 5.97)
+		(stroke
+			(width 0.6)
+			(type solid)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "30419ad0-2ed0-49e2-935c-82d73e32c67a")
+	)
+	(fp_circle
+		(center -2.29 5.15)
+		(end -2.26 5.15)
+		(stroke
+			(width 0.06)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "a6934f4a-ce65-4de6-ad36-1e62375055b2")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "1afd39da-1502-4858-9629-4abfbf39cdd8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -1.27 5 180)
+		(size 1.5 3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "a45320fa-6e6a-4143-842d-5e69a35fa80c")
+	)
+	(pad "2" smd rect
+		(at 1.27 5 180)
+		(size 1.5 3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "4b8be243-7431-4c2d-86ff-f64c6a8e649f")
+	)
+	(pad "3" smd rect
+		(at 1.27 -5 180)
+		(size 1.5 3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "37e3070c-7b27-4095-809c-f226a3447549")
+	)
+	(pad "4" smd rect
+		(at -1.27 -5 180)
+		(size 1.5 3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "d18267e6-7011-4dc2-86d4-d8178a1b81de")
+	)
+	(embedded_fonts no)
+	(model "${DISHY1_PARTS}/myparts.3dshapes/OPTO-SMD-4_L4.6-W6.5-H3.6-LS10.2-P2.54.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -90)
+		)
+	)
+)

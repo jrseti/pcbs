@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "MyParts")(type "KiCad")(uri "${KIPRJMOD}/libs/myparts.kicad_sym")(options "")(descr ""))
+  (lib (name "PowerSupply")(type "KiCad")(uri "C:/Users/jrset/OneDrive/projects/dishy1pi/hardware/power_supply/libs/myparts.kicad_sym")(options "")(descr ""))
+)

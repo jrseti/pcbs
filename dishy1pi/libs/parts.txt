@@ -1,0 +1,67 @@
+easyeda2kicad --full --lcsc_id=C114599 --output ./myparts
+Symbol name : LTV-847S, C114599
+       Library path : ./myparts.kicad_sym
+[INFO] Created Kicad footprint for ID: C114599
+       Footprint name: SMD-16_L20.0-W6.5-P2.54-LS10.2-BL
+       Footprint path: ./myparts.pretty\SMD-16_L20.0-W6.5-P2.54-LS10.2-BL.kicad_mod
+[INFO] Created 3D model for ID: C114599
+       3D model name: SMD-16_L20.0-W6.5-H3.5-LS10.2-P2.54
+       3D model path (wrl): ./myparts.3dshapes\SMD-16_L20.0-W6.5-H3.5-LS10.2-P2.54.wrl
+       3D model path (step): ./myparts.3dshapes\SMD-16_L20.0-W6.5-H3.5-LS10.2-P2.54.step
+
+easyeda2kicad --full --lcsc_id=C22112 --output ./myparts
+symbol for ID : LTV-827S-TA1, C22112
+       Symbol name : LTV-827S-TA1, C22112
+       Library path : ./myparts.kicad_sym
+[INFO] Created Kicad footprint for ID: C22112
+       Footprint name: SMD-8_L9.8-W6.6-P2.54-LS10.3-BL
+       Footprint path: ./myparts.pretty\SMD-8_L9.8-W6.6-P2.54-LS10.3-BL.kicad_mod
+[INFO] Created 3D model for ID: C22112
+       3D model name: SMD-8_L9.8-W6.6-H3.8-LS10.3-P2.54
+       3D model path (wrl): ./myparts.3dshapes\SMD-8_L9.8-W6.6-H3.8-LS10.3-P2.54.wrl
+       3D model path (step): ./myparts.3dshapes\SMD-8_L9.8-W6.6-H3.8-LS10.3-P2.54.step
+
+easyeda2kicad --full --lcsc_id=C125121 --output ./myparts
+Symbol name : LTV-817S-TA1, C125121
+       Library path : ./myparts.kicad_sym
+[INFO] Created Kicad footprint for ID: C125121
+       Footprint name: OPTO-SMD-4_L4.6-W6.5-P2.54-LS10.3-BL
+       Footprint path: ./myparts.pretty\OPTO-SMD-4_L4.6-W6.5-P2.54-LS10.3-BL.kicad_mod
+[INFO] Created 3D model for ID: C125121
+       3D model name: OPTO-SMD-4_L4.6-W6.5-H3.6-LS10.2-P2.54
+       3D model path (wrl): ./myparts.3dshapes\OPTO-SMD-4_L4.6-W6.5-H3.6-LS10.2-P2.54.wrl
+       3D model path (step): ./myparts.3dshapes\OPTO-SMD-4_L4.6-W6.5-H3.6-LS10.2-P2.54.step
+
+easyeda2kicad --full --lcsc_id=C79987 --output ./myparts 
+[INFO] Created Kicad symbol for ID : C79987
+       Symbol name : CAT24C256WI-GT3
+       Library path : ./myparts.kicad_sym
+[INFO] Created Kicad footprint for ID: C79987
+       Footprint name: SOIC-8_L4.9-W3.9-P1.27-LS6.0-BL
+       Footprint path: ./myparts.pretty\SOIC-8_L4.9-W3.9-P1.27-LS6.0-BL.kicad_mod
+[INFO] Created 3D model for ID: C79987
+       3D model name: SOIC-8_L4.9-W3.9-H1.7-LS6.0-P1.27
+       3D model path (wrl): ./myparts.3dshapes\SOIC-8_L4.9-W3.9-H1.7-LS6.0-P1.27.wrl
+       3D model path (step): ./myparts.3dshapes\SOIC-8_L4.9-W3.9-H1.7-LS6.0-P1.27.step
+
+easyeda2kicad --full --lcsc_id=C179739 --output ./myparts --symbol
+-- easyeda2kicad.py v0.8.0 --
+[WARNING] This id is already in ./myparts.kicad_sym
+[INFO] Created Kicad symbol for ID : C179739
+       Symbol name : ISO1540DR
+       Library path : ./myparts.kicad_sym
+[WARNING] The footprint for this id is already in ./myparts.pretty
+[INFO] Created Kicad footprint for ID: C179739
+       Footprint name: SOIC-8_L4.9-W3.9-P1.27-LS6.0-BL
+       Footprint path: ./myparts.pretty\SOIC-8_L4.9-W3.9-P1.27-LS6.0-BL.kicad_mod
+[INFO] Created 3D model for ID: C179739
+       3D model name: SOIC-8_L4.9-W3.9-H1.7-LS6.0-P1.27
+       3D model path (wrl): ./myparts.3dshapes\SOIC-8_L4.9-W3.9-H1.7-LS6.0-P1.27.wrl
+       3D model path (step): ./myparts.3dshapes\SOIC-8_L4.9-W3.9-H1.7-LS6.0-P1.27.step
+
+ easyeda2kicad --full --lcsc_id=C913837 --output ./myparts --symbol 
+[INFO] Created Kicad symbol for ID : C913837
+       Symbol name : LM75BIMX-5/NOPB
+       Library path : ./myparts.kicad_sym
+[WARNING] The footprint for this id is already in ./myparts.pretty
+[ERROR] Use --overwrite to replace the older footprint lib

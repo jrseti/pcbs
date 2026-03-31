@@ -1,0 +1,173 @@
+(footprint "CONN-TH_P2.54_KF2EDGR-2.54-2P"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -4 0)
+		(layer "F.SilkS")
+		(uuid "b9889adf-f7b6-4b73-b878-e3f615545e48")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "CONN-TH_P2.54_KF2EDGR-2.54-2P"
+		(at 0 4 0)
+		(layer "F.Fab")
+		(uuid "14495017-38eb-4db7-874e-8f7e318e431d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "935faea6-0de8-4f5b-9997-9f8587ec457c")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "015fce06-10e5-4f2a-a330-7a9c1e07a827")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -3.44 -1.2)
+		(end -3.44 9)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c6b92bd1-85d6-4ce3-81bd-bc33970665ab")
+	)
+	(fp_line
+		(start -3.44 9)
+		(end 3.44 9)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a69f68c9-654f-4b4e-b8f4-e148d2cee8bd")
+	)
+	(fp_line
+		(start -1.54 -1.2)
+		(end -3.44 -1.2)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "dd919041-e6af-463d-8b4c-f57be385c720")
+	)
+	(fp_line
+		(start 1 -1.2)
+		(end -1 -1.2)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0546a6dd-e67a-4277-b517-b27d4b0662f9")
+	)
+	(fp_line
+		(start 1 -1.2)
+		(end 0 -1.2)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "1e212bfb-d72a-42c1-b525-d7e8afde2d05")
+	)
+	(fp_line
+		(start 3.44 -1.2)
+		(end 1.54 -1.2)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2dc7406f-342c-497e-9f42-a0d8bc761928")
+	)
+	(fp_line
+		(start 3.44 -1.2)
+		(end 3.44 9)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "239af159-516f-4bae-b2a8-81997a3dabc6")
+	)
+	(fp_circle
+		(center -3.49 8.9)
+		(end -3.46 8.9)
+		(stroke
+			(width 0.06)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "d28d6f27-b5a2-44af-adaf-bd5067121273")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "ae1850f9-7bf7-499f-904e-4a8d394a52a3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at -1.27 0)
+		(size 2 2)
+		(drill 1.280008)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "20b48a12-279c-4453-8ea3-14b82c982617")
+	)
+	(pad "2" thru_hole circle
+		(at 1.27 0)
+		(size 2 2)
+		(drill 1.280008)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "84ef2619-290c-4f6a-aea3-e2b5e787f0d6")
+	)
+	(embedded_fonts no)
+	(model "C:/Users/jrset/OneDrive/projects/dishy1pi/hardware/dishy1pi/libs/myparts.3dshapes/CONN-TH_P2.54_KF2EDGR-2.54-2P.step"
+		(offset
+			(xyz 0 -3.9 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

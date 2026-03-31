@@ -1,0 +1,26 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "8449ffd5-e842-4ea6-b5b1-3e1122a0fc1a")
+	(paper "A4")
+	(title_block
+		(title "MCU Notes - Pinouts")
+		(date "2025-12-05")
+		(rev "1.3")
+		(company "JRDish")
+		(comment 1 "Jon Richards - Engineer")
+	)
+	(lib_symbols)
+	(text "AXIS A – AZIMUTH\n  Encoder (TIM2)\n    ENC_A_A    PA0      TIM2_CH1\n    ENC_A_B    PA1      TIM2_CH2\n    ENC_A_Z    PA15     TIM2_ETR        ; Index Z\n\n  Motor Control (DM556Y)\n    PWM_A_OUT  PA8      TIM1_CH1        ; PUL-\n    DIR_A      PC0      GPIO OUT        ; DIR-\n    EN_A       PC2      GPIO OUT        ; MF- (Enable)\n\n  Limit Switches\n    LIM_A_MIN  PB0      GPIO / EXTI\n    LIM_A_MAX  PB1      GPIO / EXTI\n\n\nAXIS B – ELEVATION\n  Encoder (TIM3)\n    ENC_B_A    PA6      TIM3_CH1\n    ENC_B_B    PA7      TIM3_CH2\n    ENC_B_Z    PB4      TIM3_ETR        ; Index Z\n\n  Motor Control (DM556Y)\n    PWM_B_OUT  PA9      TIM1_CH2        ; PUL-\n    DIR_B      PC1      GPIO OUT        ; DIR-\n    EN_B       PC3      GPIO OUT        ; MF- (Enable)\n\n  Limit Switches\n    LIM_B_MIN  PB2      GPIO / EXTI\n    LIM_B_MAX  PB10     GPIO / EXTI\n\n\nCOMMUNICATION (RASPBERRY PI + SENSORS)\n  I2C Bus  (also MCU ROM bootloader interface)\n    I2C_SCL    PB6      I2C1_SCL\n    I2C_SDA    PB7      I2C1_SDA\n\n\nBOOTLOADER / PROGRAMMING / DEBUG\n  BOOT0       BOOT0     Boot mode select (Pi-controlled)\n  NRST        NRST      Hardware reset (Pi or supervisor)\n  SWDIO       PA13      SWD Programming/Debug\n  SWCLK       PA14      SWD Clock\n  SWO         PB3       SWD Trace (optional)\n  GND / 3V3   —         SWD header\n\nMISC\n  STATUS_LED  PC13      GPIO OUT\n\nNOTES\n  • DM556Y control inputs use sinking drive: STM32 drives PUL-, DIR-, MF-.\n    PUL+/DIR+/MF+ are tied to Vcc on the driver side.\n  • Encoder Z signals use timer ETR pins for index capability.\n  • I²C1 is shared among Pi, sensors, and the ROM bootloader for firmware update.\n"
+		(exclude_from_sim no)
+		(at 27.94 100.33 0)
+		(effects
+			(font
+				(size 1.778 1.778)
+			)
+			(justify left)
+		)
+		(uuid "f5ec59e3-7f2e-4e1b-b5d6-2c9a7e13b7b6")
+	)
+)
