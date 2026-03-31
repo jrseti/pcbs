@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.0,
-          "height": 1.778,
-          "width": 1.5
+          "drill": 0.8,
+          "height": 1.27,
+          "width": 2.54
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -48,7 +48,7 @@
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.5
+          "min_clearance": 0.4
         }
       },
       "diff_pair_dimensions": [],
@@ -70,9 +70,9 @@
         "duplicate_footprints": "warning",
         "extra_footprint": "warning",
         "footprint": "error",
-        "footprint_filters_mismatch": "error",
+        "footprint_filters_mismatch": "ignore",
         "footprint_symbol_mismatch": "warning",
-        "footprint_type_mismatch": "error",
+        "footprint_type_mismatch": "ignore",
         "hole_clearance": "error",
         "hole_to_hole": "warning",
         "holes_co_located": "warning",
@@ -94,7 +94,7 @@
         "padstack": "warning",
         "pth_inside_courtyard": "ignore",
         "shorting_items": "error",
-        "silk_edge_clearance": "ignore",
+        "silk_edge_clearance": "warning",
         "silk_over_copper": "warning",
         "silk_overlap": "warning",
         "skew_out_of_range": "error",
@@ -226,16 +226,7 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [
-      [
-        "multiple_net_names|1562100|1244600|0544da57-f0f6-4604-9a63-82241ff0e07a|b07c9179-06af-4821-bd42-ab36acb46b0f|/262d8f76-cfc1-4cac-8f67-8c56cd47dd59/3ab438cf-211a-4f77-8c57-80f47d57ba40|/262d8f76-cfc1-4cac-8f67-8c56cd47dd59/3ab438cf-211a-4f77-8c57-80f47d57ba40|/262d8f76-cfc1-4cac-8f67-8c56cd47dd59/3ab438cf-211a-4f77-8c57-80f47d57ba40",
-        ""
-      ],
-      [
-        "multiple_net_names|1930400|711200|0544da57-f0f6-4604-9a63-82241ff0e07a|c0f8c860-1add-4089-8782-7d0f7b37ef3c|/262d8f76-cfc1-4cac-8f67-8c56cd47dd59/3ab438cf-211a-4f77-8c57-80f47d57ba40|/262d8f76-cfc1-4cac-8f67-8c56cd47dd59/3ab438cf-211a-4f77-8c57-80f47d57ba40|/262d8f76-cfc1-4cac-8f67-8c56cd47dd59/3ab438cf-211a-4f77-8c57-80f47d57ba40",
-        ""
-      ]
-    ],
+    "erc_exclusions": [],
     "meta": {
       "version": 0
     },
@@ -460,7 +451,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "mcu_test_board.kicad_pro",
+    "filename": "power_supply2.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -484,17 +475,17 @@
         "wire_width": 6
       },
       {
-        "clearance": 0.34,
-        "diff_pair_gap": 0.3,
-        "diff_pair_width": 0.4,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.2,
-        "name": "Pwr",
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "microvia_diameter": 0.6,
+        "microvia_drill": -0.1,
+        "name": "Power",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 0,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.5,
-        "via_diameter": 0.9,
+        "via_diameter": 0.6,
         "via_drill": 0.6
       }
     ],
@@ -505,20 +496,12 @@
     "netclass_assignments": null,
     "netclass_patterns": [
       {
-        "netclass": "Pwr",
-        "pattern": "5V_IO"
+        "netclass": "Power",
+        "pattern": "/12V_IN"
       },
       {
-        "netclass": "Pwr",
-        "pattern": "3.3V_PI"
-      },
-      {
-        "netclass": "Pwr",
-        "pattern": "5V_PI"
-      },
-      {
-        "netclass": "Pwr",
-        "pattern": "Net-(D1-C)"
+        "netclass": "Power",
+        "pattern": "/5V"
       }
     ]
   },
@@ -527,10 +510,10 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "../../../../../Downloads/",
+      "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "cad/pcb.step",
+      "step": "",
       "svg": "",
       "vrml": ""
     },
@@ -600,144 +583,12 @@
           "label": "Datasheet",
           "name": "Datasheet",
           "show": true
-        },
-        {
-          "group_by": false,
-          "label": "Capacitance",
-          "name": "Capacitance",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Category",
-          "name": "Category",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Class",
-          "name": "Class",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "LCSC",
-          "name": "LCSC",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "LCSC Part",
-          "name": "LCSC Part",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Manufacturer",
-          "name": "Manufacturer",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Minimum Qty",
-          "name": "Minimum Qty",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Operating Temperature Range",
-          "name": "Operating Temperature Range",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Overload Voltage (Max)",
-          "name": "Overload Voltage (Max)",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Part",
-          "name": "Part",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Power(Watts)",
-          "name": "Power(Watts)",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Price",
-          "name": "Price",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Process",
-          "name": "Process",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Resistance",
-          "name": "Resistance",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Stock",
-          "name": "Stock",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Temperature Coefficient",
-          "name": "Temperature Coefficient",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Tolerance",
-          "name": "Tolerance",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Type",
-          "name": "Type",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Voltage Rated",
-          "name": "Voltage Rated",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Attrition Qty",
-          "name": "Attrition Qty",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Description",
-          "name": "Description",
-          "show": false
-        },
-        {
-          "group_by": false,
-          "label": "#",
-          "name": "${ITEM_NUMBER}",
-          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
       "include_excluded_from_bom": true,
-      "name": "",
+      "name": "Default Editing",
       "sort_asc": true,
       "sort_field": "Reference"
     },
@@ -770,7 +621,7 @@
     },
     "net_format_name": "",
     "page_layout_descr_file": "",
-    "plot_directory": "/Users/jonr/Desktop/",
+    "plot_directory": "C:/Users/jrset/Downloads/",
     "space_save_all_events": true,
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
@@ -783,16 +634,8 @@
   },
   "sheets": [
     [
-      "262d8f76-cfc1-4cac-8f67-8c56cd47dd59",
+      "48fab51c-23c6-4887-9a6d-b616aaa46638",
       "Root"
-    ],
-    [
-      "c290abaa-dac7-4f5c-b720-5c717c6fa636",
-      "Notes"
-    ],
-    [
-      "3ab438cf-211a-4f77-8c57-80f47d57ba40",
-      "Axis_1"
     ]
   ],
   "text_variables": {}

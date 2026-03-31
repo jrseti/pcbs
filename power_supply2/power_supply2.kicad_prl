@@ -50,7 +50,7 @@
       "conflict_shadows",
       "shapes"
     ],
-    "visible_layers": "ffffffff_ffffffff_ffffd575_f7555529",
+    "visible_layers": "ffffffff_ffffffff_fffffff7_ffff55a1",
     "zone_display_mode": 0
   },
   "git": {
@@ -59,7 +59,7 @@
     "ssh_key": ""
   },
   "meta": {
-    "filename": "mcu_test_board.kicad_prl",
+    "filename": "power_supply2.kicad_prl",
     "version": 5
   },
   "net_inspector_panel": {
