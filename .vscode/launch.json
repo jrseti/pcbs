@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Debug STM32 (J-Link)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "jlink",
+            "device": "STM32G431KB",
+            "interface": "SWD",
+            "speed": 4000,
+            "executable": "${workspaceFolder}/mcu_test_board/software/build/STM32_MCU_TEST_32PIN.elf",
+            "runToEntryPoint": "main",
+            "svdFile": "${workspaceFolder}/STM32G431.svd",
+            "showDevDebugOutput": "none"
+        }
+    ]
+}
