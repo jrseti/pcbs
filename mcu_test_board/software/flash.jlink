@@ -1,0 +1,8 @@
+device STM32G431KB
+if SWD
+speed 4000
+autoconnect 1
+loadfile build/STM32_MCU_TEST_32PIN.hex
+r
+g
+exit
