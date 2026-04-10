@@ -70,6 +70,9 @@
         <mxCell id="0_mH-X5UvrHkozCaTBPL-24" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="I2C temp/humidity&lt;div&gt;sensor&lt;/div&gt;" vertex="1">
           <mxGeometry height="60" width="80" x="480" y="200" as="geometry" />
         </mxCell>
+        <mxCell id="0_mH-X5UvrHkozCaTBPL-25" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="eeprom" vertex="1">
+          <mxGeometry height="30" width="60" x="270" y="295" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
