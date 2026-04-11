@@ -2910,7 +2910,7 @@
 	)
 	(rectangle
 		(start 33.02 121.92)
-		(end 92.71 151.13)
+		(end 69.85 151.13)
 		(stroke
 			(width 0)
 			(type dash)
@@ -2921,8 +2921,8 @@
 		(uuid 31492be8-6313-4aab-8986-8c31526338a7)
 	)
 	(rectangle
-		(start 105.41 121.92)
-		(end 153.67 151.13)
+		(start 73.66 121.92)
+		(end 121.92 151.13)
 		(stroke
 			(width 0)
 			(type dash)
@@ -2934,7 +2934,7 @@
 	)
 	(text "16MHz XTAL"
 		(exclude_from_sim no)
-		(at 106.68 124.46 0)
+		(at 74.93 124.46 0)
 		(effects
 			(font
 				(size 2.032 2.032)
@@ -3000,7 +3000,7 @@
 		(uuid "0295bd25-5a22-4451-aa06-c28d4764c42c")
 	)
 	(junction
-		(at 120.65 139.7)
+		(at 88.9 139.7)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "06c752d8-f519-4308-83f3-4f93189bc761")
@@ -3090,7 +3090,7 @@
 		(uuid "9982ca85-e0ee-4e11-a984-752bbe3c1349")
 	)
 	(junction
-		(at 110.49 139.7)
+		(at 78.74 139.7)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9d14ee75-1bd4-4019-afd3-868b839571e7")
@@ -3102,7 +3102,7 @@
 		(uuid "aa57af2b-7b51-4ba7-bb96-6d2d932c8574")
 	)
 	(junction
-		(at 148.59 139.7)
+		(at 116.84 139.7)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b10b138f-8a03-416c-af7f-e161ed681084")
@@ -3132,7 +3132,7 @@
 		(uuid "ddd224be-4a5b-44f1-955f-ebd8ddc6620a")
 	)
 	(junction
-		(at 138.43 134.62)
+		(at 106.68 134.62)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "dec74f3c-fea0-45cf-9d7f-42a700c25fc4")
@@ -3177,7 +3177,7 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 139.7) (xy 110.49 142.24)
+			(xy 78.74 139.7) (xy 78.74 142.24)
 		)
 		(stroke
 			(width 0)
@@ -3237,16 +3237,6 @@
 	)
 	(wire
 		(pts
-			(xy 72.39 135.89) (xy 72.39 143.51)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "13172eeb-5ad6-4091-b792-8622d81b7d53")
-	)
-	(wire
-		(pts
 			(xy 86.36 20.32) (xy 86.36 36.83)
 		)
 		(stroke
@@ -3257,7 +3247,7 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 134.62) (xy 110.49 139.7)
+			(xy 78.74 134.62) (xy 78.74 139.7)
 		)
 		(stroke
 			(width 0)
@@ -3297,7 +3287,7 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 134.62) (xy 147.32 134.62)
+			(xy 116.84 134.62) (xy 115.57 134.62)
 		)
 		(stroke
 			(width 0)
@@ -3327,7 +3317,7 @@
 	)
 	(wire
 		(pts
-			(xy 120.65 139.7) (xy 120.65 140.97)
+			(xy 88.9 139.7) (xy 88.9 140.97)
 		)
 		(stroke
 			(width 0)
@@ -3337,7 +3327,7 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 134.62) (xy 121.92 134.62)
+			(xy 78.74 134.62) (xy 90.17 134.62)
 		)
 		(stroke
 			(width 0)
@@ -3377,7 +3367,7 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 134.62) (xy 138.43 134.62)
+			(xy 105.41 134.62) (xy 106.68 134.62)
 		)
 		(stroke
 			(width 0)
@@ -3437,7 +3427,7 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 139.7) (xy 148.59 142.24)
+			(xy 116.84 139.7) (xy 116.84 142.24)
 		)
 		(stroke
 			(width 0)
@@ -3477,7 +3467,7 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 134.62) (xy 148.59 139.7)
+			(xy 116.84 134.62) (xy 116.84 139.7)
 		)
 		(stroke
 			(width 0)
@@ -3647,6 +3637,16 @@
 	)
 	(wire
 		(pts
+			(xy 38.1 46.99) (xy 39.37 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7bf21f88-18c1-47eb-9c9e-4881346854f0")
+	)
+	(wire
+		(pts
 			(xy 52.07 20.32) (xy 59.69 20.32)
 		)
 		(stroke
@@ -3727,7 +3727,7 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 134.62) (xy 139.7 134.62)
+			(xy 106.68 134.62) (xy 107.95 134.62)
 		)
 		(stroke
 			(width 0)
@@ -3747,7 +3747,7 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 139.7) (xy 111.76 139.7)
+			(xy 78.74 139.7) (xy 80.01 139.7)
 		)
 		(stroke
 			(width 0)
@@ -3757,7 +3757,7 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 135.89) (xy 82.55 143.51)
+			(xy 50.8 135.89) (xy 50.8 143.51)
 		)
 		(stroke
 			(width 0)
@@ -3767,7 +3767,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 135.89) (xy 60.96 143.51)
+			(xy 62.23 135.89) (xy 62.23 143.51)
 		)
 		(stroke
 			(width 0)
@@ -3927,7 +3927,7 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 139.7) (xy 120.65 139.7)
+			(xy 87.63 139.7) (xy 88.9 139.7)
 		)
 		(stroke
 			(width 0)
@@ -3977,7 +3977,7 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 139.7) (xy 148.59 139.7)
+			(xy 105.41 139.7) (xy 116.84 139.7)
 		)
 		(stroke
 			(width 0)
@@ -4047,16 +4047,6 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 135.89) (xy 50.8 143.51)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e94c230f-1406-482a-9885-49ee98a98551")
-	)
-	(wire
-		(pts
 			(xy 59.69 30.48) (xy 59.69 31.75)
 		)
 		(stroke
@@ -4067,7 +4057,7 @@
 	)
 	(wire
 		(pts
-			(xy 120.65 139.7) (xy 121.92 139.7)
+			(xy 88.9 139.7) (xy 90.17 139.7)
 		)
 		(stroke
 			(width 0)
@@ -4077,7 +4067,7 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 133.35) (xy 138.43 134.62)
+			(xy 106.68 133.35) (xy 106.68 134.62)
 		)
 		(stroke
 			(width 0)
@@ -4116,7 +4106,7 @@
 		(uuid "5cbc2776-91d7-4115-9abc-4557009de747")
 	)
 	(label "OSC_IN"
-		(at 120.65 140.97 270)
+		(at 88.9 140.97 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4126,7 +4116,7 @@
 		(uuid "a16f37f8-0907-4043-9238-aec2e24a408f")
 	)
 	(label "OSC_OUT"
-		(at 138.43 133.35 90)
+		(at 106.68 133.35 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4135,9 +4125,9 @@
 		)
 		(uuid "b37fd83f-cd62-4ea9-b89b-ad1a4c548f51")
 	)
-	(global_label "GND_IO"
+	(global_label "GND"
 		(shape input)
-		(at 60.96 135.89 90)
+		(at 62.23 135.89 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4147,29 +4137,7 @@
 		)
 		(uuid "0f8f0329-cc40-4152-acba-0f78437a1ebf")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 60.96 126.1314 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "5V"
-		(shape input)
-		(at 50.8 135.89 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "26efe0fd-97c7-4641-b771-81f31633eacb")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 50.8 130.6067 90)
+			(at 62.23 129.0343 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4201,7 +4169,7 @@
 			)
 		)
 	)
-	(global_label "3.3V_MCU"
+	(global_label "3.3V"
 		(shape input)
 		(at 82.55 16.51 0)
 		(fields_autoplaced yes)
@@ -4213,7 +4181,7 @@
 		)
 		(uuid "89d9f654-c336-4efa-9cc6-983401d4a97e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 94.6671 16.51 0)
+			(at 89.6476 16.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4245,31 +4213,9 @@
 			)
 		)
 	)
-	(global_label "GND_MCU"
+	(global_label "3.3V"
 		(shape input)
-		(at 72.39 135.89 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "92b3f4fe-40c8-4646-ae4a-d1ba893eea4d")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 72.39 124.0148 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "3.3V_MCU"
-		(shape input)
-		(at 82.55 135.89 90)
+		(at 50.8 135.89 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4279,7 +4225,7 @@
 		)
 		(uuid "947e3fc2-79f8-4cc5-9789-4bcee8fd36be")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 82.55 123.7729 90)
+			(at 50.8 128.7924 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4289,9 +4235,9 @@
 			)
 		)
 	)
-	(global_label "3.3V_MCU"
+	(global_label "3.3V"
 		(shape input)
-		(at 39.37 46.99 180)
+		(at 38.1 46.99 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4301,7 +4247,7 @@
 		)
 		(uuid "bd13c8a1-2068-46ea-94ba-0c59ab3ea9f5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 27.2529 46.99 0)
+			(at 31.0024 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4509,7 +4455,7 @@
 	)
 	(symbol
 		(lib_id "PCM_JLCPCB-Capacitors:0402,6.8pF")
-		(at 115.57 139.7 90)
+		(at 83.82 139.7 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4517,7 +4463,7 @@
 		(dnp no)
 		(uuid "15a75aa7-ab9c-45a0-8d8c-f99c7bfad533")
 		(property "Reference" "C9"
-			(at 115.57 142.24 90)
+			(at 83.82 142.24 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4525,7 +4471,7 @@
 			)
 		)
 		(property "Value" "6.8pF"
-			(at 115.57 137.16 90)
+			(at 83.82 137.16 90)
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -4533,7 +4479,7 @@
 			)
 		)
 		(property "Footprint" "PCM_JLCPCB:C_0402"
-			(at 115.57 141.478 90)
+			(at 83.82 141.478 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4542,7 +4488,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_FH--Guangdong-Fenghua-Advanced-Tech-0402CG6R8C500NT_C1576.pdf"
-			(at 115.57 139.7 0)
+			(at 83.82 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4551,7 +4497,7 @@
 			)
 		)
 		(property "Description" "50V 6.8pF C0G 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
-			(at 115.57 139.7 0)
+			(at 83.82 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4560,7 +4506,7 @@
 			)
 		)
 		(property "LCSC" "C1576"
-			(at 115.57 139.7 0)
+			(at 83.82 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4569,7 +4515,7 @@
 			)
 		)
 		(property "Stock" "110336"
-			(at 115.57 139.7 0)
+			(at 83.82 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4578,7 +4524,7 @@
 			)
 		)
 		(property "Price" "0.004USD"
-			(at 115.57 139.7 0)
+			(at 83.82 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4587,7 +4533,7 @@
 			)
 		)
 		(property "Process" "SMT"
-			(at 115.57 139.7 0)
+			(at 83.82 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4596,7 +4542,7 @@
 			)
 		)
 		(property "Minimum Qty" "20"
-			(at 115.57 139.7 0)
+			(at 83.82 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4605,7 +4551,7 @@
 			)
 		)
 		(property "Attrition Qty" "10"
-			(at 115.57 139.7 0)
+			(at 83.82 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4614,7 +4560,7 @@
 			)
 		)
 		(property "Class" "Preferred Component"
-			(at 115.57 139.7 0)
+			(at 83.82 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4623,7 +4569,7 @@
 			)
 		)
 		(property "Category" "Capacitors,Multilayer Ceramic Capacitors MLCC - SMD/SMT"
-			(at 115.57 139.7 0)
+			(at 83.82 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4632,7 +4578,7 @@
 			)
 		)
 		(property "Manufacturer" "FH(Guangdong Fenghua Advanced Tech)"
-			(at 115.57 139.7 0)
+			(at 83.82 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4641,7 +4587,7 @@
 			)
 		)
 		(property "Part" "0402CG6R8C500NT"
-			(at 115.57 139.7 0)
+			(at 83.82 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4650,7 +4596,7 @@
 			)
 		)
 		(property "Voltage Rated" "50V"
-			(at 115.57 135.89 90)
+			(at 83.82 135.89 90)
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -4659,7 +4605,7 @@
 			)
 		)
 		(property "Capacitance" "6.8pF"
-			(at 115.57 139.7 0)
+			(at 83.82 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4668,7 +4614,7 @@
 			)
 		)
 		(property "Temperature Coefficient" "C0G"
-			(at 115.57 139.7 0)
+			(at 83.82 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4931,8 +4877,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND_MCU"
-			(at 75.692 112.776 0)
+		(property "Value" "GND"
+			(at 78.994 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4981,7 +4927,7 @@
 	)
 	(symbol
 		(lib_id "PCM_JLCPCB-Capacitors:0402,6.8pF")
-		(at 143.51 134.62 90)
+		(at 111.76 134.62 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4989,7 +4935,7 @@
 		(dnp no)
 		(uuid "2286dc6b-c733-40be-873c-a5ca454f9365")
 		(property "Reference" "C10"
-			(at 143.51 137.16 90)
+			(at 111.76 137.16 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4997,7 +4943,7 @@
 			)
 		)
 		(property "Value" "6.8pF"
-			(at 143.51 132.08 90)
+			(at 111.76 132.08 90)
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -5005,7 +4951,7 @@
 			)
 		)
 		(property "Footprint" "PCM_JLCPCB:C_0402"
-			(at 143.51 136.398 90)
+			(at 111.76 136.398 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5014,7 +4960,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_FH--Guangdong-Fenghua-Advanced-Tech-0402CG6R8C500NT_C1576.pdf"
-			(at 143.51 134.62 0)
+			(at 111.76 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5023,7 +4969,7 @@
 			)
 		)
 		(property "Description" "50V 6.8pF C0G 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
-			(at 143.51 134.62 0)
+			(at 111.76 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5032,7 +4978,7 @@
 			)
 		)
 		(property "LCSC" "C1576"
-			(at 143.51 134.62 0)
+			(at 111.76 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5041,7 +4987,7 @@
 			)
 		)
 		(property "Stock" "110336"
-			(at 143.51 134.62 0)
+			(at 111.76 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5050,7 +4996,7 @@
 			)
 		)
 		(property "Price" "0.004USD"
-			(at 143.51 134.62 0)
+			(at 111.76 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5059,7 +5005,7 @@
 			)
 		)
 		(property "Process" "SMT"
-			(at 143.51 134.62 0)
+			(at 111.76 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5068,7 +5014,7 @@
 			)
 		)
 		(property "Minimum Qty" "20"
-			(at 143.51 134.62 0)
+			(at 111.76 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5077,7 +5023,7 @@
 			)
 		)
 		(property "Attrition Qty" "10"
-			(at 143.51 134.62 0)
+			(at 111.76 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5086,7 +5032,7 @@
 			)
 		)
 		(property "Class" "Preferred Component"
-			(at 143.51 134.62 0)
+			(at 111.76 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5095,7 +5041,7 @@
 			)
 		)
 		(property "Category" "Capacitors,Multilayer Ceramic Capacitors MLCC - SMD/SMT"
-			(at 143.51 134.62 0)
+			(at 111.76 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5104,7 +5050,7 @@
 			)
 		)
 		(property "Manufacturer" "FH(Guangdong Fenghua Advanced Tech)"
-			(at 143.51 134.62 0)
+			(at 111.76 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5113,7 +5059,7 @@
 			)
 		)
 		(property "Part" "0402CG6R8C500NT"
-			(at 143.51 134.62 0)
+			(at 111.76 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5122,7 +5068,7 @@
 			)
 		)
 		(property "Voltage Rated" "50V"
-			(at 143.51 130.81 90)
+			(at 111.76 130.81 90)
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -5131,7 +5077,7 @@
 			)
 		)
 		(property "Capacitance" "6.8pF"
-			(at 143.51 134.62 0)
+			(at 111.76 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5140,7 +5086,7 @@
 			)
 		)
 		(property "Temperature Coefficient" "C0G"
-			(at 143.51 134.62 0)
+			(at 111.76 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5181,13 +5127,14 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND_MCU"
+		(property "Value" "GND"
 			(at 29.21 68.326 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
@@ -5819,7 +5766,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 60.96 143.51 180)
+		(at 62.23 143.51 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -5827,7 +5774,7 @@
 		(dnp no)
 		(uuid "45fe41dc-f691-4cb7-a8fc-0bd5de949a24")
 		(property "Reference" "#FLG02"
-			(at 60.96 145.415 0)
+			(at 62.23 145.415 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5836,7 +5783,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 60.96 147.32 0)
+			(at 62.23 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5844,7 +5791,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 60.96 143.51 0)
+			(at 62.23 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5853,7 +5800,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 60.96 143.51 0)
+			(at 62.23 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5862,7 +5809,7 @@
 			)
 		)
 		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 60.96 143.51 0)
+			(at 62.23 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5884,7 +5831,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 110.49 142.24 0)
+		(at 78.74 142.24 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5893,7 +5840,7 @@
 		(fields_autoplaced yes)
 		(uuid "4c2c12c7-d71c-4c5e-9d78-07418c77a6aa")
 		(property "Reference" "#PWR04"
-			(at 110.49 148.59 0)
+			(at 78.74 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5901,8 +5848,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND_MCU"
-			(at 110.49 147.32 0)
+		(property "Value" "GND"
+			(at 78.74 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5910,7 +5857,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 110.49 142.24 0)
+			(at 78.74 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5919,7 +5866,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 110.49 142.24 0)
+			(at 78.74 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5928,7 +5875,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 110.49 142.24 0)
+			(at 78.74 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6623,6 +6570,156 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 128.27 49.53 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6e5bf8c6-4352-4f9f-a1ce-415797bf43dc")
+		(property "Reference" "#PWR09"
+			(at 134.62 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 132.08 49.53 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 128.27 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 128.27 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 128.27 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a26c1522-8f05-4995-bf1d-2ee401b47a0d")
+		)
+		(instances
+			(project "jrdish_axis_controller"
+				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f"
+					(reference "#PWR09")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "MyParts:NX2016SA-16MHZ-EXS00A-CS07826")
+		(at 97.79 137.16 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7786c248-cfff-4ee6-baf9-9a52239002a7")
+		(property "Reference" "X1"
+			(at 97.79 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NX2016SA-16MHZ-EXS00A-CS07826"
+			(at 97.79 144.78 0)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "MyParts:CRYSTAL-SMD_4P-L2.0-W1.6-BL"
+			(at 97.79 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 97.79 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 97.79 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C7322371"
+			(at 97.79 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "7eb4782d-b530-46de-abb2-8365ec826bf9")
+		)
+		(pin "2"
+			(uuid "f7063226-ad1c-4ded-bf5f-0a2d098be2a8")
+		)
+		(pin "4"
+			(uuid "a26b5b49-1d16-4eb4-ab30-62c50b748e86")
+		)
+		(pin "1"
+			(uuid "010376a2-bd6a-4fb6-9cf8-7313efdef7f7")
+		)
+		(instances
+			(project "jrdish_axis_controller"
+				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f"
+					(reference "X1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:PWR_FLAG")
 		(at 50.8 143.51 180)
 		(unit 1)
@@ -6630,8 +6727,8 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "6e4f2de9-ba84-44b8-9699-e09144881d44")
-		(property "Reference" "#FLG03"
+		(uuid "7cd27601-a247-44a0-af70-8489171083d9")
+		(property "Reference" "#FLG04"
 			(at 50.8 145.415 0)
 			(effects
 				(font
@@ -6676,220 +6773,6 @@
 			)
 		)
 		(pin "1"
-			(uuid "ad963409-1d97-4884-82d2-dd5ffa0f8296")
-		)
-		(instances
-			(project "jrdish_axis_controller"
-				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f"
-					(reference "#FLG03")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 128.27 49.53 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "6e5bf8c6-4352-4f9f-a1ce-415797bf43dc")
-		(property "Reference" "#PWR09"
-			(at 134.62 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND_MCU"
-			(at 132.08 49.53 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 128.27 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 128.27 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 128.27 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a26c1522-8f05-4995-bf1d-2ee401b47a0d")
-		)
-		(instances
-			(project "jrdish_axis_controller"
-				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f"
-					(reference "#PWR09")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "MyParts:NX2016SA-16MHZ-EXS00A-CS07826")
-		(at 129.54 137.16 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "7786c248-cfff-4ee6-baf9-9a52239002a7")
-		(property "Reference" "X1"
-			(at 129.54 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "NX2016SA-16MHZ-EXS00A-CS07826"
-			(at 129.54 144.78 0)
-			(effects
-				(font
-					(size 1.016 1.016)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "MyParts:CRYSTAL-SMD_4P-L2.0-W1.6-BL"
-			(at 129.54 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 129.54 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 129.54 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part" "C7322371"
-			(at 129.54 149.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "7eb4782d-b530-46de-abb2-8365ec826bf9")
-		)
-		(pin "2"
-			(uuid "f7063226-ad1c-4ded-bf5f-0a2d098be2a8")
-		)
-		(pin "4"
-			(uuid "a26b5b49-1d16-4eb4-ab30-62c50b748e86")
-		)
-		(pin "1"
-			(uuid "010376a2-bd6a-4fb6-9cf8-7313efdef7f7")
-		)
-		(instances
-			(project "jrdish_axis_controller"
-				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f"
-					(reference "X1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 82.55 143.51 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(dnp no)
-		(uuid "7cd27601-a247-44a0-af70-8489171083d9")
-		(property "Reference" "#FLG04"
-			(at 82.55 145.415 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 82.55 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 82.55 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 82.55 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 82.55 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
 			(uuid "b3f45fb1-4ed6-46ab-9965-d18635932a0e")
 		)
 		(instances
@@ -6919,12 +6802,13 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND_MCU"
+		(property "Value" "GND"
 			(at 111.76 35.814 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
@@ -6961,71 +6845,6 @@
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f"
 					(reference "#PWR02")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 72.39 143.51 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(dnp no)
-		(uuid "84b9379c-c1fb-4e2c-985e-6d9a806573f7")
-		(property "Reference" "#FLG05"
-			(at 72.39 145.415 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 72.39 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 72.39 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 72.39 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 72.39 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8bd2b4ac-fc20-49dd-b30c-67d4dde8b071")
-		)
-		(instances
-			(project "jrdish_axis_controller"
-				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f"
-					(reference "#FLG05")
 					(unit 1)
 				)
 			)
@@ -7661,12 +7480,13 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND_MCU"
+		(property "Value" "GND"
 			(at 98.806 32.004 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
@@ -7906,15 +7726,15 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 148.59 142.24 0)
+		(at 116.84 142.24 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "c94451c4-f5df-4aa8-881b-bfc23942696e")
-		(property "Reference" "#PWR04"
-			(at 148.59 148.59 0)
+		(property "Reference" "#PWR0101"
+			(at 116.84 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7922,8 +7742,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND_MCU"
-			(at 143.51 146.304 0)
+		(property "Value" "GND"
+			(at 111.76 146.304 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7932,7 +7752,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 148.59 142.24 0)
+			(at 116.84 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7941,7 +7761,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 148.59 142.24 0)
+			(at 116.84 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7950,7 +7770,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 148.59 142.24 0)
+			(at 116.84 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7964,7 +7784,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f"
-					(reference "#PWR04")
+					(reference "#PWR0101")
 					(unit 1)
 				)
 			)
@@ -7989,13 +7809,14 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND_MCU"
+		(property "Value" "GND"
 			(at 62.23 33.0199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
