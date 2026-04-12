@@ -1,0 +1,18 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "b33e0d4a-cbbf-4030-9279-e2ab0e38b6f1")
+	(paper "A4")
+	(lib_symbols)
+	(text "NOTES"
+		(exclude_from_sim no)
+		(at 34.798 20.828 0)
+		(effects
+			(font
+				(size 5.08 5.08)
+			)
+		)
+		(uuid "bec4a1e9-2156-449d-a699-b91cfad0b06f")
+	)
+)

@@ -427,7 +427,15 @@
     ],
     [
       "01e0c1dd-bd55-437a-a4ac-56ab5262d0d8",
-      "I2C"
+      "I2C and EEPROM"
+    ],
+    [
+      "6fa2ea64-bed8-4819-9f4d-803f6e804a23",
+      "Fan"
+    ],
+    [
+      "aa9e0bb0-3b7d-4425-b27b-4d3f8b624f3c",
+      "Notes"
     ]
   ],
   "text_variables": {}

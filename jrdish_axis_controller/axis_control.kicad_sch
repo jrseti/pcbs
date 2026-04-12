@@ -2025,8 +2025,8 @@
 		(uuid 16f5c8bd-29d9-45af-a776-1203e9eb5cc1)
 	)
 	(rectangle
-		(start 90.17 106.68)
-		(end 130.81 154.94)
+		(start 25.4 104.14)
+		(end 88.9 152.4)
 		(stroke
 			(width 0)
 			(type dash)
@@ -2035,18 +2035,6 @@
 			(type none)
 		)
 		(uuid 4dff8eb3-84e8-4d06-a7ee-e0269815b3e7)
-	)
-	(rectangle
-		(start 29.21 106.68)
-		(end 82.55 154.94)
-		(stroke
-			(width 0)
-			(type dash)
-		)
-		(fill
-			(type none)
-		)
-		(uuid 5734a354-675b-438e-b60e-ca672bef7721)
 	)
 	(rectangle
 		(start 25.4 59.69)
@@ -2084,7 +2072,7 @@
 	)
 	(text "Motor Controller Signals"
 		(exclude_from_sim no)
-		(at 91.186 111.252 0)
+		(at 26.416 108.712 0)
 		(effects
 			(font
 				(size 2.032 2.032)
@@ -2128,7 +2116,7 @@
 	)
 	(text "MF+"
 		(exclude_from_sim no)
-		(at 109.474 138.938 0)
+		(at 66.294 136.398 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2148,20 +2136,9 @@
 		)
 		(uuid "3dd5a57f-78d6-4eda-951e-5281b2e9d730")
 	)
-	(text "Motor Pulse/Dir/Enable"
-		(exclude_from_sim no)
-		(at 31.115 111.76 0)
-		(effects
-			(font
-				(size 2.54 2.54)
-			)
-			(justify left)
-		)
-		(uuid "4df405b7-6456-4fbe-9196-2c0f9bebe0fe")
-	)
 	(text "Twist the signal pairs"
 		(exclude_from_sim no)
-		(at 94.234 121.412 0)
+		(at 40.386 119.126 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2172,7 +2149,7 @@
 	)
 	(text "PUL-"
 		(exclude_from_sim no)
-		(at 109.474 131.064 0)
+		(at 66.294 128.524 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2205,7 +2182,7 @@
 	)
 	(text "DIR+"
 		(exclude_from_sim no)
-		(at 109.474 133.35 0)
+		(at 66.294 130.81 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2216,7 +2193,7 @@
 	)
 	(text "DIR-"
 		(exclude_from_sim no)
-		(at 109.474 136.144 0)
+		(at 66.294 133.604 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2260,7 +2237,7 @@
 	)
 	(text "The DM556Y inputs are labeled\nPUL+/-, DIR+/-, MF+/-"
 		(exclude_from_sim no)
-		(at 106.68 150.114 0)
+		(at 41.91 147.574 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2281,7 +2258,7 @@
 	)
 	(text "PUL+"
 		(exclude_from_sim no)
-		(at 109.474 128.524 0)
+		(at 66.294 125.984 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2292,7 +2269,7 @@
 	)
 	(text "The motor controller first\ntargeted will be the DM556Y which\nhas opto isolated inputs."
 		(exclude_from_sim no)
-		(at 92.202 116.332 0)
+		(at 27.432 113.792 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2303,7 +2280,7 @@
 	)
 	(text "MF-"
 		(exclude_from_sim no)
-		(at 109.474 141.478 0)
+		(at 66.294 138.938 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2395,12 +2372,6 @@
 		(uuid "1b54d0ac-31cc-4927-84a4-a02a01a247f9")
 	)
 	(junction
-		(at 64.77 88.9)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1d2931ab-3473-409c-a479-f0293193e40f")
-	)
-	(junction
 		(at 80.01 76.2)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2467,12 +2438,6 @@
 		(uuid "c929bd04-4526-4592-8514-d4c2801702cd")
 	)
 	(junction
-		(at 36.83 88.9)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d85e725b-482a-437d-b775-8eaa61c30b2e")
-	)
-	(junction
 		(at 44.45 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2530,16 +2495,6 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 149.86) (xy 59.69 149.86)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "15d892f6-5dd6-478b-82bc-80f2d4603de9")
-	)
-	(wire
-		(pts
 			(xy 83.82 39.37) (xy 85.09 39.37)
 		)
 		(stroke
@@ -2550,13 +2505,13 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 133.35) (xy 101.6 133.35)
+			(xy 175.26 53.34) (xy 184.15 53.34)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1940b9bc-a98b-4eb4-b3fc-2f0dbd5bc0b4")
+		(uuid "1647b6f8-9cd2-4786-96f1-f3e77ae61d6f")
 	)
 	(wire
 		(pts
@@ -2590,16 +2545,6 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 132.08) (xy 59.69 132.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "241c1080-f4d5-476f-b715-b3b9d6683858")
-	)
-	(wire
-		(pts
 			(xy 80.01 74.93) (xy 80.01 76.2)
 		)
 		(stroke
@@ -2630,16 +2575,6 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 138.43) (xy 101.6 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "291bd7cc-2f10-46cb-bf68-b40fb5e5d25e")
-	)
-	(wire
-		(pts
 			(xy 41.91 76.2) (xy 43.18 76.2)
 		)
 		(stroke
@@ -2647,16 +2582,6 @@
 			(type default)
 		)
 		(uuid "2c79801f-eb83-4d3f-adcb-5ec6b875ea9a")
-	)
-	(wire
-		(pts
-			(xy 34.29 88.9) (xy 36.83 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "33f116a5-edeb-4be8-9a54-4f012a2d099b")
 	)
 	(wire
 		(pts
@@ -2690,7 +2615,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 144.78) (xy 49.53 144.78)
+			(xy 48.26 135.89) (xy 49.53 135.89)
 		)
 		(stroke
 			(width 0)
@@ -2710,16 +2635,6 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 135.89) (xy 101.6 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "542ddbd7-3094-446d-a8e5-f822e78582d5")
-	)
-	(wire
-		(pts
 			(xy 119.38 29.21) (xy 119.38 30.48)
 		)
 		(stroke
@@ -2727,16 +2642,6 @@
 			(type default)
 		)
 		(uuid "54561828-6f18-41d1-aed4-37c9f6755b7d")
-	)
-	(wire
-		(pts
-			(xy 99.06 140.97) (xy 101.6 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "568be32c-5464-4475-8d94-1c559a98204e")
 	)
 	(wire
 		(pts
@@ -2810,16 +2715,6 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 88.9) (xy 64.77 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "65e7faa5-9e49-41b4-a729-8e5f4f6564ef")
-	)
-	(wire
-		(pts
 			(xy 162.56 60.96) (xy 168.91 60.96)
 		)
 		(stroke
@@ -2837,16 +2732,6 @@
 			(type default)
 		)
 		(uuid "686943fc-cc95-4a4e-8be8-f536df54d2f1")
-	)
-	(wire
-		(pts
-			(xy 99.06 128.27) (xy 101.6 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "72ccba0f-a9a2-42b1-ba31-408fb1f19f7e")
 	)
 	(wire
 		(pts
@@ -2880,16 +2765,6 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 53.34) (xy 184.15 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7ec906e2-8899-4802-9ec2-b31a17fe9789")
-	)
-	(wire
-		(pts
 			(xy 162.56 60.96) (xy 162.56 62.23)
 		)
 		(stroke
@@ -2897,16 +2772,6 @@
 			(type default)
 		)
 		(uuid "80b84f96-ac77-4c8f-ac96-6e4807b51605")
-	)
-	(wire
-		(pts
-			(xy 99.06 130.81) (xy 101.6 130.81)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "810ebc59-1c01-42e2-a1ef-02fd3c3d4c21")
 	)
 	(wire
 		(pts
@@ -2967,16 +2832,6 @@
 			(type default)
 		)
 		(uuid "8e328ca6-917b-4eae-88b0-45b81551ae97")
-	)
-	(wire
-		(pts
-			(xy 57.15 144.78) (xy 59.69 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8ec1dbcf-57fb-430a-9e95-5337102cacaa")
 	)
 	(wire
 		(pts
@@ -3050,6 +2905,16 @@
 	)
 	(wire
 		(pts
+			(xy 40.64 128.27) (xy 58.42 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a029feda-a81d-4024-8000-9b1e4e3d2307")
+	)
+	(wire
+		(pts
 			(xy 109.22 39.37) (xy 110.49 39.37)
 		)
 		(stroke
@@ -3087,6 +2952,16 @@
 			(type default)
 		)
 		(uuid "a43dd235-2bf9-405a-845b-5302e9a2ed97")
+	)
+	(wire
+		(pts
+			(xy 40.64 138.43) (xy 58.42 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a4677eda-bae5-42cb-a758-6f1515d3d96f")
 	)
 	(wire
 		(pts
@@ -3130,16 +3005,6 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 119.38) (xy 49.53 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "aa168517-af81-4e4c-af02-c7a4bb72ddbc")
-	)
-	(wire
-		(pts
 			(xy 118.11 39.37) (xy 119.38 39.37)
 		)
 		(stroke
@@ -3180,16 +3045,6 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 124.46) (xy 59.69 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b32b845c-70d4-492a-b219-1501ce2d1343")
-	)
-	(wire
-		(pts
 			(xy 119.38 39.37) (xy 119.38 40.64)
 		)
 		(stroke
@@ -3197,6 +3052,16 @@
 			(type default)
 		)
 		(uuid "b3bd4842-e3ec-4f61-9c5c-69926a4db32d")
+	)
+	(wire
+		(pts
+			(xy 57.15 125.73) (xy 58.42 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b50e2d04-2845-4d57-8309-174a1174aaff")
 	)
 	(wire
 		(pts
@@ -3217,6 +3082,16 @@
 			(type default)
 		)
 		(uuid "b94a065a-5992-4ce0-96b2-1f23ac921fdd")
+	)
+	(wire
+		(pts
+			(xy 57.15 130.81) (xy 58.42 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bccef86f-213f-4e54-bcb5-08e790a77df7")
 	)
 	(wire
 		(pts
@@ -3280,7 +3155,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 132.08) (xy 49.53 132.08)
+			(xy 48.26 130.81) (xy 49.53 130.81)
 		)
 		(stroke
 			(width 0)
@@ -3310,23 +3185,13 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 119.38) (xy 59.69 119.38)
+			(xy 40.64 133.35) (xy 58.42 133.35)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e93ff448-f6fa-4f58-906f-560b066d1b59")
-	)
-	(wire
-		(pts
-			(xy 181.61 58.42) (xy 184.15 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "eb5b53d7-e9e1-4026-a305-97eadc37e362")
+		(uuid "eb4f52f0-94fa-4664-ba69-ac25f91919e4")
 	)
 	(wire
 		(pts
@@ -3350,13 +3215,33 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 137.16) (xy 59.69 137.16)
+			(xy 175.26 58.42) (xy 184.15 58.42)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f609bdab-62e8-40e2-831d-926048fc9e63")
+		(uuid "f19b42a1-242e-47d6-87d0-15fcd4e30a82")
+	)
+	(wire
+		(pts
+			(xy 57.15 135.89) (xy 58.42 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f62e4765-1b1a-4d0b-85c8-aa3d4963f0ee")
+	)
+	(wire
+		(pts
+			(xy 48.26 125.73) (xy 49.53 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8173c12-1688-4243-8292-a37ae18520ff")
 	)
 	(wire
 		(pts
@@ -3418,16 +3303,6 @@
 		)
 		(uuid "05cedc8f-7e78-457b-ac77-798f080b84bc")
 	)
-	(label "DIR+"
-		(at 59.69 132.08 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "1847088d-d98b-4f07-89a6-36a1eab4e426")
-	)
 	(label "LIM2_OUT"
 		(at 62.23 76.2 180)
 		(effects
@@ -3448,56 +3323,6 @@
 		)
 		(uuid "2add8893-a10f-4cb1-88d7-5ce4b1a0046b")
 	)
-	(label "DIR-"
-		(at 59.69 137.16 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "31cf58b1-f287-440a-a7d7-14f4230397f5")
-	)
-	(label "PUL1-"
-		(at 99.06 130.81 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "3568a8dc-ce9d-43b7-99ed-3d0819fe7504")
-	)
-	(label "PUL1+"
-		(at 99.06 128.27 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "4402cada-8c8f-41c1-b1e1-517a968a22e4")
-	)
-	(label "LIM1_RET"
-		(at 34.29 88.9 180)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify right bottom)
-		)
-		(uuid "4e6617ed-38fc-41e6-abc5-cde5bb8ab34e")
-	)
-	(label "MF-"
-		(at 99.06 140.97 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "5c2366cb-872d-41ae-9eda-173c67d5758d")
-	)
 	(label "LIM1_OUT"
 		(at 34.29 76.2 180)
 		(effects
@@ -3507,106 +3332,6 @@
 			(justify right bottom)
 		)
 		(uuid "5d6de42e-5033-47c1-a94b-4fd3d4e6e302")
-	)
-	(label "DIR-"
-		(at 99.06 135.89 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "6da2f489-338d-4def-b566-3ed0102ffa3e")
-	)
-	(label "PUL1+"
-		(at 59.69 119.38 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "80459fd9-f1c1-4cbb-a161-411f9dc9fe91")
-	)
-	(label "MF+"
-		(at 59.69 144.78 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "8dd5fe0a-8b76-4056-9e73-4cb4905655de")
-	)
-	(label "PUL1-"
-		(at 59.69 124.46 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "98717811-8837-404c-b647-1aee76773479")
-	)
-	(label "LIM1_RET"
-		(at 181.61 53.34 180)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify right bottom)
-		)
-		(uuid "9dc74953-6418-4ed2-b2b0-3b2594d96949")
-	)
-	(label "LIM2_RET"
-		(at 181.61 58.42 180)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify right bottom)
-		)
-		(uuid "b74ec9b5-dd8d-47a5-8ddf-4d75897b03e4")
-	)
-	(label "DIR+"
-		(at 99.06 133.35 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "b7a492ee-95e4-4560-bf92-ac1db95b9d5d")
-	)
-	(label "MF+"
-		(at 99.06 138.43 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "c9cd5131-82df-44c8-a96d-a1ccb03f2612")
-	)
-	(label "MF-"
-		(at 59.69 149.86 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "d9d5e4e9-0468-4092-aadc-94948a1b958d")
-	)
-	(label "LIM2_RET"
-		(at 62.23 88.9 180)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify right bottom)
-		)
-		(uuid "efd0bc22-8680-4bb6-9572-cbc4b7470754")
 	)
 	(global_label "ENC_Z"
 		(shape input)
@@ -3676,7 +3401,7 @@
 	)
 	(global_label "3.3V"
 		(shape input)
-		(at 48.26 119.38 180)
+		(at 48.26 125.73 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3686,7 +3411,7 @@
 		)
 		(uuid "268ca40f-798a-404e-9972-d1e1b4f5020d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 41.1624 119.38 0)
+			(at 41.1624 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3698,7 +3423,7 @@
 	)
 	(global_label "PUL_MCU"
 		(shape input)
-		(at 48.26 124.46 180)
+		(at 40.64 128.27 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3708,7 +3433,7 @@
 		)
 		(uuid "29745ec0-24f9-4591-83b3-319034686e4d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 36.6267 124.46 0)
+			(at 29.0067 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3742,7 +3467,7 @@
 	)
 	(global_label "3.3V"
 		(shape input)
-		(at 48.26 144.78 180)
+		(at 48.26 135.89 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3752,7 +3477,7 @@
 		)
 		(uuid "39b2b900-d28b-4baf-b0de-3f86e10a8cb4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 41.1624 144.78 0)
+			(at 41.1624 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3896,7 +3621,7 @@
 	)
 	(global_label "DIR_MCU"
 		(shape input)
-		(at 48.26 137.16 180)
+		(at 40.64 133.35 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3906,7 +3631,7 @@
 		)
 		(uuid "a9ddd4dd-6def-4da6-9b1f-009761ae05ad")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 37.1105 137.16 0)
+			(at 29.4905 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3984,7 +3709,7 @@
 	)
 	(global_label "3.3V"
 		(shape input)
-		(at 48.26 132.08 180)
+		(at 48.26 130.81 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3994,7 +3719,7 @@
 		)
 		(uuid "cfb6186a-0e42-4323-8e79-90c07f00b188")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 41.1624 132.08 0)
+			(at 41.1624 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4050,7 +3775,7 @@
 	)
 	(global_label "MF_MCU"
 		(shape input)
-		(at 48.26 149.86 180)
+		(at 40.64 138.43 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4060,7 +3785,7 @@
 		)
 		(uuid "eeef7295-1c19-4363-9fd4-bf47a72e350f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 37.7153 149.86 0)
+			(at 30.0953 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4124,7 +3849,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "042a1e2a-88f2-4dbe-be40-5f769ae3a446")
-		(property "Reference" "R13"
+		(property "Reference" "R8"
 			(at 78.74 35.56 90)
 			(effects
 				(font
@@ -4330,7 +4055,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
-					(reference "R13")
+					(reference "R8")
 					(unit 1)
 				)
 			)
@@ -4345,7 +4070,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0569b06f-3b6e-4955-b83a-785e3b72d553")
-		(property "Reference" "#PWR012"
+		(property "Reference" "#PWR017"
 			(at 44.45 96.52 0)
 			(effects
 				(font
@@ -4396,7 +4121,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
-					(reference "#PWR012")
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -4404,23 +4129,23 @@
 	)
 	(symbol
 		(lib_id "PCM_JLCPCB-Resistors:0603,180Ω")
-		(at 53.34 144.78 90)
+		(at 53.34 135.89 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "0867c625-9295-436b-b2a8-f71011129e68")
-		(property "Reference" "R12"
-			(at 53.34 142.748 90)
+		(property "Reference" "R16"
+			(at 53.34 133.858 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.889 0.889)
 				)
 			)
 		)
 		(property "Value" "180Ω"
-			(at 53.34 144.78 90)
+			(at 53.34 135.89 90)
 			(do_not_autoplace yes)
 			(effects
 				(font
@@ -4429,7 +4154,7 @@
 			)
 		)
 		(property "Footprint" "PCM_JLCPCB:R_0603"
-			(at 53.34 146.558 90)
+			(at 53.34 137.668 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4438,7 +4163,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2206010130_UNI-ROYAL-Uniroyal-Elec-0603WAF1800T5E_C22828.pdf"
-			(at 53.34 144.78 0)
+			(at 53.34 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4447,7 +4172,7 @@
 			)
 		)
 		(property "Description" "100mW Thick Film Resistors 75V ±100ppm/°C ±1% 180Ω 0603 Chip Resistor - Surface Mount ROHS"
-			(at 53.34 144.78 0)
+			(at 53.34 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4456,7 +4181,7 @@
 			)
 		)
 		(property "LCSC" "C22828"
-			(at 53.34 144.78 0)
+			(at 53.34 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4465,7 +4190,7 @@
 			)
 		)
 		(property "Stock" "68342"
-			(at 53.34 144.78 0)
+			(at 53.34 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4474,7 +4199,7 @@
 			)
 		)
 		(property "Price" "0.004USD"
-			(at 53.34 144.78 0)
+			(at 53.34 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4483,7 +4208,7 @@
 			)
 		)
 		(property "Process" "SMT"
-			(at 53.34 144.78 0)
+			(at 53.34 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4492,7 +4217,7 @@
 			)
 		)
 		(property "Minimum Qty" "20"
-			(at 53.34 144.78 0)
+			(at 53.34 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4501,7 +4226,7 @@
 			)
 		)
 		(property "Attrition Qty" "10"
-			(at 53.34 144.78 0)
+			(at 53.34 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4510,7 +4235,7 @@
 			)
 		)
 		(property "Class" "Preferred Component"
-			(at 53.34 144.78 0)
+			(at 53.34 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4519,7 +4244,7 @@
 			)
 		)
 		(property "Category" "Resistors,Chip Resistor - Surface Mount"
-			(at 53.34 144.78 0)
+			(at 53.34 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4528,7 +4253,7 @@
 			)
 		)
 		(property "Manufacturer" "UNI-ROYAL(Uniroyal Elec)"
-			(at 53.34 144.78 0)
+			(at 53.34 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4537,7 +4262,7 @@
 			)
 		)
 		(property "Part" "0603WAF1800T5E"
-			(at 53.34 144.78 0)
+			(at 53.34 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4546,7 +4271,7 @@
 			)
 		)
 		(property "Resistance" "180Ω"
-			(at 53.34 144.78 0)
+			(at 53.34 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4555,7 +4280,7 @@
 			)
 		)
 		(property "Power(Watts)" "100mW"
-			(at 53.34 144.78 0)
+			(at 53.34 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4564,7 +4289,7 @@
 			)
 		)
 		(property "Type" "Thick Film Resistors"
-			(at 53.34 144.78 0)
+			(at 53.34 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4573,7 +4298,7 @@
 			)
 		)
 		(property "Overload Voltage (Max)" "75V"
-			(at 53.34 144.78 0)
+			(at 53.34 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4582,7 +4307,7 @@
 			)
 		)
 		(property "Operating Temperature Range" "-55°C~+155°C"
-			(at 53.34 144.78 0)
+			(at 53.34 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4591,7 +4316,7 @@
 			)
 		)
 		(property "Tolerance" "±1%"
-			(at 53.34 144.78 0)
+			(at 53.34 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4600,7 +4325,7 @@
 			)
 		)
 		(property "Temperature Coefficient" "±100ppm/°C"
-			(at 53.34 144.78 0)
+			(at 53.34 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4617,7 +4342,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
-					(reference "R12")
+					(reference "R16")
 					(unit 1)
 				)
 			)
@@ -4702,7 +4427,7 @@
 	)
 	(symbol
 		(lib_id "PCM_JLCPCB-Resistors:0603,180Ω")
-		(at 53.34 119.38 90)
+		(at 53.34 125.73 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4710,7 +4435,7 @@
 		(dnp no)
 		(uuid "0d01c495-5152-41f9-aa7b-857fdd49574c")
 		(property "Reference" "R14"
-			(at 53.34 117.348 90)
+			(at 53.34 123.698 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4718,7 +4443,7 @@
 			)
 		)
 		(property "Value" "180Ω"
-			(at 53.34 119.38 90)
+			(at 53.34 125.73 90)
 			(do_not_autoplace yes)
 			(effects
 				(font
@@ -4727,7 +4452,7 @@
 			)
 		)
 		(property "Footprint" "PCM_JLCPCB:R_0603"
-			(at 53.34 121.158 90)
+			(at 53.34 127.508 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4736,7 +4461,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2206010130_UNI-ROYAL-Uniroyal-Elec-0603WAF1800T5E_C22828.pdf"
-			(at 53.34 119.38 0)
+			(at 53.34 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4745,7 +4470,7 @@
 			)
 		)
 		(property "Description" "100mW Thick Film Resistors 75V ±100ppm/°C ±1% 180Ω 0603 Chip Resistor - Surface Mount ROHS"
-			(at 53.34 119.38 0)
+			(at 53.34 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4754,7 +4479,7 @@
 			)
 		)
 		(property "LCSC" "C22828"
-			(at 53.34 119.38 0)
+			(at 53.34 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4763,7 +4488,7 @@
 			)
 		)
 		(property "Stock" "68342"
-			(at 53.34 119.38 0)
+			(at 53.34 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4772,7 +4497,7 @@
 			)
 		)
 		(property "Price" "0.004USD"
-			(at 53.34 119.38 0)
+			(at 53.34 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4781,7 +4506,7 @@
 			)
 		)
 		(property "Process" "SMT"
-			(at 53.34 119.38 0)
+			(at 53.34 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4790,7 +4515,7 @@
 			)
 		)
 		(property "Minimum Qty" "20"
-			(at 53.34 119.38 0)
+			(at 53.34 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4799,7 +4524,7 @@
 			)
 		)
 		(property "Attrition Qty" "10"
-			(at 53.34 119.38 0)
+			(at 53.34 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4808,7 +4533,7 @@
 			)
 		)
 		(property "Class" "Preferred Component"
-			(at 53.34 119.38 0)
+			(at 53.34 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4817,7 +4542,7 @@
 			)
 		)
 		(property "Category" "Resistors,Chip Resistor - Surface Mount"
-			(at 53.34 119.38 0)
+			(at 53.34 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4826,7 +4551,7 @@
 			)
 		)
 		(property "Manufacturer" "UNI-ROYAL(Uniroyal Elec)"
-			(at 53.34 119.38 0)
+			(at 53.34 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4835,7 +4560,7 @@
 			)
 		)
 		(property "Part" "0603WAF1800T5E"
-			(at 53.34 119.38 0)
+			(at 53.34 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4844,7 +4569,7 @@
 			)
 		)
 		(property "Resistance" "180Ω"
-			(at 53.34 119.38 0)
+			(at 53.34 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4853,7 +4578,7 @@
 			)
 		)
 		(property "Power(Watts)" "100mW"
-			(at 53.34 119.38 0)
+			(at 53.34 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4862,7 +4587,7 @@
 			)
 		)
 		(property "Type" "Thick Film Resistors"
-			(at 53.34 119.38 0)
+			(at 53.34 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4871,7 +4596,7 @@
 			)
 		)
 		(property "Overload Voltage (Max)" "75V"
-			(at 53.34 119.38 0)
+			(at 53.34 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4880,7 +4605,7 @@
 			)
 		)
 		(property "Operating Temperature Range" "-55°C~+155°C"
-			(at 53.34 119.38 0)
+			(at 53.34 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4889,7 +4614,7 @@
 			)
 		)
 		(property "Tolerance" "±1%"
-			(at 53.34 119.38 0)
+			(at 53.34 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4898,7 +4623,7 @@
 			)
 		)
 		(property "Temperature Coefficient" "±100ppm/°C"
-			(at 53.34 119.38 0)
+			(at 53.34 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4931,7 +4656,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2092c43e-2386-4dcd-9ba7-a18da918662f")
-		(property "Reference" "C18"
+		(property "Reference" "C15"
 			(at 121.92 41.9099 0)
 			(effects
 				(font
@@ -5111,7 +4836,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
-					(reference "C18")
+					(reference "C15")
 					(unit 1)
 				)
 			)
@@ -5126,7 +4851,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "25dbac08-0b4b-470f-b3cb-90a445b880c7")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR014"
 			(at 83.82 55.88 0)
 			(effects
 				(font
@@ -5177,7 +4902,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
-					(reference "#PWR08")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -5192,7 +4917,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "29a0e957-8a45-473f-b116-1f16c0bb92a0")
-		(property "Reference" "R8"
+		(property "Reference" "R12"
 			(at 46.736 73.914 90)
 			(effects
 				(font
@@ -5398,7 +5123,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
-					(reference "R8")
+					(reference "R12")
 					(unit 1)
 				)
 			)
@@ -5413,7 +5138,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3142e7ef-865e-4701-9218-91569cae61c1")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR013"
 			(at 48.26 55.88 0)
 			(effects
 				(font
@@ -5464,7 +5189,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
-					(reference "#PWR07")
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -5480,7 +5205,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3634e33a-dfed-481a-8da8-4553a0ae1218")
-		(property "Reference" "C13"
+		(property "Reference" "C14"
 			(at 86.36 41.9099 0)
 			(effects
 				(font
@@ -5660,7 +5385,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
-					(reference "C13")
+					(reference "C14")
 					(unit 1)
 				)
 			)
@@ -5675,7 +5400,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3a96e350-315b-4472-b5a1-b8d3e209a702")
-		(property "Reference" "R27"
+		(property "Reference" "R6"
 			(at 121.158 34.29 0)
 			(effects
 				(font
@@ -5882,7 +5607,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
-					(reference "R27")
+					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -5897,7 +5622,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3ba6b284-cd6d-4353-9734-a9f70421403a")
-		(property "Reference" "CN7"
+		(property "Reference" "CN1"
 			(at 187.198 34.544 0)
 			(effects
 				(font
@@ -5981,7 +5706,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
-					(reference "CN7")
+					(reference "CN1")
 					(unit 1)
 				)
 			)
@@ -5996,7 +5721,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "45b08cf1-3938-4027-821e-47aa258dc963")
-		(property "Reference" "R7"
+		(property "Reference" "R10"
 			(at 43.434 71.12 0)
 			(effects
 				(font
@@ -6203,7 +5928,7 @@
 		(instances
 			(project ""
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
-					(reference "R7")
+					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -6211,15 +5936,15 @@
 	)
 	(symbol
 		(lib_id "MyParts:KF2EDGR-2.54-6P")
-		(at 106.68 134.62 0)
+		(at 63.5 132.08 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "559ca21e-88f8-4573-8a6f-6a5ee1868aed")
-		(property "Reference" "CN8"
-			(at 106.426 124.714 0)
+		(property "Reference" "CN2"
+			(at 63.246 122.174 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6227,7 +5952,7 @@
 			)
 		)
 		(property "Value" "KF2EDGR-2.54-6P"
-			(at 113.03 144.78 0)
+			(at 69.85 142.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6235,7 +5960,7 @@
 			)
 		)
 		(property "Footprint" "MyParts:CONN-TH_KF2EDGR-2.54-6P"
-			(at 106.68 148.59 0)
+			(at 63.5 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6244,7 +5969,7 @@
 			)
 		)
 		(property "Datasheet" "https://lcsc.com/product-detail/Pluggable-System-Terminal-Block_Cixi-Kefa-Elec-KF2EDGR-2-54-6P_C577598.html"
-			(at 106.68 151.13 0)
+			(at 63.5 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6253,7 +5978,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 106.68 134.62 0)
+			(at 63.5 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6262,7 +5987,7 @@
 			)
 		)
 		(property "LCSC Part" "C577598"
-			(at 106.68 153.67 0)
+			(at 63.5 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6291,7 +6016,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
-					(reference "CN8")
+					(reference "CN2")
 					(unit 1)
 				)
 			)
@@ -6307,7 +6032,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "59088c11-c87c-4d52-bd52-3d85dc23eb28")
-		(property "Reference" "#PWR027"
+		(property "Reference" "#PWR016"
 			(at 162.56 68.58 0)
 			(effects
 				(font
@@ -6358,7 +6083,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
-					(reference "#PWR027")
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -6450,7 +6175,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5fc48e90-d0a6-42ab-876c-f6e3440f035d")
-		(property "Reference" "R11"
+		(property "Reference" "R13"
 			(at 74.676 73.914 90)
 			(effects
 				(font
@@ -6656,7 +6381,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
-					(reference "R11")
+					(reference "R13")
 					(unit 1)
 				)
 			)
@@ -6671,7 +6396,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "8d41924a-3b64-490e-9d6e-b52f4a52b018")
-		(property "Reference" "#PWR011"
+		(property "Reference" "#PWR015"
 			(at 119.38 55.88 0)
 			(effects
 				(font
@@ -6722,7 +6447,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
-					(reference "#PWR011")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -6737,7 +6462,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "980e81a4-d10e-4142-8166-d7bc61b043e2")
-		(property "Reference" "R24"
+		(property "Reference" "R5"
 			(at 85.598 34.29 0)
 			(effects
 				(font
@@ -6944,7 +6669,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
-					(reference "R24")
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -6959,7 +6684,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9b819c69-04ab-4c39-b32d-85151b657c80")
-		(property "Reference" "D4"
+		(property "Reference" "D1"
 			(at 152.146 50.038 90)
 			(effects
 				(font
@@ -7021,7 +6746,7 @@
 		(instances
 			(project ""
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
-					(reference "D4")
+					(reference "D1")
 					(unit 1)
 				)
 			)
@@ -7036,7 +6761,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9d5f7e3e-fb5c-426d-adf0-daf4d56cc734")
-		(property "Reference" "#PWR013"
+		(property "Reference" "#PWR018"
 			(at 72.39 96.52 0)
 			(effects
 				(font
@@ -7087,7 +6812,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
-					(reference "#PWR013")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -7103,7 +6828,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a9df5398-aa9d-44d0-9020-76d394469eb2")
-		(property "Reference" "R9"
+		(property "Reference" "R7"
 			(at 43.18 35.56 90)
 			(effects
 				(font
@@ -7309,7 +7034,7 @@
 		(instances
 			(project ""
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
-					(reference "R9")
+					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -7324,7 +7049,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b9c53999-30d6-4b39-82c0-ffe067b8f393")
-		(property "Reference" "C20"
+		(property "Reference" "C17"
 			(at 74.676 80.0099 0)
 			(effects
 				(font
@@ -7504,7 +7229,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
-					(reference "C20")
+					(reference "C17")
 					(unit 1)
 				)
 			)
@@ -7519,7 +7244,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "cc3f67b5-a6b7-4ca5-a7f4-3ea43d3f09af")
-		(property "Reference" "R10"
+		(property "Reference" "R11"
 			(at 71.374 71.12 0)
 			(effects
 				(font
@@ -7726,7 +7451,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
-					(reference "R10")
+					(reference "R11")
 					(unit 1)
 				)
 			)
@@ -7741,7 +7466,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "cf160892-2a3e-4a14-90ee-1873b84c7df9")
-		(property "Reference" "#PWR026"
+		(property "Reference" "#PWR012"
 			(at 171.45 40.64 0)
 			(effects
 				(font
@@ -7793,7 +7518,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
-					(reference "#PWR026")
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -7808,7 +7533,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d4c14bc3-62a6-4769-ae3c-7fc5c7589704")
-		(property "Reference" "R6"
+		(property "Reference" "R4"
 			(at 50.038 34.29 0)
 			(effects
 				(font
@@ -8015,7 +7740,74 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
-					(reference "R6")
+					(reference "R4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 175.26 58.42 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d4e6e453-302e-40df-88f4-f897b9ca20c5")
+		(property "Reference" "#PWR039"
+			(at 168.91 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 170.18 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 175.26 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 175.26 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 175.26 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "84b182c5-f4b6-4503-9fe2-e54a94440bd4")
+		)
+		(instances
+			(project "jrdish_axis_controller"
+				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
+					(reference "#PWR039")
 					(unit 1)
 				)
 			)
@@ -8031,7 +7823,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e0c750cb-cb82-4b1b-9b53-2c45e03fe694")
-		(property "Reference" "C12"
+		(property "Reference" "C13"
 			(at 50.8 41.9099 0)
 			(effects
 				(font
@@ -8211,7 +8003,74 @@
 		(instances
 			(project ""
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
-					(reference "C12")
+					(reference "C13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 175.26 53.34 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e1fe7774-83d7-44c0-8129-f039f8a39990")
+		(property "Reference" "#PWR038"
+			(at 168.91 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 170.18 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 175.26 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 175.26 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 175.26 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e391882c-e86f-4811-b33c-fd0b341f3749")
+		)
+		(instances
+			(project "jrdish_axis_controller"
+				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
+					(reference "#PWR038")
 					(unit 1)
 				)
 			)
@@ -8226,7 +8085,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "eacad511-1e02-46b5-b8fb-7373436663ef")
-		(property "Reference" "C19"
+		(property "Reference" "C16"
 			(at 46.736 80.0099 0)
 			(effects
 				(font
@@ -8406,7 +8265,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
-					(reference "C19")
+					(reference "C16")
 					(unit 1)
 				)
 			)
@@ -8422,7 +8281,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ec8a0160-0c3d-4d67-8d92-e5d810ae200c")
-		(property "Reference" "R26"
+		(property "Reference" "R9"
 			(at 114.3 35.56 90)
 			(effects
 				(font
@@ -8628,7 +8487,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
-					(reference "R26")
+					(reference "R9")
 					(unit 1)
 				)
 			)
@@ -8636,23 +8495,23 @@
 	)
 	(symbol
 		(lib_id "PCM_JLCPCB-Resistors:0603,180Ω")
-		(at 53.34 132.08 90)
+		(at 53.34 130.81 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "eca25ea7-cd7d-4bf6-a979-14d3a9554aca")
-		(property "Reference" "R5"
-			(at 53.34 130.048 90)
+		(property "Reference" "R15"
+			(at 53.086 128.778 90)
 			(effects
 				(font
-					(size 1.27 1.27)
+					(size 0.889 0.889)
 				)
 			)
 		)
 		(property "Value" "180Ω"
-			(at 53.34 132.08 90)
+			(at 53.34 130.81 90)
 			(do_not_autoplace yes)
 			(effects
 				(font
@@ -8661,7 +8520,7 @@
 			)
 		)
 		(property "Footprint" "PCM_JLCPCB:R_0603"
-			(at 53.34 133.858 90)
+			(at 53.34 132.588 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8670,7 +8529,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2206010130_UNI-ROYAL-Uniroyal-Elec-0603WAF1800T5E_C22828.pdf"
-			(at 53.34 132.08 0)
+			(at 53.34 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8679,7 +8538,7 @@
 			)
 		)
 		(property "Description" "100mW Thick Film Resistors 75V ±100ppm/°C ±1% 180Ω 0603 Chip Resistor - Surface Mount ROHS"
-			(at 53.34 132.08 0)
+			(at 53.34 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8688,7 +8547,7 @@
 			)
 		)
 		(property "LCSC" "C22828"
-			(at 53.34 132.08 0)
+			(at 53.34 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8697,7 +8556,7 @@
 			)
 		)
 		(property "Stock" "68342"
-			(at 53.34 132.08 0)
+			(at 53.34 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8706,7 +8565,7 @@
 			)
 		)
 		(property "Price" "0.004USD"
-			(at 53.34 132.08 0)
+			(at 53.34 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8715,7 +8574,7 @@
 			)
 		)
 		(property "Process" "SMT"
-			(at 53.34 132.08 0)
+			(at 53.34 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8724,7 +8583,7 @@
 			)
 		)
 		(property "Minimum Qty" "20"
-			(at 53.34 132.08 0)
+			(at 53.34 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8733,7 +8592,7 @@
 			)
 		)
 		(property "Attrition Qty" "10"
-			(at 53.34 132.08 0)
+			(at 53.34 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8742,7 +8601,7 @@
 			)
 		)
 		(property "Class" "Preferred Component"
-			(at 53.34 132.08 0)
+			(at 53.34 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8751,7 +8610,7 @@
 			)
 		)
 		(property "Category" "Resistors,Chip Resistor - Surface Mount"
-			(at 53.34 132.08 0)
+			(at 53.34 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8760,7 +8619,7 @@
 			)
 		)
 		(property "Manufacturer" "UNI-ROYAL(Uniroyal Elec)"
-			(at 53.34 132.08 0)
+			(at 53.34 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8769,7 +8628,7 @@
 			)
 		)
 		(property "Part" "0603WAF1800T5E"
-			(at 53.34 132.08 0)
+			(at 53.34 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8778,7 +8637,7 @@
 			)
 		)
 		(property "Resistance" "180Ω"
-			(at 53.34 132.08 0)
+			(at 53.34 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8787,7 +8646,7 @@
 			)
 		)
 		(property "Power(Watts)" "100mW"
-			(at 53.34 132.08 0)
+			(at 53.34 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8796,7 +8655,7 @@
 			)
 		)
 		(property "Type" "Thick Film Resistors"
-			(at 53.34 132.08 0)
+			(at 53.34 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8805,7 +8664,7 @@
 			)
 		)
 		(property "Overload Voltage (Max)" "75V"
-			(at 53.34 132.08 0)
+			(at 53.34 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8814,7 +8673,7 @@
 			)
 		)
 		(property "Operating Temperature Range" "-55°C~+155°C"
-			(at 53.34 132.08 0)
+			(at 53.34 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8823,7 +8682,7 @@
 			)
 		)
 		(property "Tolerance" "±1%"
-			(at 53.34 132.08 0)
+			(at 53.34 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8832,7 +8691,7 @@
 			)
 		)
 		(property "Temperature Coefficient" "±100ppm/°C"
-			(at 53.34 132.08 0)
+			(at 53.34 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8849,7 +8708,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
-					(reference "R5")
+					(reference "R15")
 					(unit 1)
 				)
 			)
@@ -8864,7 +8723,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f4341001-b6e0-4903-94fe-fb6bd1b1aa68")
-		(property "Reference" "D10"
+		(property "Reference" "D5"
 			(at 58.928 83.058 90)
 			(effects
 				(font
@@ -8926,7 +8785,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
-					(reference "D10")
+					(reference "D5")
 					(unit 1)
 				)
 			)
@@ -8941,7 +8800,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "f840fe4c-6e4c-4657-8b8e-6e195d69f692")
-		(property "Reference" "D9"
+		(property "Reference" "D4"
 			(at 32.766 83.058 90)
 			(effects
 				(font
@@ -9003,7 +8862,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
-					(reference "D9")
+					(reference "D4")
 					(unit 1)
 				)
 			)
