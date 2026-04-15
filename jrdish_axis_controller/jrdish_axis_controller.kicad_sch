@@ -4911,10 +4911,6 @@
 		(uuid "d32a7d75-1a2f-4cc8-bf3d-602e8c69ea37")
 	)
 	(no_connect
-		(at 104.14 46.99)
-		(uuid "ddc98cf0-3732-47e8-a8ea-a056543dc406")
-	)
-	(no_connect
 		(at 104.14 97.79)
 		(uuid "f448a9ac-cd5f-4b21-b27e-11dad35be379")
 	)
@@ -6001,6 +5997,16 @@
 			(type default)
 		)
 		(uuid "c6579d47-81dd-43b6-b74b-b4a5eadee43c")
+	)
+	(wire
+		(pts
+			(xy 104.14 46.99) (xy 105.41 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c68c84e2-100f-4f56-a63f-ab307d0f06f6")
 	)
 	(wire
 		(pts
@@ -7625,6 +7631,28 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "RS485_DE_MCU"
+		(shape input)
+		(at 105.41 46.99 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d9598f58-4a5a-4d3b-b541-4c2dd99f32d4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 122.9093 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
