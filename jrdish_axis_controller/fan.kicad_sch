@@ -2489,7 +2489,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1d0a0559-ea83-45f8-a979-12a6de59caaa")
-		(property "Reference" "CN6"
+		(property "Reference" "CN12"
 			(at 117.348 76.454 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2565,7 +2565,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/6fa2ea64-bed8-4819-9f4d-803f6e804a23"
-					(reference "CN6")
+					(reference "CN12")
 					(unit 1)
 				)
 			)
@@ -2582,7 +2582,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6c597ae5-4ad5-4233-a5d0-75be5b1633c7")
-		(property "Reference" "#PWR040"
+		(property "Reference" "#PWR046"
 			(at 128.27 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -2644,7 +2644,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/6fa2ea64-bed8-4819-9f4d-803f6e804a23"
-					(reference "#PWR040")
+					(reference "#PWR046")
 					(unit 1)
 				)
 			)
@@ -2662,7 +2662,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "82a38317-313e-4448-9913-c03cf9b5d857")
-		(property "Reference" "R26"
+		(property "Reference" "R27"
 			(at 133.35 90.17 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2911,7 +2911,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/6fa2ea64-bed8-4819-9f4d-803f6e804a23"
-					(reference "R26")
+					(reference "R27")
 					(unit 1)
 				)
 			)
@@ -2929,7 +2929,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "88d60512-ee27-4371-8fac-3697460e8b71")
-		(property "Reference" "R27"
+		(property "Reference" "R28"
 			(at 130.81 99.0599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3179,7 +3179,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/6fa2ea64-bed8-4819-9f4d-803f6e804a23"
-					(reference "R27")
+					(reference "R28")
 					(unit 1)
 				)
 			)
@@ -3196,7 +3196,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9edbf9ff-8195-463e-9368-640c5f10bc74")
-		(property "Reference" "C44"
+		(property "Reference" "C55"
 			(at 126.238 76.4539 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3414,7 +3414,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/6fa2ea64-bed8-4819-9f4d-803f6e804a23"
-					(reference "C44")
+					(reference "C55")
 					(unit 1)
 				)
 			)
@@ -3546,7 +3546,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b70c7da2-ed51-414f-89dd-066aabeba877")
-		(property "Reference" "#PWR041"
+		(property "Reference" "#PWR047"
 			(at 137.16 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -3608,7 +3608,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/6fa2ea64-bed8-4819-9f4d-803f6e804a23"
-					(reference "#PWR041")
+					(reference "#PWR047")
 					(unit 1)
 				)
 			)
@@ -3625,7 +3625,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ed6bcaee-a12a-4f55-b4f7-d0ce12cc85d7")
-		(property "Reference" "C45"
+		(property "Reference" "C56"
 			(at 133.604 76.1999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3843,7 +3843,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/6fa2ea64-bed8-4819-9f4d-803f6e804a23"
-					(reference "C45")
+					(reference "C56")
 					(unit 1)
 				)
 			)
