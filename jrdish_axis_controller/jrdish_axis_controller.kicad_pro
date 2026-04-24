@@ -50,11 +50,52 @@
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.0
+          "min_clearance": 0.2
         }
       },
       "diff_pair_dimensions": [],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "copper_edge_clearance|200400000|65160000|70623e89-8a87-4153-b594-82924da772c6|9481ad26-abb5-462e-878a-b88d7116b4b5",
+          ""
+        ],
+        [
+          "copper_edge_clearance|200400000|70760000|70623e89-8a87-4153-b594-82924da772c6|3103d0fc-d387-46cf-92fb-49e803465b16",
+          ""
+        ],
+        [
+          "copper_edge_clearance|200400000|73100000|70623e89-8a87-4153-b594-82924da772c6|5bfd16a8-44b8-4172-be8a-f91fdd6fc8ea",
+          ""
+        ],
+        [
+          "copper_edge_clearance|200400000|78700000|70623e89-8a87-4153-b594-82924da772c6|00b0ff42-a9ce-461d-82f1-29249d8a76b4",
+          ""
+        ],
+        [
+          "isolated_copper|126091575|67553429|c63c2801-43c5-4f4b-a1fa-8bbcbae8d983|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "isolated_copper|168271371|95676652|c63c2801-43c5-4f4b-a1fa-8bbcbae8d983|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "isolated_copper|168810530|93147334|c63c2801-43c5-4f4b-a1fa-8bbcbae8d983|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "isolated_copper|168886319|94568633|c63c2801-43c5-4f4b-a1fa-8bbcbae8d983|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "isolated_copper|176720615|118605522|c63c2801-43c5-4f4b-a1fa-8bbcbae8d983|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "isolated_copper|176774423|117705482|c63c2801-43c5-4f4b-a1fa-8bbcbae8d983|00000000-0000-0000-0000-000000000000",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -507,10 +548,10 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 0,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.2,
+        "track_width": 0.5,
         "tuning_profile": "",
-        "via_diameter": 0.6,
-        "via_drill": 0.3
+        "via_diameter": 0.8,
+        "via_drill": 0.4
       }
     ],
     "meta": {

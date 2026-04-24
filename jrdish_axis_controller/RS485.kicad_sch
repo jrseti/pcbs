@@ -6348,7 +6348,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "1214006b-1253-4d4a-bed6-37a60b130220")
 		(property "Reference" "#PWR028"
 			(at 139.7 90.17 0)
@@ -6361,9 +6360,8 @@
 				)
 			)
 		)
-		(property "Value" "GND"
-			(at 139.7 88.9 0)
-			(hide yes)
+		(property "Value" "RS485_GND"
+			(at 139.192 87.884 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
