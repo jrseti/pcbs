@@ -56,6 +56,10 @@
       "diff_pair_dimensions": [],
       "drc_exclusions": [
         [
+          "isolated_copper|149949571|62925185|c63c2801-43c5-4f4b-a1fa-8bbcbae8d983|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
           "isolated_copper|175937539|33120185|70ec1a30-2beb-4d20-8243-ba3cd4531c68|00000000-0000-0000-0000-000000000000",
           ""
         ],
@@ -699,7 +703,7 @@
         "uuid": "10d7c3e5-be4d-4306-a59e-500b86bd141f"
       }
     ],
-    "used_designators": "",
+    "used_designators": "#PWR69-70,D16-17,R55-56,H5-6",
     "variants": []
   },
   "sheets": [

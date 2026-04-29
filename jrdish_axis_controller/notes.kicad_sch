@@ -10,7 +10,7 @@
 		(company "JRSeti")
 	)
 	(lib_symbols)
-	(text "Purpose: Control one Axis of a motor controlled\nsystem.\n\n- Modbus commands over isolated RS485.\n- MCU outputs motor PWM, direction, enable/disable\n- Input from encoder connected to motor output\n- Host provides configuration and position commands\n- MCU runs a PID loop to position/move motor\n- Onboard temperature sensor, MCU can turn fan on/off\n- I2C extender for sensors placed at the axis"
+	(text "Purpose: Control dual axes of a motor controlled\nsystem.\n\n- Modbus commands over isolated RS485 from a host.\n- MCU outputs motor PWM, direction, enable/disable\n- Input from encoder connected to motor output\n- Host provides configuration and position commands\n- MCU runs a PID loop to position/move motors\n- Onboard temperature sensor, MCU can turn fan on/off\n- I2C extender for sensors placed at the axes\n- 1PPS input from a GPS\n- NMEA sentences and 1PPS from a NEO-M9N"
 		(exclude_from_sim no)
 		(at 28.956 45.466 0)
 		(effects
