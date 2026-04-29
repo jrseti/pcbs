@@ -10,6 +10,146 @@
 		(company "JRSeti")
 	)
 	(lib_symbols
+		(symbol "Device:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "MyParts:1812L110_48QR"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -335,6 +475,9 @@
 			(embedded_fonts no)
 		)
 		(symbol "MyParts:AO3407A"
+			(pin_names
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1519,166 +1662,6 @@
 						)
 					)
 					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "MyParts:RT0603BRD07976RL"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at 0 5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "RT0603BRD07976RL"
-				(at 0 -5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "MyParts:R0603"
-				(at 0 -7.62 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://www.lcsc.com/datasheet/C861607.pdf"
-				(at 0 -10.16 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "-55℃~+155℃ 100mW 75V 976Ω Thin Film Resistor ±0.1% ±25ppm/℃ 0603 Chip Resistor - Surface Mount ROHS"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Manufacturer" "YAGEO(国巨)"
-				(at 0 -12.7 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "MPN" "RT0603BRD07976RL"
-				(at 0 -15.24 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "LCSC Part" "C861607"
-				(at 0 -17.78 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "Pre-ordered RLCs"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "RT0603BRD07976RL_0_1"
-				(rectangle
-					(start -2.54 1.27)
-					(end 2.54 -1.27)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 0 180)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5174,6 +5157,17 @@
 		)
 		(uuid "08fe21f9-d1f9-4a32-bb6f-b5fa3c0d21ba")
 	)
+	(text "source"
+		(exclude_from_sim no)
+		(at 238.252 44.958 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "22e5e24c-08dd-499f-b692-7629f597d22e")
+	)
 	(text "Output"
 		(exclude_from_sim no)
 		(at 40.005 91.44 0)
@@ -5194,6 +5188,27 @@
 			)
 		)
 		(uuid "78b35cb0-f7af-44ae-9039-6a6d4c031468")
+	)
+	(text "gate"
+		(exclude_from_sim no)
+		(at 229.362 46.736 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "8b2f9599-3130-43ab-94b3-37487a764ed3")
+	)
+	(text "0.1%"
+		(exclude_from_sim no)
+		(at 218.694 112.522 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "8b4965f4-c3c1-48ea-b8ba-9d5e41b5fe7d")
 	)
 	(text "On"
 		(exclude_from_sim no)
@@ -5279,6 +5294,17 @@
 			(justify left)
 		)
 		(uuid "c4a7ed86-9735-4d53-b701-204674a5fdab")
+	)
+	(text "drain"
+		(exclude_from_sim no)
+		(at 238.76 53.34 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "d88f7bf2-b5b4-4251-b3d5-9ae861393175")
 	)
 	(text "25V"
 		(exclude_from_sim no)
@@ -5880,6 +5906,16 @@
 	)
 	(wire
 		(pts
+			(xy 214.63 102.87) (xy 214.63 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aad8e7d4-c592-4bcc-abf9-9c0decfe0ccf")
+	)
+	(wire
+		(pts
 			(xy 228.6 44.45) (xy 228.6 43.18)
 		)
 		(stroke
@@ -6090,6 +6126,16 @@
 	)
 	(wire
 		(pts
+			(xy 214.63 113.03) (xy 214.63 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc0f3706-b1fd-4454-a040-7fe6699138a9")
+	)
+	(wire
+		(pts
 			(xy 214.63 125.73) (xy 214.63 127)
 		)
 		(stroke
@@ -6127,26 +6173,6 @@
 			(type default)
 		)
 		(uuid "e8b7a6b6-6e5a-4905-bf7b-5f13068afcdf")
-	)
-	(wire
-		(pts
-			(xy 214.63 102.87) (xy 214.63 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e9a35392-54ba-4519-880e-c94b33965652")
-	)
-	(wire
-		(pts
-			(xy 214.63 114.3) (xy 214.63 115.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ebc1ecd0-5f64-4c45-b9d5-8e9365aafc34")
 	)
 	(wire
 		(pts
@@ -8054,7 +8080,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "025cf468-1578-4748-a63f-d6c163f2cf33")
-		(property "Reference" "C41"
+		(property "Reference" "C46"
 			(at 160.655 45.847 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8129,7 +8155,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/f4424325-c15a-4f12-b98c-68501db44bed"
-					(reference "C41")
+					(reference "C46")
 					(unit 1)
 				)
 			)
@@ -8138,6 +8164,7 @@
 	(symbol
 		(lib_id "MyParts:AO3407A")
 		(at 234.95 49.53 0)
+		(mirror x)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8147,7 +8174,7 @@
 		(dnp no)
 		(uuid "1696bade-3151-4191-8f1d-334badb996e6")
 		(property "Reference" "Q1"
-			(at 242.57 48.2599 0)
+			(at 242.57 50.8001 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8158,7 +8185,7 @@
 			)
 		)
 		(property "Value" "AO3407A"
-			(at 242.57 50.7999 0)
+			(at 242.57 48.2601 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8169,7 +8196,7 @@
 			)
 		)
 		(property "Footprint" "MyParts:SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR"
-			(at 234.95 62.23 0)
+			(at 234.95 36.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8180,7 +8207,7 @@
 			)
 		)
 		(property "Datasheet" "https://lcsc.com/product-detail/MOSFET_AOS_AO3407A_AO3407A_C15155.html"
-			(at 234.95 64.77 0)
+			(at 234.95 34.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8202,7 +8229,7 @@
 			)
 		)
 		(property "LCSC Part" "C15155"
-			(at 234.95 67.31 0)
+			(at 234.95 31.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8356,7 +8383,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2901dacb-664e-4a17-bf08-d844cc3e1ef2")
-		(property "Reference" "C47"
+		(property "Reference" "C52"
 			(at 227.33 107.9499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8574,7 +8601,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/f4424325-c15a-4f12-b98c-68501db44bed"
-					(reference "C47")
+					(reference "C52")
 					(unit 1)
 				)
 			)
@@ -8592,7 +8619,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2af512ca-a18f-4827-adc0-26a22f114924")
-		(property "Reference" "CN13"
+		(property "Reference" "CN6"
 			(at 55.88 102.8699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8667,7 +8694,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/f4424325-c15a-4f12-b98c-68501db44bed"
-					(reference "CN13")
+					(reference "CN6")
 					(unit 1)
 				)
 			)
@@ -8684,7 +8711,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3371b8e0-31bc-4df7-9532-6b2304056c98")
-		(property "Reference" "#FLG06"
+		(property "Reference" "#FLG07"
 			(at 48.26 42.545 0)
 			(hide yes)
 			(show_name no)
@@ -8744,7 +8771,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/f4424325-c15a-4f12-b98c-68501db44bed"
-					(reference "#FLG06")
+					(reference "#FLG07")
 					(unit 1)
 				)
 			)
@@ -8761,7 +8788,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "362f39a4-e84c-42f0-85f7-0b592ed749ac")
-		(property "Reference" "#FLG05"
+		(property "Reference" "#FLG06"
 			(at 38.1 42.545 0)
 			(hide yes)
 			(show_name no)
@@ -8821,7 +8848,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/f4424325-c15a-4f12-b98c-68501db44bed"
-					(reference "#FLG05")
+					(reference "#FLG06")
 					(unit 1)
 				)
 			)
@@ -8917,7 +8944,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4b466c25-22dc-4bc1-a460-bbd74a4bb910")
-		(property "Reference" "C42"
+		(property "Reference" "C47"
 			(at 170.18 45.72 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8992,7 +9019,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/f4424325-c15a-4f12-b98c-68501db44bed"
-					(reference "C42")
+					(reference "C47")
 					(unit 1)
 				)
 			)
@@ -9088,7 +9115,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "54cb902c-f598-4d79-8eb7-2d90dc28b8b3")
-		(property "Reference" "C43"
+		(property "Reference" "C48"
 			(at 191.77 93.98 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9303,7 +9330,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/f4424325-c15a-4f12-b98c-68501db44bed"
-					(reference "C43")
+					(reference "C48")
 					(unit 1)
 				)
 			)
@@ -9321,7 +9348,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "54dbcfa4-0389-429c-b59e-d3f053372383")
-		(property "Reference" "C48"
+		(property "Reference" "C53"
 			(at 241.3 107.9499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9539,7 +9566,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/f4424325-c15a-4f12-b98c-68501db44bed"
-					(reference "C48")
+					(reference "C53")
 					(unit 1)
 				)
 			)
@@ -9557,7 +9584,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5ca62911-d844-4514-b21f-4c74e4da67f3")
-		(property "Reference" "C44"
+		(property "Reference" "C49"
 			(at 135.89 104.1399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9775,7 +9802,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/f4424325-c15a-4f12-b98c-68501db44bed"
-					(reference "C44")
+					(reference "C49")
 					(unit 1)
 				)
 			)
@@ -9854,6 +9881,98 @@
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/f4424325-c15a-4f12-b98c-68501db44bed"
 					(reference "#PWR037")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 214.63 109.22 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "62e44fc1-a8e2-4ab0-9b95-198e354261d6")
+		(property "Reference" "R21"
+			(at 216.154 107.696 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "976kΩ"
+			(at 216.154 110.236 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 212.852 109.22 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C865713.pdf?spm=wm.sxq.inf.ggs___wm.ssy.bg.0.xh&lcsc_vid=EVALUwdWTlVZUFNSQwdYXwVSFFRfUV1fE1IIUFRRFQcxVlNRQFFWUlFUTllcVTsOAxUeFF5JWBYZEEoKFBINSQcJGk4eFQsCAgIaSgADAwAHC0slRVFXVlNIHxUDCw%3D%3D"
+			(at 214.63 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 214.63 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C865713"
+			(at 214.63 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "958de3ff-9a1d-45ec-b7c6-972824aa994b")
+		)
+		(pin "2"
+			(uuid "9ee45c09-9323-42f9-b7b3-0e4f65e925de")
+		)
+		(instances
+			(project "jrdish_axis_controller"
+				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/f4424325-c15a-4f12-b98c-68501db44bed"
+					(reference "R21")
 					(unit 1)
 				)
 			)
@@ -10139,7 +10258,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "748cc53e-17cd-404d-9b11-654ac13982aa")
-		(property "Reference" "C45"
+		(property "Reference" "C50"
 			(at 146.05 104.1399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10357,7 +10476,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/f4424325-c15a-4f12-b98c-68501db44bed"
-					(reference "C45")
+					(reference "C50")
 					(unit 1)
 				)
 			)
@@ -10375,7 +10494,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "795a31db-1137-41a2-8d63-dc2165ed0ca3")
-		(property "Reference" "L9"
+		(property "Reference" "L11"
 			(at 204.47 93.98 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10448,7 +10567,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/f4424325-c15a-4f12-b98c-68501db44bed"
-					(reference "L9")
+					(reference "L11")
 					(unit 1)
 				)
 			)
@@ -10466,7 +10585,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "82d56f09-7f80-47ce-bdf4-a0d5882e6c8b")
-		(property "Reference" "C46"
+		(property "Reference" "C51"
 			(at 154.94 104.1399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10684,7 +10803,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/f4424325-c15a-4f12-b98c-68501db44bed"
-					(reference "C46")
+					(reference "C51")
 					(unit 1)
 				)
 			)
@@ -11575,120 +11694,6 @@
 		)
 	)
 	(symbol
-		(lib_id "MyParts:RT0603BRD07976RL")
-		(at 214.63 109.22 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ca3c1222-1b7c-4800-a69a-82d7f550ad6f")
-		(property "Reference" "R21"
-			(at 217.17 107.9499 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "976Ω"
-			(at 217.17 110.4899 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "MyParts:R0603"
-			(at 222.25 109.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C861607.pdf"
-			(at 224.79 109.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "-55℃~+155℃ 100mW 75V 976Ω Thin Film Resistor ±0.1% ±25ppm/℃ 0603 Chip Resistor - Surface Mount ROHS"
-			(at 214.63 109.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "YAGEO(国巨)"
-			(at 227.33 109.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "RT0603BRD07976RL"
-			(at 229.87 109.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part" "C861607"
-			(at 232.41 109.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "2e168de2-79ee-4c34-afdd-37771b9944f7")
-		)
-		(pin "1"
-			(uuid "b2d829a4-d536-4cb4-aa74-ce0db596e05b")
-		)
-		(instances
-			(project "jrdish_axis_controller"
-				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/f4424325-c15a-4f12-b98c-68501db44bed"
-					(reference "R21")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "PCM_JLCPCB-Resistors:0603,100kΩ")
 		(at 186.69 114.3 0)
 		(unit 1)
@@ -12047,7 +12052,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fc052b04-c0cd-4bde-be32-63333258aa2b")
-		(property "Reference" "C49"
+		(property "Reference" "C54"
 			(at 163.83 125.7299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12265,7 +12270,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/f4424325-c15a-4f12-b98c-68501db44bed"
-					(reference "C49")
+					(reference "C54")
 					(unit 1)
 				)
 			)

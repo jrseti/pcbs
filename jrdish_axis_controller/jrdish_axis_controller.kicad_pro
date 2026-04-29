@@ -50,52 +50,11 @@
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.2
+          "min_clearance": 0.0
         }
       },
       "diff_pair_dimensions": [],
-      "drc_exclusions": [
-        [
-          "copper_edge_clearance|200400000|65160000|70623e89-8a87-4153-b594-82924da772c6|9481ad26-abb5-462e-878a-b88d7116b4b5",
-          ""
-        ],
-        [
-          "copper_edge_clearance|200400000|70760000|70623e89-8a87-4153-b594-82924da772c6|3103d0fc-d387-46cf-92fb-49e803465b16",
-          ""
-        ],
-        [
-          "copper_edge_clearance|200400000|73100000|70623e89-8a87-4153-b594-82924da772c6|5bfd16a8-44b8-4172-be8a-f91fdd6fc8ea",
-          ""
-        ],
-        [
-          "copper_edge_clearance|200400000|78700000|70623e89-8a87-4153-b594-82924da772c6|00b0ff42-a9ce-461d-82f1-29249d8a76b4",
-          ""
-        ],
-        [
-          "isolated_copper|126091575|67553429|c63c2801-43c5-4f4b-a1fa-8bbcbae8d983|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "isolated_copper|168271371|95676652|c63c2801-43c5-4f4b-a1fa-8bbcbae8d983|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "isolated_copper|168810530|93147334|c63c2801-43c5-4f4b-a1fa-8bbcbae8d983|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "isolated_copper|168886319|94568633|c63c2801-43c5-4f4b-a1fa-8bbcbae8d983|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "isolated_copper|176720615|118605522|c63c2801-43c5-4f4b-a1fa-8bbcbae8d983|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "isolated_copper|176774423|117705482|c63c2801-43c5-4f4b-a1fa-8bbcbae8d983|00000000-0000-0000-0000-000000000000",
-          ""
-        ]
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -285,7 +244,12 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [],
+    "erc_exclusions": [
+      [
+        "power_pin_not_driven|469900|1765300|3c378461-33f6-4a89-acfb-ec8f31aeb650|00000000-0000-0000-0000-000000000000|/10d7c3e5-be4d-4306-a59e-500b86bd141f|/10d7c3e5-be4d-4306-a59e-500b86bd141f|",
+        ""
+      ]
+    ],
     "meta": {
       "version": 0
     },
@@ -714,7 +678,7 @@
         "uuid": "10d7c3e5-be4d-4306-a59e-500b86bd141f"
       }
     ],
-    "used_designators": "R15-16,R42-44",
+    "used_designators": "CN14",
     "variants": []
   },
   "sheets": [
@@ -753,6 +717,10 @@
     [
       "4e86d230-6896-4d8d-a4af-088ba322fa83",
       "Axis Control - 2"
+    ],
+    [
+      "7fa68ebc-abbe-49d0-8996-6dde5383e808",
+      "User Switches"
     ]
   ],
   "text_variables": {},

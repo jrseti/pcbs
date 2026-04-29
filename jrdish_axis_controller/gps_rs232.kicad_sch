@@ -2161,7 +2161,7 @@
 	)
 	(text "RS232"
 		(exclude_from_sim no)
-		(at 110.998 97.536 0)
+		(at 109.22 97.282 0)
 		(effects
 			(font
 				(size 2.032 2.032)
@@ -2240,10 +2240,22 @@
 		(uuid "b7c27dde-d523-4bec-97b6-90d901ec9cc2")
 	)
 	(junction
+		(at 162.56 111.76)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "876be5b2-7617-456f-b8a5-41a7015df250")
+	)
+	(junction
 		(at 109.22 124.46)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "aacc9615-fc93-44b2-adf4-83bd8d9e1c95")
+	)
+	(junction
+		(at 172.72 113.03)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f8403767-2d00-4064-a039-80b8564700e7")
 	)
 	(junction
 		(at 144.78 57.15)
@@ -2268,6 +2280,16 @@
 			(type default)
 		)
 		(uuid "01dce1b6-ec1b-402e-a4a9-3bde42dcf703")
+	)
+	(wire
+		(pts
+			(xy 162.56 111.76) (xy 163.83 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13c3720d-56ba-45f4-90da-cda28b111ebd")
 	)
 	(wire
 		(pts
@@ -2331,7 +2353,7 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 114.3) (xy 162.56 114.3)
+			(xy 161.29 114.3) (xy 172.72 114.3)
 		)
 		(stroke
 			(width 0)
@@ -2391,16 +2413,6 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 110.49) (xy 162.56 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5191b9de-4175-4717-ae35-6fbb9c25603d")
-	)
-	(wire
-		(pts
 			(xy 127 63.5) (xy 128.27 63.5)
 		)
 		(stroke
@@ -2408,6 +2420,16 @@
 			(type default)
 		)
 		(uuid "5489db64-51b4-4599-a711-875201a59398")
+	)
+	(wire
+		(pts
+			(xy 172.72 111.76) (xy 172.72 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "58e34216-2a05-499e-84be-aee334108ef6")
 	)
 	(wire
 		(pts
@@ -2428,16 +2450,6 @@
 			(type default)
 		)
 		(uuid "67d71340-5ccd-4aee-8b88-0977eb7939c6")
-	)
-	(wire
-		(pts
-			(xy 162.56 101.6) (xy 162.56 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "748b5bc4-a896-46b0-981a-d11e9fb5b28f")
 	)
 	(wire
 		(pts
@@ -2471,16 +2483,6 @@
 	)
 	(wire
 		(pts
-			(xy 163.83 101.6) (xy 162.56 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "86a269f9-4bc0-45e3-b0ff-bd1f879d7060")
-	)
-	(wire
-		(pts
 			(xy 110.49 114.3) (xy 109.22 114.3)
 		)
 		(stroke
@@ -2501,6 +2503,16 @@
 	)
 	(wire
 		(pts
+			(xy 172.72 113.03) (xy 172.72 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "97b0eff1-43c6-48e9-9f48-ad07858c6fde")
+	)
+	(wire
+		(pts
 			(xy 109.22 114.3) (xy 109.22 124.46)
 		)
 		(stroke
@@ -2508,6 +2520,16 @@
 			(type default)
 		)
 		(uuid "9856f3e5-390c-4727-a93c-4f65ce554bba")
+	)
+	(wire
+		(pts
+			(xy 162.56 109.22) (xy 162.56 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae2db50d-5f56-4c51-a81b-1ac950a4df31")
 	)
 	(wire
 		(pts
@@ -2538,6 +2560,16 @@
 			(type default)
 		)
 		(uuid "b7d03d77-f225-4a11-9084-1ff6087d4022")
+	)
+	(wire
+		(pts
+			(xy 171.45 111.76) (xy 172.72 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "be40828c-e485-403b-8e41-7c9847e9b697")
 	)
 	(wire
 		(pts
@@ -2638,6 +2670,16 @@
 			(type default)
 		)
 		(uuid "f8023e8e-0520-4e98-8392-166869b2d394")
+	)
+	(wire
+		(pts
+			(xy 172.72 113.03) (xy 176.53 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fc7a04fa-0481-41f5-ba4b-bd019bda3b5c")
 	)
 	(wire
 		(pts
@@ -3763,7 +3805,7 @@
 	)
 	(global_label "3V3"
 		(shape input)
-		(at 163.83 101.6 0)
+		(at 162.56 109.22 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3773,7 +3815,7 @@
 		)
 		(uuid "de8eecb8-b63d-49a4-8cba-11e89606a441")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 170.3228 101.6 0)
+			(at 162.56 102.7272 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3900,7 +3942,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "164a773b-f834-45d0-8c59-bafccd2b805e")
-		(property "Reference" "C58"
+		(property "Reference" "C62"
 			(at 125.73 102.87 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4115,7 +4157,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/005a8950-9739-403f-9896-26bcf992d086"
-					(reference "C58")
+					(reference "C62")
 					(unit 1)
 				)
 			)
@@ -4133,7 +4175,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "189b60b0-75df-4344-937b-132bce9f998c")
-		(property "Reference" "CN6"
+		(property "Reference" "CN10"
 			(at 123.952 59.944 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4208,7 +4250,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/005a8950-9739-403f-9896-26bcf992d086"
-					(reference "CN6")
+					(reference "CN10")
 					(unit 1)
 				)
 			)
@@ -4383,7 +4425,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "352dbdc5-7b2d-47bd-a78e-97bc652d8409")
-		(property "Reference" "C59"
+		(property "Reference" "C64"
 			(at 108.458 117.094 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4601,7 +4643,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/005a8950-9739-403f-9896-26bcf992d086"
-					(reference "C59")
+					(reference "C64")
 					(unit 1)
 				)
 			)
@@ -4618,7 +4660,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3b37fdf8-479d-4952-b0b2-9b0d5cacec1d")
-		(property "Reference" "CN5"
+		(property "Reference" "CN11"
 			(at 185.674 113.03 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4718,7 +4760,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/005a8950-9739-403f-9896-26bcf992d086"
-					(reference "CN5")
+					(reference "CN11")
 					(unit 1)
 				)
 			)
@@ -4736,7 +4778,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4c77067d-b5a8-4206-bbc4-31f89eb2c66b")
-		(property "Reference" "R29"
+		(property "Reference" "R31"
 			(at 147.32 52.0699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4986,7 +5028,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/005a8950-9739-403f-9896-26bcf992d086"
-					(reference "R29")
+					(reference "R31")
 					(unit 1)
 				)
 			)
@@ -5250,7 +5292,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8db3749a-a505-442e-9277-053b9b209d7b")
-		(property "Reference" "R30"
+		(property "Reference" "R32"
 			(at 132.08 59.69 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5499,7 +5541,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/005a8950-9739-403f-9896-26bcf992d086"
-					(reference "R30")
+					(reference "R32")
 					(unit 1)
 				)
 			)
@@ -5672,7 +5714,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9bd90846-1b6f-4152-b065-d726bfd6f323")
-		(property "Reference" "C61"
+		(property "Reference" "C66"
 			(at 108.712 126.492 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5890,7 +5932,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/005a8950-9739-403f-9896-26bcf992d086"
-					(reference "C61")
+					(reference "C66")
 					(unit 1)
 				)
 			)
@@ -5986,7 +6028,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ca44517f-036b-4e09-aecf-8f1ec6674a3b")
-		(property "Reference" "C60"
+		(property "Reference" "C65"
 			(at 122.682 117.856 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6201,7 +6243,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/005a8950-9739-403f-9896-26bcf992d086"
-					(reference "C60")
+					(reference "C65")
 					(unit 1)
 				)
 			)
@@ -6209,7 +6251,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 162.56 114.3 90)
+		(at 176.53 113.03 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6220,7 +6262,7 @@
 		(fields_autoplaced yes)
 		(uuid "f1f8d931-ee33-43fc-b888-7a704ea9af1b")
 		(property "Reference" "#PWR050"
-			(at 168.91 114.3 0)
+			(at 176.53 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6231,7 +6273,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 167.64 114.3 0)
+			(at 176.53 118.11 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6242,7 +6284,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 162.56 114.3 0)
+			(at 176.53 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6253,7 +6295,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 162.56 114.3 0)
+			(at 176.53 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6264,7 +6306,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 162.56 114.3 0)
+			(at 176.53 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6288,7 +6330,7 @@
 	)
 	(symbol
 		(lib_id "PCM_JLCPCB-Capacitors:0402,100nF")
-		(at 162.56 106.68 0)
+		(at 167.64 111.76 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6297,30 +6339,30 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f3e80f2c-39ad-48bc-aaa6-61bffe748025")
-		(property "Reference" "C57"
-			(at 164.592 105.1559 0)
+		(property "Reference" "C63"
+			(at 166.624 106.4259 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Value" "100nF"
-			(at 164.592 107.696 0)
+			(at 166.624 108.204 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 0.8 0.8)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" "PCM_JLCPCB:C_0402"
-			(at 160.782 106.68 90)
+			(at 167.64 113.538 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6331,7 +6373,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05B104KO5NNNC_C1525.pdf"
-			(at 162.56 106.68 0)
+			(at 167.64 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6342,7 +6384,7 @@
 			)
 		)
 		(property "Description" "16V 100nF X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"
-			(at 162.56 106.68 0)
+			(at 167.64 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6353,7 +6395,7 @@
 			)
 		)
 		(property "LCSC" "C1525"
-			(at 162.56 106.68 0)
+			(at 167.64 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6364,7 +6406,7 @@
 			)
 		)
 		(property "Stock" "20208285"
-			(at 162.56 106.68 0)
+			(at 167.64 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6375,7 +6417,7 @@
 			)
 		)
 		(property "Price" "0.004USD"
-			(at 162.56 106.68 0)
+			(at 167.64 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6386,7 +6428,7 @@
 			)
 		)
 		(property "Process" "SMT"
-			(at 162.56 106.68 0)
+			(at 167.64 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6397,7 +6439,7 @@
 			)
 		)
 		(property "Minimum Qty" "20"
-			(at 162.56 106.68 0)
+			(at 167.64 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6408,7 +6450,7 @@
 			)
 		)
 		(property "Attrition Qty" "10"
-			(at 162.56 106.68 0)
+			(at 167.64 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6419,7 +6461,7 @@
 			)
 		)
 		(property "Class" "Basic Component"
-			(at 162.56 106.68 0)
+			(at 167.64 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6430,7 +6472,7 @@
 			)
 		)
 		(property "Category" "Capacitors,Multilayer Ceramic Capacitors MLCC - SMD/SMT"
-			(at 162.56 106.68 0)
+			(at 167.64 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6441,7 +6483,7 @@
 			)
 		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
-			(at 162.56 106.68 0)
+			(at 167.64 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6452,7 +6494,7 @@
 			)
 		)
 		(property "Part" "CL05B104KO5NNNC"
-			(at 162.56 106.68 0)
+			(at 167.64 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6463,18 +6505,18 @@
 			)
 		)
 		(property "Voltage Rated" "16V"
-			(at 164.592 110.236 0)
+			(at 166.624 109.474 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 0.8 0.8)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Tolerance" "±10%"
-			(at 162.56 106.68 0)
+			(at 167.64 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6485,7 +6527,7 @@
 			)
 		)
 		(property "Capacitance" "100nF"
-			(at 162.56 106.68 0)
+			(at 167.64 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6496,7 +6538,7 @@
 			)
 		)
 		(property "Temperature Coefficient" "X7R"
-			(at 162.56 106.68 0)
+			(at 167.64 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6515,7 +6557,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/005a8950-9739-403f-9896-26bcf992d086"
-					(reference "C57")
+					(reference "C63")
 					(unit 1)
 				)
 			)

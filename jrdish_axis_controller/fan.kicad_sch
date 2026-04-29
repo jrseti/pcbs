@@ -2489,7 +2489,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1d0a0559-ea83-45f8-a979-12a6de59caaa")
-		(property "Reference" "CN12"
+		(property "Reference" "CN9"
 			(at 117.348 76.454 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2565,7 +2565,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/6fa2ea64-bed8-4819-9f4d-803f6e804a23"
-					(reference "CN12")
+					(reference "CN9")
 					(unit 1)
 				)
 			)
@@ -2662,7 +2662,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "82a38317-313e-4448-9913-c03cf9b5d857")
-		(property "Reference" "R27"
+		(property "Reference" "R29"
 			(at 133.35 90.17 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2911,7 +2911,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/6fa2ea64-bed8-4819-9f4d-803f6e804a23"
-					(reference "R27")
+					(reference "R29")
 					(unit 1)
 				)
 			)
@@ -2929,7 +2929,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "88d60512-ee27-4371-8fac-3697460e8b71")
-		(property "Reference" "R28"
+		(property "Reference" "R30"
 			(at 130.81 99.0599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3179,7 +3179,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/6fa2ea64-bed8-4819-9f4d-803f6e804a23"
-					(reference "R28")
+					(reference "R30")
 					(unit 1)
 				)
 			)
@@ -3196,7 +3196,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9edbf9ff-8195-463e-9368-640c5f10bc74")
-		(property "Reference" "C55"
+		(property "Reference" "C60"
 			(at 126.238 76.4539 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3414,7 +3414,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/6fa2ea64-bed8-4819-9f4d-803f6e804a23"
-					(reference "C55")
+					(reference "C60")
 					(unit 1)
 				)
 			)
@@ -3625,7 +3625,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ed6bcaee-a12a-4f55-b4f7-d0ce12cc85d7")
-		(property "Reference" "C56"
+		(property "Reference" "C61"
 			(at 133.604 76.1999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3843,7 +3843,7 @@
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/6fa2ea64-bed8-4819-9f4d-803f6e804a23"
-					(reference "C56")
+					(reference "C61")
 					(unit 1)
 				)
 			)
