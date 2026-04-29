@@ -54,7 +54,28 @@
         }
       },
       "diff_pair_dimensions": [],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "isolated_copper|175937539|33120185|70ec1a30-2beb-4d20-8243-ba3cd4531c68|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "silk_overlap|148290000|60900000|44de79fe-76ec-42fc-92f9-18abc1c41ce6|f4c2be90-0fea-4aad-89f0-9b0b5c986803",
+          ""
+        ],
+        [
+          "silk_overlap|161030000|60900000|2f71cade-7efe-48ad-bd70-f81fbaaf8f7a|f4c2be90-0fea-4aad-89f0-9b0b5c986803",
+          ""
+        ],
+        [
+          "silk_overlap|180290000|60750000|7f291bcd-8ffc-4d95-87fd-88f5821c9bae|d7aa1ad2-baf7-47d5-a093-7f827c95541c",
+          ""
+        ],
+        [
+          "silk_overlap|193030000|60750000|6ac9806e-6939-4bc1-99d6-ce13b7f1f8de|d7aa1ad2-baf7-47d5-a093-7f827c95541c",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -678,7 +699,7 @@
         "uuid": "10d7c3e5-be4d-4306-a59e-500b86bd141f"
       }
     ],
-    "used_designators": "CN14",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [
