@@ -5387,6 +5387,17 @@
 		)
 		(uuid "583b041f-ed1e-4b31-b986-a48a40bf761c")
 	)
+	(text "PA8,9,10,11 should be \nconfigured to internal pull-up."
+		(exclude_from_sim no)
+		(at 131.572 80.264 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "6d373af7-f1c5-4130-ac9b-e068f1ee9784")
+	)
 	(text "Place jumper for force\ninto bootloader mode"
 		(exclude_from_sim no)
 		(at 134.112 50.546 0)
