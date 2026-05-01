@@ -5,8 +5,8 @@
 	(uuid "10d7c3e5-be4d-4306-a59e-500b86bd141f")
 	(paper "A4")
 	(title_block
-		(title "MCU/Overview")
-		(date "2026-04-12")
+		(title "Dual Axis Controller")
+		(date "2026-04-30")
 		(rev "1.0")
 		(company "JRSeti")
 	)
@@ -1326,6 +1326,153 @@
 						)
 					)
 					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "MyParts:RH-5016"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "CN"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "RH-5016"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "MyParts:TESTPOINT-SMD_L3.0-W2.0"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.lcsc.com/datasheet/C5199799.pdf"
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "荣和"
+				(at 0 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "RH-5016"
+				(at 0 -15.24 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC Part" "C5199799"
+				(at 0 -17.78 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "Thimble/Copper Rod/Test Ring"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "RH-5016_0_1"
+				(rectangle
+					(start -1.27 2.54)
+					(end 3.81 -2.54)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(circle
+					(center 0 1.27)
+					(radius 0.38)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5141,7 +5288,7 @@
 				)
 			)
 			(symbol "GND_1_1"
-				(pin power_in line
+				(pin passive line
 					(at 0 0 270)
 					(length 0)
 					(name ""
@@ -5418,6 +5565,16 @@
 			)
 		)
 		(uuid "9250e637-c2c1-48b7-9735-dcdca0aa9189")
+	)
+	(text "Test point in upper right\narea of board"
+		(exclude_from_sim no)
+		(at 106.934 139.446 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "ac136b69-b5d2-4782-8863-74ed7e5a0b23")
 	)
 	(text "Dual Axis Controller"
 		(exclude_from_sim no)
@@ -5898,6 +6055,16 @@
 			(type default)
 		)
 		(uuid "1ba254eb-542e-4dc0-9554-8ea98c0a456a")
+	)
+	(wire
+		(pts
+			(xy 100.33 133.35) (xy 101.6 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1c3c0f98-cc80-4c46-b416-dac74939f53d")
 	)
 	(wire
 		(pts
@@ -9302,6 +9469,30 @@
 			)
 		)
 	)
+	(global_label "3V3"
+		(shape input)
+		(at 100.33 133.35 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a0bb8683-5091-4be5-960b-8269bee1c752")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 93.2324 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
 	(global_label "SCL_MCU"
 		(shape input)
 		(at 105.41 105.41 0)
@@ -11432,6 +11623,118 @@
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f"
 					(reference "#PWR010")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "MyParts:RH-5016")
+		(at 105.41 133.35 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "50f6c139-6086-4e14-a82c-d328c7ca10d9")
+		(property "Reference" "TP4"
+			(at 110.49 132.0799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "RH-5016"
+			(at 110.49 134.6199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MyParts:TESTPOINT-SMD_L3.0-W2.0"
+			(at 105.41 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C5199799.pdf"
+			(at 105.41 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 105.41 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "荣和"
+			(at 105.41 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RH-5016"
+			(at 105.41 148.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C5199799"
+			(at 105.41 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "baff851d-2276-4c59-a5b6-f77cc0683688")
+		)
+		(instances
+			(project "jrdish_axis_controller"
+				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f"
+					(reference "TP4")
 					(unit 1)
 				)
 			)
@@ -14398,7 +14701,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://lcsc.com/product-detail/No-specification-for-star-making-plan_STMicroelectronics-STM32G474RET6_C521608.html"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C521608.pdf?spm=wm.sxq.inf.ggs&lcsc_vid=FFBaV1wHQFldUVICFgBfBVJTQVJWXgBfEQRYBAFQE1YxVlNRQFdeU11fQVRWXztW"
 			(at 80.01 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -14420,7 +14723,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "ST(意法半导体)"
+		(property "Manufacturer" "ST"
 			(at 80.01 133.35 0)
 			(hide yes)
 			(show_name no)

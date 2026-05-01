@@ -4,6 +4,11 @@
 	(generator_version "10.0")
 	(uuid "a397e451-dff0-4cb2-b147-6c4f1a45d29d")
 	(paper "A4")
+	(title_block
+		(title "GPS 1PPS and RS232 ")
+		(date "2026-04-30")
+		(rev "1.0")
+	)
 	(lib_symbols
 		(symbol "210S-1*3PL=11.6MMGold-platedblack_1"
 			(pin_names
@@ -2898,7 +2903,7 @@
 				)
 			)
 			(symbol "GND_1_1"
-				(pin power_in line
+				(pin passive line
 					(at 0 0 270)
 					(length 0)
 					(name ""
@@ -3065,9 +3070,9 @@
 		)
 		(uuid "679dea81-198c-42f2-9a22-e0a990f73d94")
 	)
-	(text "2N7002 is 474pF, creating a RC time constant\nof 4.7us. This is fast enough for this application."
+	(text "2N7002 Ciss is 20pF typ, 50pF max, creating an RC \ntime constant of 0.2µs typ / 0.5µs max with R32. \nThis is well within the requirements for this application."
 		(exclude_from_sim no)
-		(at 86.106 72.898 0)
+		(at 81.534 73.914 0)
 		(effects
 			(font
 				(size 1.27 1.27)

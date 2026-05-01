@@ -5,8 +5,8 @@
 	(uuid "71bdd4cc-5b2b-4652-bc52-c9301744211b")
 	(paper "A4")
 	(title_block
-		(title "Encoder/Motor/Limit Switch")
-		(date "2026-04-12")
+		(title "Encoder/Motor/Limit Switch - Axis1")
+		(date "2026-04-30")
 		(rev "1.0")
 		(company "JRSeti")
 	)
@@ -2914,7 +2914,7 @@
 				)
 			)
 			(symbol "GND_1_1"
-				(pin power_in line
+				(pin passive line
 					(at 0 0 270)
 					(length 0)
 					(name ""

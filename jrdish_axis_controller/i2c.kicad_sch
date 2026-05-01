@@ -5,7 +5,8 @@
 	(uuid "b5e88db7-a5ee-4eba-b7f9-f81ba732929a")
 	(paper "A4")
 	(title_block
-		(date "2026-04-12")
+		(title "I2C and I2C Flash")
+		(date "2026-04-30")
 		(rev "1.0")
 		(company "JRSeti")
 	)
@@ -2425,7 +2426,7 @@
 				)
 			)
 			(symbol "GND_1_1"
-				(pin power_in line
+				(pin passive line
 					(at 0 0 270)
 					(length 0)
 					(name ""
@@ -2448,7 +2449,7 @@
 		)
 	)
 	(rectangle
-		(start 66.04 100.33)
+		(start 59.69 100.33)
 		(end 147.32 149.86)
 		(stroke
 			(width 0)
@@ -2514,7 +2515,7 @@
 		)
 		(uuid "28986ed0-e897-4d72-9d9f-0a743c5351b1")
 	)
-	(text "EEPROM W25Q32JV (3V version) \nSPI - 4MB \nPINS: SCK, MOSI, MISO, CS"
+	(text "NOR Flash W25Q32JV (3V version) \nSPI - 4MB \nPINS: SCK, MOSI, MISO, CS"
 		(exclude_from_sim no)
 		(at 109.22 139.192 0)
 		(effects
@@ -6673,7 +6674,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Others_JST-Sales-America__JST-Sales-America-SM04B-SRSS-TB-LF-SN_C160404.html"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C160404.pdf?spm=wm.sxq.inf.ggs&lcsc_vid=FFBaV1wHQFldUVICFgBfBVJTQVJWXgBfEQRYBAFQE1YxVlNRQFRYVVZVTllcVDtW"
 			(at 182.88 128.27 0)
 			(hide yes)
 			(show_name no)
@@ -7969,7 +7970,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://lcsc.com/product-detail/Others_JST-Sales-America__JST-Sales-America-SM04B-SRSS-TB-LF-SN_C160404.html"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C160404.pdf?spm=wm.sxq.inf.ggs&lcsc_vid=FFBaV1wHQFldUVICFgBfBVJTQVJWXgBfEQRYBAFQE1YxVlNRQFRYVVZVTllcVDtW"
 			(at 212.09 128.27 0)
 			(hide yes)
 			(show_name no)

@@ -5,8 +5,8 @@
 	(uuid "71bdd4cc-5b2b-4652-bc52-c9301744211b")
 	(paper "A4")
 	(title_block
-		(title "Encoder/Motor/Limit Switch")
-		(date "2026-04-12")
+		(title "Encoder/Motor/Limit Switch - Axis2")
+		(date "2026-04-30")
 		(rev "1.0")
 		(company "JRSeti")
 	)
@@ -2908,7 +2908,7 @@
 				)
 			)
 			(symbol "GND_1_1"
-				(pin power_in line
+				(pin passive line
 					(at 0 0 270)
 					(length 0)
 					(name ""
@@ -2978,7 +2978,7 @@
 		)
 		(uuid "e6496c5a-d718-4131-b8e7-8ddf690bcd9c")
 	)
-	(text "PUL1-"
+	(text "PUL2-"
 		(exclude_from_sim no)
 		(at 103.124 127.254 0)
 		(effects
@@ -2989,7 +2989,7 @@
 		)
 		(uuid "1196dab0-2449-4e3a-8a6a-e8299adee0e0")
 	)
-	(text "DIR1-"
+	(text "DIR2-"
 		(exclude_from_sim no)
 		(at 103.124 132.334 0)
 		(effects
@@ -3000,7 +3000,7 @@
 		)
 		(uuid "15dbec4a-ab49-4575-a70c-ae1a28a216ec")
 	)
-	(text "DIR1+"
+	(text "DIR2+"
 		(exclude_from_sim no)
 		(at 103.124 129.54 0)
 		(effects
@@ -3098,7 +3098,7 @@
 		)
 		(uuid "5ea6a01b-233f-4874-9276-5ee4446b8c07")
 	)
-	(text "ENABLE1+"
+	(text "ENABLE2+"
 		(exclude_from_sim no)
 		(at 103.124 135.128 0)
 		(effects
@@ -3109,7 +3109,7 @@
 		)
 		(uuid "5eb361bf-2bda-4d4f-bb32-4e722da4a725")
 	)
-	(text "ENABLE1-"
+	(text "ENABLE2-"
 		(exclude_from_sim no)
 		(at 103.124 137.668 0)
 		(effects
@@ -3152,7 +3152,7 @@
 		)
 		(uuid "7de289d4-c37b-41a8-9ba7-20e6bcbaa8d6")
 	)
-	(text "PUL1+"
+	(text "PUL2+"
 		(exclude_from_sim no)
 		(at 103.124 124.714 0)
 		(effects

@@ -4,6 +4,12 @@
 	(generator_version "10.0")
 	(uuid "2b878021-ce6b-4c82-b26a-af160fc91f59")
 	(paper "A4")
+	(title_block
+		(title "User Switches")
+		(date "2026-04-30")
+		(rev "1.0")
+		(company "JRSeti")
+	)
 	(lib_symbols
 		(symbol "MyParts:KF2EDGR-2.54-6P"
 			(exclude_from_sim no)
@@ -1855,7 +1861,7 @@
 				)
 			)
 			(symbol "GND_1_1"
-				(pin power_in line
+				(pin passive line
 					(at 0 0 270)
 					(length 0)
 					(name ""
