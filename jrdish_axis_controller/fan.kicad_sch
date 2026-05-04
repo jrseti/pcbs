@@ -1927,7 +1927,7 @@
 				)
 			)
 			(symbol "GND_1_1"
-				(pin passive line
+				(pin power_in line
 					(at 0 0 270)
 					(length 0)
 					(name ""
@@ -2405,7 +2405,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://lcsc.com/product-detail/MOSFET_AOS_AO3400A_AO3400A_C20917.html"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C15155.pdf?spm=wm.sxq.inf.ggs&lcsc_vid=FFBaV1wHQFldUVICFgBfBVJTQVJWXgBfEQRYBAFQE1YxVlNRQFdaUl1WQVlZUjtW"
 			(at 143.51 109.22 0)
 			(hide yes)
 			(show_name no)
