@@ -8678,6 +8678,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C172881"
+			(at 245.11 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "492ba648-bd69-4d2e-95f0-feaa42721011")
 		)
@@ -8750,6 +8761,17 @@
 			)
 		)
 		(property "Description" "7V/12V, 600W Asymmetrical TVS Diode Array, SOT-23"
+			(at 76.2 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C172881"
 			(at 76.2 31.75 0)
 			(hide yes)
 			(show_name no)
