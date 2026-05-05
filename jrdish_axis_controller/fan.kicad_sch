@@ -1989,7 +1989,7 @@
 		)
 		(uuid "f20e37bc-9ece-490c-9c17-1ee4e053dae8")
 	)
-	(text "MCU Turns Fan on/off\nFan is small cooling fan, available on Amazon\nDraws max 250mA"
+	(text "MCU Turns Fan on/off\nFan is small DC cooling fan, available on Amazon\nDraws max 250mA"
 		(exclude_from_sim no)
 		(at 113.538 113.284 0)
 		(effects

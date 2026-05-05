@@ -797,6 +797,215 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "MyParts:TPESD0402G15V"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TPESD0402G15V"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "MyParts:D0402-BI"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.lcsc.com/datasheet/C558618.pdf"
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "TECH PUBLIC(台舟)"
+				(at 0 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "TPESD0402G15V"
+				(at 0 -15.24 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC Part" "C558618"
+				(at 0 -17.78 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "ESD Protection Devices"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TPESD0402G15V_0_1"
+				(polyline
+					(pts
+						(xy -3.81 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -1.78) (xy 0 0) (xy -2.54 1.78) (xy -2.54 -1.78)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.51 1.27) (xy -0.51 1.78) (xy 0 1.78) (xy 0 -1.78) (xy 0.51 -1.78) (xy 0.51 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.78) (xy 0 0) (xy 2.54 -1.78) (xy 2.54 1.78)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.81 0) (xy 2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -6.35 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 6.35 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "PCM_JLCPCB-Capacitors:0402,100nF"
 			(pin_numbers
 				(hide yes)
@@ -3149,7 +3358,7 @@
 	)
 	(rectangle
 		(start 162.56 24.13)
-		(end 255.27 104.14)
+		(end 255.27 107.95)
 		(stroke
 			(width 0)
 			(type dash)
@@ -3171,7 +3380,7 @@
 	)
 	(text "Note: The encoder inputs are open-collector so 5V TVS diode\n      is there to protect the MCU pin from spikes > 5V."
 		(exclude_from_sim no)
-		(at 179.578 101.092 0)
+		(at 170.688 104.902 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3212,9 +3421,9 @@
 		)
 		(uuid "16b1caf1-bafb-4456-8d1d-1fdfd71f4b35")
 	)
-	(text "Diodes are TPESD0402G05V bidirectional ultra-low capacitance (0.05 pF) \nESD protection diode. No polarity - either pin may be tied to GND.\nProtects logic from ESD & cable transients.\nEncoder is the E6B2-CWZ6C NPN Open-collector Output Model."
+	(text "Diodes are TPESD0402G05V and TPESD0402G15V bidirectional ultra-low capacitance (0.05 pF) \nESD protection diode. No polarity - either pin may be tied to GND.\nProtects logic from ESD & cable transients.\nEncoder is the E6B2-CWZ6C NPN Open-collector Output Model."
 		(exclude_from_sim no)
-		(at 181.356 93.726 0)
+		(at 170.942 98.044 0)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -3507,7 +3716,7 @@
 	)
 	(text "TVS diodes placed at connector"
 		(exclude_from_sim no)
-		(at 209.296 87.122 0)
+		(at 209.042 90.932 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3515,7 +3724,7 @@
 		)
 		(uuid "d182a14a-958a-4a79-9e2c-5fedd7013a53")
 	)
-	(text "Diodes are TPESD0402G05V and should\nbe places at the connector."
+	(text "Diodes are TPESD0402G05V and should\nbe placed at the connector."
 		(exclude_from_sim no)
 		(at 201.676 153.162 0)
 		(effects
@@ -3542,16 +3751,10 @@
 		(uuid "078c133c-10d9-434e-851d-bd8f0c89e64d")
 	)
 	(junction
-		(at 200.66 82.55)
+		(at 181.61 86.36)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "0bb67d30-1925-4524-b12b-87029014c9e4")
-	)
-	(junction
-		(at 187.96 82.55)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "17302967-03c8-490b-b28c-aa6888664cae")
+		(uuid "0cb79900-16bb-4360-9c67-d5c23ad78ecb")
 	)
 	(junction
 		(at 88.9 62.23)
@@ -3576,6 +3779,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3fbbbd36-a51d-490b-895b-c14b7551578f")
+	)
+	(junction
+		(at 187.96 86.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "44a5ff08-16e1-4f9d-949a-4e04457a1c86")
 	)
 	(junction
 		(at 124.46 62.23)
@@ -3608,12 +3817,6 @@
 		(uuid "7d0180cc-8bf8-409d-921a-747496575edd")
 	)
 	(junction
-		(at 181.61 82.55)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8f3b6f6e-42de-4ed2-aa62-275ae3ac3f9c")
-	)
-	(junction
 		(at 190.5 133.35)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3632,16 +3835,16 @@
 		(uuid "b8345c16-b1f7-4046-acf5-09401611beb5")
 	)
 	(junction
-		(at 175.26 82.55)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b90bf30a-7d90-4c73-9741-d44793930575")
-	)
-	(junction
 		(at 88.9 52.07)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ba6f81ef-6202-426e-8180-added894f548")
+	)
+	(junction
+		(at 200.66 86.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "be394525-5e8c-4005-ae26-be95e047796a")
 	)
 	(junction
 		(at 200.66 67.31)
@@ -3650,10 +3853,10 @@
 		(uuid "be3b2c49-67f3-4d43-ac95-171b493414e0")
 	)
 	(junction
-		(at 194.31 82.55)
+		(at 194.31 86.36)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "d7da31c4-3009-4fcb-b0bf-8175b51c684a")
+		(uuid "c2612c3b-12f7-40ac-b3a8-8d4767c8fb99")
 	)
 	(junction
 		(at 67.31 124.46)
@@ -3684,6 +3887,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f17d3d4a-74bf-4611-b17a-8d7446b8dfe1")
+	)
+	(junction
+		(at 175.26 86.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f9e22f98-82c2-498e-a3b5-c6ea6e79fe11")
 	)
 	(junction
 		(at 80.01 134.62)
@@ -3740,16 +3949,6 @@
 			(type default)
 		)
 		(uuid "05c8a597-c10e-4be4-920c-67ecd18d15db")
-	)
-	(wire
-		(pts
-			(xy 181.61 82.55) (xy 175.26 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "05f4aadd-2749-41c2-b2eb-59824cd0d163")
 	)
 	(wire
 		(pts
@@ -3893,7 +4092,7 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 68.58) (xy 175.26 82.55)
+			(xy 175.26 68.58) (xy 175.26 86.36)
 		)
 		(stroke
 			(width 0)
@@ -3920,6 +4119,16 @@
 			(type default)
 		)
 		(uuid "251a78a2-a2e9-47f1-aef7-77c9bae07f6e")
+	)
+	(wire
+		(pts
+			(xy 187.96 76.2) (xy 187.96 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "28b5e329-8a36-425c-a71a-e085b6fc8b55")
 	)
 	(wire
 		(pts
@@ -3953,13 +4162,13 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 82.55) (xy 187.96 83.82)
+			(xy 200.66 86.36) (xy 207.01 86.36)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3022d77d-13a8-4471-9e06-290aadf19840")
+		(uuid "325d4fe1-a472-4e10-b80e-cf6c20f1071c")
 	)
 	(wire
 		(pts
@@ -3980,16 +4189,6 @@
 			(type default)
 		)
 		(uuid "3c80e545-4763-403b-8a5d-581c5327bc61")
-	)
-	(wire
-		(pts
-			(xy 187.96 82.55) (xy 181.61 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3dfd3c3c-d3f7-4621-a7a9-61d4421bdb98")
 	)
 	(wire
 		(pts
@@ -4173,26 +4372,6 @@
 	)
 	(wire
 		(pts
-			(xy 194.31 82.55) (xy 187.96 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6b66e058-57bd-484d-8a76-858063602fd8")
-	)
-	(wire
-		(pts
-			(xy 200.66 82.55) (xy 194.31 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6c3ac9e5-5978-420c-8868-3d7686a9ac6b")
-	)
-	(wire
-		(pts
 			(xy 190.5 124.46) (xy 190.5 123.19)
 		)
 		(stroke
@@ -4203,7 +4382,17 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 66.04) (xy 168.91 82.55)
+			(xy 175.26 86.36) (xy 181.61 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "71f37e35-4f65-4f01-ae3e-53582a7d956f")
+	)
+	(wire
+		(pts
+			(xy 168.91 66.04) (xy 168.91 86.36)
 		)
 		(stroke
 			(width 0)
@@ -4230,16 +4419,6 @@
 			(type default)
 		)
 		(uuid "78fa0a99-a221-40e8-beed-e25efbf19c03")
-	)
-	(wire
-		(pts
-			(xy 207.01 82.55) (xy 200.66 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7f61dbd9-7797-4512-8ff7-69d3e5d79788")
 	)
 	(wire
 		(pts
@@ -4293,13 +4472,23 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 82.55) (xy 168.91 82.55)
+			(xy 168.91 86.36) (xy 175.26 86.36)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "864a80c4-263c-4223-ac5b-9eff72912906")
+	)
+	(wire
+		(pts
+			(xy 181.61 71.12) (xy 181.61 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "86662d34-f51e-4b8d-947d-5a9ff5e22b10")
 	)
 	(wire
 		(pts
@@ -4310,16 +4499,6 @@
 			(type default)
 		)
 		(uuid "887f9898-f904-438c-8ba8-819d0723b6e9")
-	)
-	(wire
-		(pts
-			(xy 200.66 80.01) (xy 200.66 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "89f5bd87-fdcf-4d3e-a6bb-a7f0fec9e043")
 	)
 	(wire
 		(pts
@@ -4370,6 +4549,16 @@
 			(type default)
 		)
 		(uuid "9362fb30-bf36-40cc-aaa1-3ddb3a7f6eb8")
+	)
+	(wire
+		(pts
+			(xy 194.31 86.36) (xy 200.66 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "948e7266-83c0-4ecb-b4fd-af1f8ed2fe78")
 	)
 	(wire
 		(pts
@@ -4593,6 +4782,16 @@
 	)
 	(wire
 		(pts
+			(xy 181.61 86.36) (xy 187.96 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c47fc030-3423-4dd0-9997-48458b2b183a")
+	)
+	(wire
+		(pts
 			(xy 88.9 62.23) (xy 88.9 63.5)
 		)
 		(stroke
@@ -4613,6 +4812,16 @@
 	)
 	(wire
 		(pts
+			(xy 187.96 86.36) (xy 194.31 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c9fffab1-27b5-414e-8c91-0b3f2cc446df")
+	)
+	(wire
+		(pts
 			(xy 57.15 134.62) (xy 58.42 134.62)
 		)
 		(stroke
@@ -4623,13 +4832,13 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 73.66) (xy 187.96 82.55)
+			(xy 200.66 82.55) (xy 200.66 86.36)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d38a8fe5-08d3-4594-926e-79db2e96297d")
+		(uuid "d4311620-0dac-4c6b-95a7-062f05befd8a")
 	)
 	(wire
 		(pts
@@ -4660,6 +4869,16 @@
 			(type default)
 		)
 		(uuid "d6f18e32-8823-43d6-8cfc-71f008662c07")
+	)
+	(wire
+		(pts
+			(xy 194.31 78.74) (xy 194.31 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da78d1ed-8994-4177-926b-d6a7caf31e22")
 	)
 	(wire
 		(pts
@@ -4713,6 +4932,16 @@
 	)
 	(wire
 		(pts
+			(xy 187.96 86.36) (xy 187.96 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e8e44819-f477-48d7-a3d2-c19dc45258b6")
+	)
+	(wire
+		(pts
 			(xy 187.96 63.5) (xy 187.96 62.23)
 		)
 		(stroke
@@ -4723,13 +4952,13 @@
 	)
 	(wire
 		(pts
-			(xy 194.31 76.2) (xy 194.31 82.55)
+			(xy 207.01 86.36) (xy 207.01 85.09)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ec22cfeb-f893-42ad-b145-9969b16034fb")
+		(uuid "edc30d64-1a90-412b-924a-f36e1b3d527f")
 	)
 	(wire
 		(pts
@@ -4790,16 +5019,6 @@
 			(type default)
 		)
 		(uuid "f8173c12-1688-4243-8292-a37ae18520ff")
-	)
-	(wire
-		(pts
-			(xy 181.61 71.12) (xy 181.61 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f86ab72b-8db9-4fdc-9b9b-bd71006a4ea6")
 	)
 	(wire
 		(pts
@@ -5801,6 +6020,120 @@
 		)
 	)
 	(symbol
+		(lib_id "MyParts:TPESD0402G15V")
+		(at 194.31 72.39 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1064dca2-a1e2-4722-94e6-0207c5be61a6")
+		(property "Reference" "D5"
+			(at 188.976 74.168 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TPESD0402G15V"
+			(at 190.5 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "MyParts:D0402-BI"
+			(at 201.93 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C558618.pdf"
+			(at 204.47 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "40VC Clamp ESD DIODE 0402"
+			(at 194.31 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TECH PUBLIC(台舟)"
+			(at 207.01 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "TPESD0402G15V"
+			(at 209.55 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C558618"
+			(at 212.09 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0e26507e-b729-4f86-85ea-311cd8db8835")
+		)
+		(pin "2"
+			(uuid "d423f1a9-4d89-4f5f-8254-da9b32615d2e")
+		)
+		(instances
+			(project "jrdish_axis_controller"
+				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
+					(reference "D5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "PCM_JLCPCB-Resistors:0603,180Ω")
 		(at 96.52 127 90)
 		(unit 1)
@@ -6303,98 +6636,6 @@
 		)
 	)
 	(symbol
-		(lib_id "MyParts:TPESD0402G05V")
-		(at 200.66 74.93 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "2292efa2-1654-4267-8753-ab4e7d1faee0")
-		(property "Reference" "D31"
-			(at 196.596 76.2 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TPESD0402G05V"
-			(at 195.58 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "MyParts:D0402-BI"
-			(at 193.04 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C558615.pdf?spm=wm.sxq.inf.ggs___wm.ssy.bg.0.xh&lcsc_vid=FFBaV1wHQFldUVICFgBfBVJTQVJWXgBfEQRYBAFQE1YxVlNRQFVXU1JRQVReUTsOAxUeFF5JWBYZEEoKFBINSQcJGk4eFQsCAgIaSgADAwAHC0slRldcU1ZUWQkaCgg%3D"
-			(at 200.66 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "5VWM 40VC 0402"
-			(at 200.66 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part" "C558615"
-			(at 190.5 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "0bf8657e-3065-4947-9724-1967dc869bb2")
-		)
-		(pin "1"
-			(uuid "e9d34427-e7de-42b8-ace6-2d6d9d5e3d52")
-		)
-		(instances
-			(project "jrdish_axis_controller"
-				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
-					(reference "D31")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 88.9 72.39 0)
 		(unit 1)
@@ -6467,6 +6708,120 @@
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
 					(reference "#PWR017")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "MyParts:TPESD0402G15V")
+		(at 187.96 69.85 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "2d5adf20-f175-4e17-af70-574adf1de3df")
+		(property "Reference" "D4"
+			(at 182.626 71.628 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TPESD0402G15V"
+			(at 184.15 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "MyParts:D0402-BI"
+			(at 195.58 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C558618.pdf"
+			(at 198.12 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "40VC Clamp ESD DIODE 0402"
+			(at 187.96 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TECH PUBLIC(台舟)"
+			(at 200.66 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "TPESD0402G15V"
+			(at 203.2 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C558618"
+			(at 205.74 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "63fb981c-00f1-4d99-9b8d-77fa75e24f95")
+		)
+		(pin "2"
+			(uuid "203ccf2e-ad9f-4824-97c1-8b9a0a6f05c4")
+		)
+		(instances
+			(project "jrdish_axis_controller"
+				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
+					(reference "D4")
 					(unit 1)
 				)
 			)
@@ -8591,7 +8946,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 187.96 83.82 0)
+		(at 187.96 88.9 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8602,7 +8957,7 @@
 		(fields_autoplaced yes)
 		(uuid "59088c11-c87c-4d52-bd52-3d85dc23eb28")
 		(property "Reference" "#PWR019"
-			(at 187.96 90.17 0)
+			(at 187.96 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8613,7 +8968,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 187.96 88.9 0)
+			(at 187.96 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8624,7 +8979,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 187.96 83.82 0)
+			(at 187.96 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8635,7 +8990,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 187.96 83.82 0)
+			(at 187.96 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8646,7 +9001,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 187.96 83.82 0)
+			(at 187.96 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9465,8 +9820,8 @@
 		)
 	)
 	(symbol
-		(lib_id "MyParts:TPESD0402G05V")
-		(at 207.01 77.47 270)
+		(lib_id "MyParts:TPESD0402G15V")
+		(at 200.66 76.2 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9474,20 +9829,20 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "7f443ad8-7c3c-424f-867e-2a0adc9cf73c")
-		(property "Reference" "D32"
-			(at 202.946 78.74 90)
+		(uuid "85f30443-845e-4e8e-87c3-940a31c05ef6")
+		(property "Reference" "D31"
+			(at 195.326 77.978 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Value" "TPESD0402G05V"
-			(at 201.93 77.47 0)
+		(property "Value" "TPESD0402G15V"
+			(at 196.85 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9498,7 +9853,7 @@
 			)
 		)
 		(property "Footprint" "MyParts:D0402-BI"
-			(at 199.39 77.47 0)
+			(at 208.28 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9508,8 +9863,8 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C558615.pdf?spm=wm.sxq.inf.ggs___wm.ssy.bg.0.xh&lcsc_vid=FFBaV1wHQFldUVICFgBfBVJTQVJWXgBfEQRYBAFQE1YxVlNRQFVXU1JRQVReUTsOAxUeFF5JWBYZEEoKFBINSQcJGk4eFQsCAgIaSgADAwAHC0slRldcU1ZUWQkaCgg%3D"
-			(at 207.01 77.47 0)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C558618.pdf"
+			(at 210.82 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9519,8 +9874,8 @@
 				)
 			)
 		)
-		(property "Description" "5VWM 40VC 0402"
-			(at 207.01 77.47 0)
+		(property "Description" "40VC Clamp ESD DIODE 0402"
+			(at 200.66 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9530,8 +9885,8 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C558615"
-			(at 196.85 77.47 0)
+		(property "Manufacturer" "TECH PUBLIC(台舟)"
+			(at 213.36 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9541,108 +9896,38 @@
 				)
 			)
 		)
-		(pin "2"
-			(uuid "09afc5b6-1f24-42ea-a800-f2499af4f032")
+		(property "MPN" "TPESD0402G15V"
+			(at 215.9 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C558618"
+			(at 218.44 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
 		)
 		(pin "1"
-			(uuid "094d18dc-4fd1-435c-8f2e-1b4ea4902fbd")
+			(uuid "ff785e81-f5b3-468a-8f5a-b2e56287fe05")
+		)
+		(pin "2"
+			(uuid "e961857e-ea7e-4ca7-beee-d8907a4dd737")
 		)
 		(instances
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
-					(reference "D32")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "MyParts:TPESD0402G05V")
-		(at 194.31 71.12 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "836d17fe-c351-4faf-954d-7e44241809e1")
-		(property "Reference" "D5"
-			(at 190.246 72.39 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TPESD0402G05V"
-			(at 189.23 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "MyParts:D0402-BI"
-			(at 186.69 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C558615.pdf?spm=wm.sxq.inf.ggs___wm.ssy.bg.0.xh&lcsc_vid=FFBaV1wHQFldUVICFgBfBVJTQVJWXgBfEQRYBAFQE1YxVlNRQFVXU1JRQVReUTsOAxUeFF5JWBYZEEoKFBINSQcJGk4eFQsCAgIaSgADAwAHC0slRldcU1ZUWQkaCgg%3D"
-			(at 194.31 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "5VWM 40VC 0402"
-			(at 194.31 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part" "C558615"
-			(at 184.15 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "22e0041c-e978-47b6-98bf-befe16a9b9ba")
-		)
-		(pin "1"
-			(uuid "faaa817a-79e0-42fd-b316-5a637c01be78")
-		)
-		(instances
-			(project "jrdish_axis_controller"
-				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
-					(reference "D5")
+					(reference "D31")
 					(unit 1)
 				)
 			)
@@ -10879,98 +11164,6 @@
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
 					(reference "R7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "MyParts:TPESD0402G05V")
-		(at 187.96 68.58 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "aa35dda7-2eaf-4b50-984b-96e5e820530e")
-		(property "Reference" "D4"
-			(at 183.896 69.85 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TPESD0402G05V"
-			(at 182.88 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "MyParts:D0402-BI"
-			(at 180.34 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C558615.pdf?spm=wm.sxq.inf.ggs___wm.ssy.bg.0.xh&lcsc_vid=FFBaV1wHQFldUVICFgBfBVJTQVJWXgBfEQRYBAFQE1YxVlNRQFVXU1JRQVReUTsOAxUeFF5JWBYZEEoKFBINSQcJGk4eFQsCAgIaSgADAwAHC0slRldcU1ZUWQkaCgg%3D"
-			(at 187.96 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "5VWM 40VC 0402"
-			(at 187.96 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part" "C558615"
-			(at 177.8 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "d9c9ada5-bacf-411d-a53a-dfab248f6762")
-		)
-		(pin "1"
-			(uuid "cf4e65c0-1488-40f3-be68-12d42f62d218")
-		)
-		(instances
-			(project "jrdish_axis_controller"
-				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
-					(reference "D4")
 					(unit 1)
 				)
 			)
@@ -12291,6 +12484,120 @@
 			(project "jrdish_axis_controller"
 				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
 					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "MyParts:TPESD0402G15V")
+		(at 207.01 78.74 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ed3dd6cc-5cb1-4403-a3e7-591a4b97832f")
+		(property "Reference" "D32"
+			(at 201.676 80.518 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TPESD0402G15V"
+			(at 203.2 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "MyParts:D0402-BI"
+			(at 214.63 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/C558618.pdf"
+			(at 217.17 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "40VC Clamp ESD DIODE 0402"
+			(at 207.01 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TECH PUBLIC(台舟)"
+			(at 219.71 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "TPESD0402G15V"
+			(at 222.25 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C558618"
+			(at 224.79 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5bc1e43b-728b-4093-8894-407ef650835c")
+		)
+		(pin "2"
+			(uuid "059ec458-cd20-4975-8bf2-878609a1af11")
+		)
+		(instances
+			(project "jrdish_axis_controller"
+				(path "/10d7c3e5-be4d-4306-a59e-500b86bd141f/9493fd2e-7ff6-4d8c-93a5-d9e42c2785c7"
+					(reference "D32")
 					(unit 1)
 				)
 			)

@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
   <diagram name="Page-1" id="Ol9V4JjPlvW-zA4f__mc">
-    <mxGraphModel dx="415" dy="312" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="692" dy="520" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -11,10 +11,10 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="0_mH-X5UvrHkozCaTBPL-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Motor PWM&lt;div&gt;Outputs&lt;/div&gt;&lt;div&gt;6-pin&lt;/div&gt;" vertex="1">
-          <mxGeometry height="60" width="90" x="430" y="400" as="geometry" />
+          <mxGeometry height="60" width="70" x="291" y="400" as="geometry" />
         </mxCell>
         <mxCell id="0_mH-X5UvrHkozCaTBPL-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Encoder Inputs 9-p&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;in&lt;/span&gt;" vertex="1">
-          <mxGeometry height="60" width="160" x="215" y="400" as="geometry" />
+          <mxGeometry height="60" width="112" x="168" y="400" as="geometry" />
         </mxCell>
         <mxCell id="yZ4mFRJocaxYnEUbtarn-25" edge="1" parent="1" source="0_mH-X5UvrHkozCaTBPL-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="yZ4mFRJocaxYnEUbtarn-24">
           <mxGeometry relative="1" as="geometry" />
@@ -61,24 +61,26 @@
         <mxCell id="0_mH-X5UvrHkozCaTBPL-25" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="SPI&lt;div&gt;4MB&lt;/div&gt;&lt;div&gt;Memory&lt;/div&gt;" vertex="1">
           <mxGeometry height="45" width="60" x="335" y="280" as="geometry" />
         </mxCell>
-        <mxCell id="yZ4mFRJocaxYnEUbtarn-6" edge="1" parent="1" source="yZ4mFRJocaxYnEUbtarn-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="yZ4mFRJocaxYnEUbtarn-4">
+        <mxCell id="yZ4mFRJocaxYnEUbtarn-6" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="170" y="500" />
+              <mxPoint x="123" y="500" />
             </Array>
+            <mxPoint x="123" y="456" as="sourcePoint" />
+            <mxPoint x="188" y="505" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="yZ4mFRJocaxYnEUbtarn-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="12V to encoder" vertex="1">
-          <mxGeometry height="30" width="60" x="131" y="426" as="geometry" />
+          <mxGeometry height="30" width="60" x="84" y="426" as="geometry" />
         </mxCell>
         <mxCell id="yZ4mFRJocaxYnEUbtarn-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="DM556Y Motor Controller" vertex="1">
-          <mxGeometry height="40" width="120" x="415" y="490" as="geometry" />
+          <mxGeometry height="40" width="85" x="283.5" y="490" as="geometry" />
         </mxCell>
         <mxCell id="yZ4mFRJocaxYnEUbtarn-9" edge="1" parent="1" source="yZ4mFRJocaxYnEUbtarn-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="0_mH-X5UvrHkozCaTBPL-3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="yZ4mFRJocaxYnEUbtarn-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="E6B2-CWZ6C Encoder" vertex="1">
-          <mxGeometry height="40" width="120" x="235" y="480" as="geometry" />
+          <mxGeometry height="50" width="72" x="188" y="480" as="geometry" />
         </mxCell>
         <mxCell id="yZ4mFRJocaxYnEUbtarn-5" edge="1" parent="1" source="0_mH-X5UvrHkozCaTBPL-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.867;entryY=0.117;entryDx=0;entryDy=0;entryPerimeter=0;" target="yZ4mFRJocaxYnEUbtarn-2">
           <mxGeometry relative="1" as="geometry" />
@@ -182,6 +184,35 @@
         </mxCell>
         <mxCell id="ja9Dc9diWnfNjr0Chbwa-18" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Host&lt;div&gt;Controller&lt;/div&gt;" vertex="1">
           <mxGeometry height="30" width="60" x="322.5" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="6D-QJTkiPkjgYoGVMvLB-1" edge="1" parent="1" source="6D-QJTkiPkjgYoGVMvLB-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="6D-QJTkiPkjgYoGVMvLB-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6D-QJTkiPkjgYoGVMvLB-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Motor PWM&lt;div&gt;Outputs&lt;/div&gt;&lt;div&gt;6-pin&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="70" x="498" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="6D-QJTkiPkjgYoGVMvLB-11" edge="1" parent="1" source="6D-QJTkiPkjgYoGVMvLB-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="6D-QJTkiPkjgYoGVMvLB-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="375" y="460" />
+              <mxPoint x="375" y="505" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6D-QJTkiPkjgYoGVMvLB-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Encoder Inputs 9-p&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;in&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="112" x="375" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="6D-QJTkiPkjgYoGVMvLB-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="DM556Y Motor Controller" vertex="1">
+          <mxGeometry height="40" width="85" x="490.5" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="6D-QJTkiPkjgYoGVMvLB-7" edge="1" parent="1" source="6D-QJTkiPkjgYoGVMvLB-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="6D-QJTkiPkjgYoGVMvLB-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6D-QJTkiPkjgYoGVMvLB-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="E6B2-CWZ6C Encoder" vertex="1">
+          <mxGeometry height="50" width="72" x="395" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="6D-QJTkiPkjgYoGVMvLB-10" edge="1" parent="1" source="yZ4mFRJocaxYnEUbtarn-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="yZ4mFRJocaxYnEUbtarn-4">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

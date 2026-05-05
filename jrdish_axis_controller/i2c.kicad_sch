@@ -3050,6 +3050,16 @@
 		)
 		(uuid "9a6f857f-1fb8-45dc-bef6-b0332f5434cf")
 	)
+	(text "I2C sensors may include the Adafruit sensors which\nmay have their own pull-up resistors. So H3 and H4\nallows you to not have I2C on-board."
+		(exclude_from_sim no)
+		(at 189.484 40.132 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "a12ee790-c56e-40e3-8fca-571f2a527664")
+	)
 	(text "The I2C pull-up resistors are on jumpers because some I2C sensors on the line\nmay have their own pull-up, so the jumpers allow removing the pull-ups \nin this case."
 		(exclude_from_sim no)
 		(at 152.146 93.726 0)

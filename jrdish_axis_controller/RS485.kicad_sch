@@ -3832,7 +3832,7 @@
 	)
 	(text "RS485_2_GND"
 		(exclude_from_sim no)
-		(at 137.668 172.974 0)
+		(at 137.6741 172.974 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3842,7 +3842,7 @@
 	)
 	(text "RS485_2_TX"
 		(exclude_from_sim no)
-		(at 136.906 170.18 0)
+		(at 136.8274 170.18 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3916,7 +3916,7 @@
 	)
 	(text "RS485_1_RX"
 		(exclude_from_sim no)
-		(at 72.136 157.48 0)
+		(at 72.2086 157.48 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3926,7 +3926,7 @@
 	)
 	(text "RS485_2_RX"
 		(exclude_from_sim no)
-		(at 136.906 167.64 0)
+		(at 136.9786 167.64 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3956,7 +3956,7 @@
 	)
 	(text "RS485_2_CHASSIS"
 		(exclude_from_sim no)
-		(at 138.43 175.514 0)
+		(at 139.7 175.514 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4038,7 +4038,7 @@
 	)
 	(text "RS485_1_GND"
 		(exclude_from_sim no)
-		(at 72.898 162.814 0)
+		(at 72.9041 162.814 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4059,7 +4059,7 @@
 	)
 	(text "RS485_1_CHASSIS"
 		(exclude_from_sim no)
-		(at 73.914 165.354 0)
+		(at 74.93 165.354 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4121,7 +4121,7 @@
 	)
 	(text "RS485_1_TX"
 		(exclude_from_sim no)
-		(at 72.39 160.02 0)
+		(at 72.0574 160.274 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7734,7 +7734,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" ".1uF"
+		(property "Value" "100nF"
 			(at 112.522 57.912 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9050,7 +9050,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" ".1uF"
+		(property "Value" "100nF"
 			(at 50.292 51.562 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11273,7 +11273,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" ".1uF"
+		(property "Value" "100nF"
 			(at 186.182 51.562 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13342,7 +13342,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" ".1uF"
+		(property "Value" "100nF"
 			(at 248.412 57.912 90)
 			(show_name no)
 			(do_not_autoplace no)
