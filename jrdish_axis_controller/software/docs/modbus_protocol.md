@@ -67,8 +67,8 @@ All registers are 16-bit. 32-bit values occupy two consecutive
 registers (HI word at lower address, LO word at next address).
 Float32 values are IEEE 754, stored as two 16-bit registers.
 
-Axis 1 = Azimuth (AZ)
-Axis 2 = Elevation (EL)
+Axis 1 (connector 1) = Elevation (EL)
+Axis 2 (connector 2) = Azimuth (AZ)
 
 ---
 
@@ -87,7 +87,7 @@ Axis 2 = Elevation (EL)
 
 ---
 
-### 5.2 Axis 1 (AZ) — Encoder Configuration (Read/Write)
+### 5.2 Axis 2 (AZ) — Encoder Configuration (Read/Write)
 
 | Address | Name                | Type    | Description                          | Default |
 |---------|---------------------|---------|--------------------------------------|---------|
@@ -102,7 +102,7 @@ Axis 2 = Elevation (EL)
 
 ---
 
-### 5.3 Axis 1 (AZ) — PID Configuration (Read/Write)
+### 5.3 Axis 2 (AZ) — PID Configuration (Read/Write)
 
 | Address | Name         | Type    | Description              | Default |
 |---------|--------------|---------|--------------------------|---------|
@@ -118,7 +118,7 @@ PID gains are float32 stored as HI/LO uint16 pairs (IEEE 754).
 
 ---
 
-### 5.4 Axis 1 (AZ) — Motion Command (Read/Write)
+### 5.4 Axis 2 (AZ) — Motion Command (Read/Write)
 
 | Address | Name              | Type    | Description                                      |
 |---------|-------------------|---------|--------------------------------------------------|
@@ -133,7 +133,7 @@ PID gains are float32 stored as HI/LO uint16 pairs (IEEE 754).
 
 ---
 
-### 5.5 Axis 1 (AZ) — Status (Read-Only)
+### 5.5 Axis 2 (AZ) — Status (Read-Only)
 
 | Address | Name              | Type    | Description                          |
 |---------|-------------------|---------|--------------------------------------|
@@ -150,9 +150,9 @@ PID gains are float32 stored as HI/LO uint16 pairs (IEEE 754).
 
 ---
 
-### 5.6 Axis 2 (EL) — Encoder Configuration (Read/Write)
+### 5.6 Axis 1 (EL) — Encoder Configuration (Read/Write)
 
-Same structure as Axis 1, offset by 0x0060:
+Same structure as Axis 2, offset by 0x0060:
 
 | Address | Name                | Type    | Description                          | Default |
 |---------|---------------------|---------|--------------------------------------|---------|
@@ -167,7 +167,7 @@ Same structure as Axis 1, offset by 0x0060:
 
 ---
 
-### 5.7 Axis 2 (EL) — PID Configuration (Read/Write)
+### 5.7 Axis 1 (EL) — PID Configuration (Read/Write)
 
 | Address | Name         | Type    | Description              | Default |
 |---------|--------------|---------|--------------------------|---------|
@@ -181,7 +181,7 @@ Same structure as Axis 1, offset by 0x0060:
 
 ---
 
-### 5.8 Axis 2 (EL) — Motion Command (Read/Write)
+### 5.8 Axis 1 (EL) — Motion Command (Read/Write)
 
 | Address | Name              | Type    | Description                                      |
 |---------|-------------------|---------|--------------------------------------------------|
@@ -196,7 +196,7 @@ Same structure as Axis 1, offset by 0x0060:
 
 ---
 
-### 5.9 Axis 2 (EL) — Status (Read-Only)
+### 5.9 Axis 1 (EL) — Status (Read-Only)
 
 | Address | Name              | Type    | Description                          |
 |---------|-------------------|---------|--------------------------------------|

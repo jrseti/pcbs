@@ -225,7 +225,7 @@ REMOTE_JLINK = /usr/local/bin/JLinkExe
 
 flashr: $(BUILD_DIR)/$(TARGET).hex
 	@echo "r" > flash_remote.jlink
-	@echo "loadfile $(REMOTE_DIR)/$(TARGET).hex" >> flash_remote.jlink
+	@echo "loadfile $(TARGET).hex" >> flash_remote.jlink
 	@echo "r" >> flash_remote.jlink
 	@echo "g" >> flash_remote.jlink
 	@echo "exit" >> flash_remote.jlink

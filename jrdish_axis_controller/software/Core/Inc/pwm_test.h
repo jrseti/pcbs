@@ -4,8 +4,8 @@
 /* -----------------------------------------------------------------------
  * pwm_test.h
  * Stepper pulse output test — PUL1 (TIM16 CH1, PA6) and PUL2 (TIM3 CH3, PB0)
- * DIR1=PC4, ENABLE1=PC5 (AZ)
- * DIR2=PB1, ENABLE2=PB2 (EL)
+ * DIR1=PC4, ENABLE1=PC5 (EL — connector 1)
+ * DIR2=PB1, ENABLE2=PB2 (AZ — connector 2)
  * ENABLE is active LOW on DM556Y.
  * ----------------------------------------------------------------------- */
 

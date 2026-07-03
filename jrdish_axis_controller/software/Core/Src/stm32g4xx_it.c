@@ -382,9 +382,9 @@ void LPUART1_IRQHandler(void)
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
     if (GPIO_Pin == ENC1_Z_Pin)
-        Encoder_AZ_Z_Callback();
-    else if (GPIO_Pin == ENC2_Z_Pin)
         Encoder_EL_Z_Callback();
+    else if (GPIO_Pin == ENC2_Z_Pin)
+        Encoder_AZ_Z_Callback();
     else if (GPIO_Pin == GPS_1PPS_Pin)
         GPS_1PPS_Callback();
 }

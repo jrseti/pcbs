@@ -2,11 +2,11 @@
  * encoder.c
  * Quadrature encoder reading via STM32 timer encoder interface
  *
- * AZ = TIM2 (32-bit counter), PA0=CH1, PA1=CH2
- * EL = TIM1 (16-bit counter), PC0=CH1, PC1=PC2
+ * Connector 1 (ENC1) drives the EL axis — TIM2 (32-bit counter), PA0=CH1, PA1=CH2
+ * Connector 2 (ENC2) drives the AZ axis — TIM1 (16-bit counter), PC0=CH1, PC1=PC2
  *
- * TIM2 is 32-bit so AZ position is read directly as int32_t.
- * TIM1 is 16-bit so EL position is tracked with an overflow counter
+ * TIM2 is 32-bit so EL position is read directly as int32_t.
+ * TIM1 is 16-bit so AZ position is tracked with an overflow counter
  * to give a full int32_t range.
  *
  * Encoder mode: both edges on both channels (4x counting).
@@ -24,10 +24,10 @@ extern TIM_HandleTypeDef htim1;
 extern TIM_HandleTypeDef htim2;
 
 /* ----------------------------------------------------------------------- */
-/* EL overflow tracking (TIM1 is 16-bit)                                   */
+/* AZ overflow tracking (TIM1 is 16-bit)                                   */
 /* ----------------------------------------------------------------------- */
-static int32_t  elOverflow    = 0;     /* accumulated overflow count       */
-static uint16_t elLastCount   = 0;     /* previous TIM1 CNT value          */
+static uint16_t azLastCount   = 0;     /* previous TIM1 CNT value          */
+static int32_t  azPosition    = 0;     /* accumulated AZ position          */
 
 /* ----------------------------------------------------------------------- */
 /* Z pulse counters — incremented from EXTI IRQ                            */
@@ -35,7 +35,7 @@ static uint16_t elLastCount   = 0;     /* previous TIM1 CNT value          */
 static volatile uint16_t azZCount = 0;
 static volatile uint16_t elZCount = 0;
 
-/* Called from HAL_GPIO_EXTI_Callback in stm32g4xx_it.c for ENC1_Z (PA2) */
+/* Called from HAL_GPIO_EXTI_Callback in stm32g4xx_it.c for ENC2_Z (PC3) */
 void Encoder_AZ_Z_Callback(void)
 {
     azZCount++;
@@ -43,7 +43,7 @@ void Encoder_AZ_Z_Callback(void)
     printf("AZ Z pulse #%u\r\n", azZCount);
 }
 
-/* Called from HAL_GPIO_EXTI_Callback for EL Z pin when wired */
+/* Called from HAL_GPIO_EXTI_Callback for ENC1_Z (PA2) */
 void Encoder_EL_Z_Callback(void)
 {
     elZCount++;
@@ -67,43 +67,41 @@ void Encoder_Init(void)
     __HAL_TIM_SET_COUNTER(&htim2, 0x80000000UL);
     __HAL_TIM_SET_COUNTER(&htim1, 0x8000U);
 
-    elLastCount = 0x8000U;
-    elOverflow  = 0;
+    azLastCount = 0x8000U;
+    azPosition  = 0;
 
     printf("Encoder_Init done\r\n");
 }
 
 int32_t Encoder_GetAZ(void)
 {
-    /* TIM2 is 32-bit — direct signed read with midpoint offset */
-    uint32_t raw = __HAL_TIM_GET_COUNTER(&htim2);
-    return (int32_t)(raw - 0x80000000UL);
+    /* Connector 2 / TIM1 is 16-bit — track overflow/underflow manually */
+    uint16_t current = (uint16_t)__HAL_TIM_GET_COUNTER(&htim1);
+    int16_t  delta   = (int16_t)(current - azLastCount);
+    azLastCount      = current;
+
+    /* Accumulate into 32-bit position */
+    azPosition += delta;
+    return azPosition;
 }
 
 int32_t Encoder_GetEL(void)
 {
-    /* TIM1 is 16-bit — track overflow/underflow manually */
-    uint16_t current = (uint16_t)__HAL_TIM_GET_COUNTER(&htim1);
-    int16_t  delta   = (int16_t)(current - elLastCount);
-    elLastCount      = current;
-
-    /* Accumulate into 32-bit position */
-    static int32_t elPosition = 0;
-    elPosition += delta;
-    return elPosition;
+    /* Connector 1 / TIM2 is 32-bit — direct signed read with midpoint offset */
+    uint32_t raw = __HAL_TIM_GET_COUNTER(&htim2);
+    return (int32_t)(raw - 0x80000000UL);
 }
 
 void Encoder_ResetAZ(void)
 {
-    __HAL_TIM_SET_COUNTER(&htim2, 0x80000000UL);
+    __HAL_TIM_SET_COUNTER(&htim1, 0x8000U);
+    azLastCount = 0x8000U;
+    azPosition  = 0;
 }
 
 void Encoder_ResetEL(void)
 {
-    __HAL_TIM_SET_COUNTER(&htim1, 0x8000U);
-    elLastCount = 0x8000U;
-    static int32_t elPosition = 0;
-    elPosition = 0;
+    __HAL_TIM_SET_COUNTER(&htim2, 0x80000000UL);
 }
 
 void Encoder_Run(void)
@@ -115,11 +113,12 @@ void Encoder_Run(void)
     Modbus_SetReg32(REG_AZ_POS_HI, (uint32_t)az);
     Modbus_SetReg32(REG_EL_POS_HI, (uint32_t)el);
 
-    /* Read limit switches — active LOW, invert so 1=triggered */
+    /* Read limit switches — active LOW, invert so 1=triggered.
+     * Connector 2 (LIMIT2_*) is the AZ axis, connector 1 (LIMIT1_*) is EL. */
     uint16_t lim = 0;
-    if (HAL_GPIO_ReadPin(LIMIT1_SW1_GPIO_Port, LIMIT1_SW1_Pin) == GPIO_PIN_RESET) lim |= (1 << 0);
-    if (HAL_GPIO_ReadPin(LIMIT1_SW2_GPIO_Port, LIMIT1_SW2_Pin) == GPIO_PIN_RESET) lim |= (1 << 1);
-    if (HAL_GPIO_ReadPin(LIMIT2_SW1_GPIO_Port, LIMIT2_SW1_Pin) == GPIO_PIN_RESET) lim |= (1 << 2);
-    if (HAL_GPIO_ReadPin(LIMIT2_SW2_GPIO_Port, LIMIT2_SW2_Pin) == GPIO_PIN_RESET) lim |= (1 << 3);
+    if (HAL_GPIO_ReadPin(LIMIT2_SW1_GPIO_Port, LIMIT2_SW1_Pin) == GPIO_PIN_RESET) lim |= (1 << 0);
+    if (HAL_GPIO_ReadPin(LIMIT2_SW2_GPIO_Port, LIMIT2_SW2_Pin) == GPIO_PIN_RESET) lim |= (1 << 1);
+    if (HAL_GPIO_ReadPin(LIMIT1_SW1_GPIO_Port, LIMIT1_SW1_Pin) == GPIO_PIN_RESET) lim |= (1 << 2);
+    if (HAL_GPIO_ReadPin(LIMIT1_SW2_GPIO_Port, LIMIT1_SW2_Pin) == GPIO_PIN_RESET) lim |= (1 << 3);
     Modbus_SetReg(REG_LIMIT_SW, lim);
 }

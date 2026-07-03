@@ -2,12 +2,12 @@
  * pwm_test.c
  * Stepper pulse output and direction/enable control
  *
- * AZ axis:
+ * EL axis (connector 1):
  *   PUL1   = TIM16 CH1, PA6
  *   DIR1   = PC4  (0=CW, 1=CCW)
  *   ENABLE1= PC5  (active LOW — LOW=enabled, HIGH=disabled)
  *
- * EL axis:
+ * AZ axis (connector 2):
  *   PUL2   = TIM3  CH3, PB0
  *   DIR2   = PB1  (0=CW, 1=CCW)
  *   ENABLE2= PB2  (active LOW — LOW=enabled, HIGH=disabled)
@@ -80,42 +80,42 @@ void PWM_Test_Run(void)
     /* Placeholder for future ramp/sweep logic */
 }
 
-/* --- AZ --- */
+/* --- AZ (connector 2) --- */
 
 void PWM_SetFreq_AZ(uint32_t hz)
 {
-    SetTimerFreq(&htim16, TIM_CHANNEL_1, hz);
+    SetTimerFreq(&htim3, TIM_CHANNEL_3, hz);
 }
 
 void PWM_Enable_AZ(uint8_t en)
 {
     /* ENABLE is active HIGH on this board (ENA+ to MCU, ENA- to GND) */
-    HAL_GPIO_WritePin(ENABLE1_GPIO_Port, ENABLE1_Pin,
+    HAL_GPIO_WritePin(ENABLE2_GPIO_Port, ENABLE2_Pin,
         en ? GPIO_PIN_SET : GPIO_PIN_RESET);
 }
 
 void PWM_SetDir_AZ(uint8_t dir)
 {
-    HAL_GPIO_WritePin(DIR1_GPIO_Port, DIR1_Pin,
+    HAL_GPIO_WritePin(DIR2_GPIO_Port, DIR2_Pin,
         dir ? GPIO_PIN_SET : GPIO_PIN_RESET);
 }
 
-/* --- EL --- */
+/* --- EL (connector 1) --- */
 
 void PWM_SetFreq_EL(uint32_t hz)
 {
-    SetTimerFreq(&htim3, TIM_CHANNEL_3, hz);
+    SetTimerFreq(&htim16, TIM_CHANNEL_1, hz);
 }
 
 void PWM_Enable_EL(uint8_t en)
 {
     /* ENABLE is active HIGH on this board */
-    HAL_GPIO_WritePin(ENABLE2_GPIO_Port, ENABLE2_Pin,
+    HAL_GPIO_WritePin(ENABLE1_GPIO_Port, ENABLE1_Pin,
         en ? GPIO_PIN_SET : GPIO_PIN_RESET);
 }
 
 void PWM_SetDir_EL(uint8_t dir)
 {
-    HAL_GPIO_WritePin(DIR2_GPIO_Port, DIR2_Pin,
+    HAL_GPIO_WritePin(DIR1_GPIO_Port, DIR1_Pin,
         dir ? GPIO_PIN_SET : GPIO_PIN_RESET);
 }

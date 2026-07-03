@@ -5,8 +5,8 @@
  * encoder.h
  * Quadrature encoder reading
  *
- * AZ = TIM2 (32-bit), CH1=PA0, CH2=PA1
- * EL = TIM1 (16-bit), CH1=PC0, CH2=PC1
+ * Connector 1 (ENC1) drives the EL axis  — TIM2 (32-bit), CH1=PA0, CH2=PA1
+ * Connector 2 (ENC2) drives the AZ axis  — TIM1 (16-bit), CH1=PC0, CH2=PC1
  * ----------------------------------------------------------------------- */
 
 #include <stdint.h>

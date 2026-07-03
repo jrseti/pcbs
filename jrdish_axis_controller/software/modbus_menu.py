@@ -469,10 +469,10 @@ def action_flash_test(mb: ModbusClient):
 
 def action_limit_switches(mb: ModbusClient):
     print("\n[ Limit Switch Monitor — press Enter to stop ]\n")
-    print("  Bit 0 = AZ_LIM1 (LIMIT1_SW1)")
-    print("  Bit 1 = AZ_LIM2 (LIMIT1_SW2)")
-    print("  Bit 2 = EL_LIM1 (LIMIT2_SW1)")
-    print("  Bit 3 = EL_LIM2 (LIMIT2_SW2)\n")
+    print("  Bit 0 = AZ_LIM1 (LIMIT2_SW1)")
+    print("  Bit 1 = AZ_LIM2 (LIMIT2_SW2)")
+    print("  Bit 2 = EL_LIM1 (LIMIT1_SW1)")
+    print("  Bit 3 = EL_LIM2 (LIMIT1_SW2)\n")
 
     import threading
     stop = threading.Event()
