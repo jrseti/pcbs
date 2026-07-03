@@ -217,11 +217,29 @@ flash: $(BUILD_DIR)/$(TARGET).hex
 	-autoconnect 1 -CommandFile flash.jlink
 
 #######################################
+# flash (remote, over ssh)
+#######################################
+REMOTE_HOST = jon@macbookpro.lan
+REMOTE_DIR = firmware
+REMOTE_JLINK = /usr/local/bin/JLinkExe
+
+flashr: $(BUILD_DIR)/$(TARGET).hex
+	@echo "r" > flash_remote.jlink
+	@echo "loadfile $(REMOTE_DIR)/$(TARGET).hex" >> flash_remote.jlink
+	@echo "r" >> flash_remote.jlink
+	@echo "g" >> flash_remote.jlink
+	@echo "exit" >> flash_remote.jlink
+	ssh $(REMOTE_HOST) "mkdir -p $(REMOTE_DIR)"
+	scp $(BUILD_DIR)/$(TARGET).hex flash_remote.jlink $(REMOTE_HOST):$(REMOTE_DIR)/
+	ssh $(REMOTE_HOST) "cd $(REMOTE_DIR) && $(REMOTE_JLINK) -device $(JLINK_DEVICE) -if $(JLINK_IF) -speed $(JLINK_SPEED) -autoconnect 1 -CommandFile flash_remote.jlink; rm -f flash_remote.jlink"
+	-rm -f flash_remote.jlink
+
+#######################################
 # clean up
 #######################################
 clean:
 	-rm -fR $(BUILD_DIR)
-	-rm -f flash.jlink
+	-rm -f flash.jlink flash_remote.jlink
   
 #######################################
 # dependencies
