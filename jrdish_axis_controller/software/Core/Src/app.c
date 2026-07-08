@@ -65,8 +65,11 @@ void App_Run(void)
 {
     Modbus_Run();
     Flash_Run();
-    PWM_Test_Run();
+    /* Encoder_Run() before PWM_Test_Run(): the homing/move control loop in
+     * PWM_Test_Run() reads REG_LIMIT_SW and REG_*_POS_HI, both written by
+     * Encoder_Run(), and must see fresh data from the same tick. */
     Encoder_Run();
+    PWM_Test_Run();
     //I2C_Test_Run();
     GPS_Run();
 

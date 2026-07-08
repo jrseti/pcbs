@@ -3486,6 +3486,17 @@
 		)
 		(uuid "3dd5a57f-78d6-4eda-951e-5281b2e9d730")
 	)
+	(text "The encoder is missing pulses at higher speeds. \nClaude Fable 5 suggests changing to 1k ohm and\n1nF, τ = 1 µs."
+		(exclude_from_sim no)
+		(at 29.972 31.75 0)
+		(effects
+			(font
+				(size 3.048 3.048)
+			)
+			(justify left)
+		)
+		(uuid "42fab98f-9e5e-426b-9fa6-d74a5d4e4050")
+	)
 	(text "Twist the signal pairs"
 		(exclude_from_sim no)
 		(at 83.566 115.316 0)

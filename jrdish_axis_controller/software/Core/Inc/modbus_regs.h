@@ -7,7 +7,7 @@
  * ----------------------------------------------------------------------- */
 
 /* Total register count */
-#define MODBUS_REG_COUNT        0x00CA
+#define MODBUS_REG_COUNT        0x00D1
 
 /* ----------------------------------------------------------------------- */
 /* System (0x0000 - 0x0007)                                                */
@@ -24,13 +24,12 @@
 /* ----------------------------------------------------------------------- */
 /* AZ (connector 2) Encoder Config (0x0010 - 0x0017)                           */
 /* ----------------------------------------------------------------------- */
-#define REG_AZ_ENC_PPR          0x0010
-#define REG_AZ_GEAR_RATIO_HI    0x0011
-#define REG_AZ_GEAR_RATIO_LO    0x0012
-#define REG_AZ_PULLEY_RATIO     0x0013
-#define REG_AZ_LIM1_POS_HI      0x0014
+#define REG_AZ_GEAR_RATIO_HI    0x0010  /* Motor:output gear reduction, HIGH word (default 20) */
+#define REG_AZ_GEAR_RATIO_LO    0x0011  /* Motor:output gear reduction, LOW word                 */
+                                        /* 0x0012-0x0013 reserved                        */
+#define REG_AZ_LIM1_POS_HI      0x0014  /* Always 0 — encoder is zeroed at LIMIT1 during homing */
 #define REG_AZ_LIM1_POS_LO      0x0015
-#define REG_AZ_LIM2_POS_HI      0x0016
+#define REG_AZ_LIM2_POS_HI      0x0016  /* Encoder count at LIMIT2 — negative (see calibration) */
 #define REG_AZ_LIM2_POS_LO      0x0017
 
 /* ----------------------------------------------------------------------- */
@@ -53,7 +52,7 @@
 #define REG_AZ_CMD_POS_LO       0x0033
 #define REG_AZ_CMD_RPM_HI       0x0034
 #define REG_AZ_CMD_RPM_LO       0x0035
-#define REG_AZ_CMD_HOME         0x0036
+#define REG_AZ_CMD_HOME         0x0036  /* LIMIT1 is the CW-side switch — home by seeking CW */
 #define REG_AZ_CMD_STOP         0x0037
 
 /* ----------------------------------------------------------------------- */
@@ -71,15 +70,27 @@
 #define REG_AZ_ERROR            0x0049
 
 /* ----------------------------------------------------------------------- */
+/* AZ (connector 2) Calibration / Velocity Config (0x004A - 0x0050)         */
+/* Placed in the gap after AZ Status — see docs/modbus_protocol.md         */
+/* ----------------------------------------------------------------------- */
+#define REG_AZ_DRIVER_PPR       0x004A  /* DM556Y pulses/rev DIP setting (default 400) */
+#define REG_AZ_MAX_RPM_HI       0x004B  /* Max output-shaft RPM, float32 HIGH (default 1.5) */
+#define REG_AZ_MAX_RPM_LO       0x004C
+#define REG_AZ_LIM1_ANGLE_HI    0x004D  /* Measured angle at LIMIT1 (home), float32 HIGH */
+#define REG_AZ_LIM1_ANGLE_LO    0x004E
+#define REG_AZ_LIM2_ANGLE_HI    0x004F  /* Measured angle at LIMIT2, float32 HIGH */
+#define REG_AZ_LIM2_ANGLE_LO    0x0050
+                                        /* 0x0051-0x006F reserved for future growth */
+
+/* ----------------------------------------------------------------------- */
 /* EL (connector 1) Encoder Config (0x0070 - 0x0077)                           */
 /* ----------------------------------------------------------------------- */
-#define REG_EL_ENC_PPR          0x0070
-#define REG_EL_GEAR_RATIO_HI    0x0071
-#define REG_EL_GEAR_RATIO_LO    0x0072
-#define REG_EL_PULLEY_RATIO     0x0073
-#define REG_EL_LIM1_POS_HI      0x0074
+#define REG_EL_GEAR_RATIO_HI    0x0070  /* Motor:output gear reduction, HIGH word (default 20) */
+#define REG_EL_GEAR_RATIO_LO    0x0071  /* Motor:output gear reduction, LOW word                 */
+                                        /* 0x0072-0x0073 reserved                        */
+#define REG_EL_LIM1_POS_HI      0x0074  /* Always 0 — encoder is zeroed at LIMIT1 during homing */
 #define REG_EL_LIM1_POS_LO      0x0075
-#define REG_EL_LIM2_POS_HI      0x0076
+#define REG_EL_LIM2_POS_HI      0x0076  /* Encoder count at LIMIT2 — negative (see calibration) */
 #define REG_EL_LIM2_POS_LO      0x0077
 
 /* ----------------------------------------------------------------------- */
@@ -102,7 +113,7 @@
 #define REG_EL_CMD_POS_LO       0x0093
 #define REG_EL_CMD_RPM_HI       0x0094
 #define REG_EL_CMD_RPM_LO       0x0095
-#define REG_EL_CMD_HOME         0x0096
+#define REG_EL_CMD_HOME         0x0096  /* LIMIT1 is the CW-side switch — home by seeking CW */
 #define REG_EL_CMD_STOP         0x0097
 
 /* ----------------------------------------------------------------------- */
@@ -157,6 +168,7 @@
 #define AXIS_ERR_HOMING_FAILED  0x03
 #define AXIS_ERR_PID_SATURATED  0x04
 #define AXIS_ERR_POS_RANGE      0x05
+#define AXIS_ERR_NOT_CALIBRATED 0x06  /* LIM2_ANGLE==LIM1_ANGLE or LIM2_POS==0 */
 
 /* ----------------------------------------------------------------------- */
 /* SPI Flash (0x00C0 - 0x00C2)                                             */
@@ -195,6 +207,19 @@
 /* ----------------------------------------------------------------------- */
 #define REG_LIMIT_SW            0x00C9  /* bit0=AZ_LIM1, bit1=AZ_LIM2,    */
                                         /* bit2=EL_LIM1, bit3=EL_LIM2      */
+
+/* ----------------------------------------------------------------------- */
+/* EL (connector 1) Calibration / Velocity Config (0x00CA - 0x00D0)        */
+/* EL's mirrored gap (0x00AA-0x00AF) is only 6 registers, too small for    */
+/* this 7-register block — appended after the map end instead.            */
+/* ----------------------------------------------------------------------- */
+#define REG_EL_DRIVER_PPR       0x00CA  /* DM556Y pulses/rev DIP setting (default 400) */
+#define REG_EL_MAX_RPM_HI       0x00CB  /* Max output-shaft RPM, float32 HIGH (default 1.5) */
+#define REG_EL_MAX_RPM_LO       0x00CC
+#define REG_EL_LIM1_ANGLE_HI    0x00CD  /* Measured angle at LIMIT1 (home), float32 HIGH */
+#define REG_EL_LIM1_ANGLE_LO    0x00CE
+#define REG_EL_LIM2_ANGLE_HI    0x00CF  /* Measured angle at LIMIT2, float32 HIGH */
+#define REG_EL_LIM2_ANGLE_LO    0x00D0
 
 /* ----------------------------------------------------------------------- */
 /* Modbus constants                                                         */

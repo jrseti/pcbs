@@ -10,8 +10,11 @@
  * to give a full int32_t range.
  *
  * Encoder mode: both edges on both channels (4x counting).
- * E6B2-CWZ6C: 2000 PPR × 4 = 8000 counts/encoder rev.
- * With 6000:1 gear ratio: 48,000,000 counts/dish revolution.
+ * E6B2-CWZ6C: 2000 PPR x4 = 8000 counts/encoder rev.
+ *
+ * Counts-per-dish-revolution isn't a fixed constant here — position is
+ * derived from two-point calibration against the limit switches (see
+ * pwm_test.c: LIM1_ANGLE/LIM2_ANGLE/LIM2_POS), not from PPR x gear ratio.
  * ----------------------------------------------------------------------- */
 
 #include "encoder.h"
@@ -34,6 +37,32 @@ static int32_t  azPosition    = 0;     /* accumulated AZ position          */
 /* ----------------------------------------------------------------------- */
 static volatile uint16_t azZCount = 0;
 static volatile uint16_t elZCount = 0;
+
+/* ----------------------------------------------------------------------- */
+/* Limit switch debounce — raw mechanical contacts chatter (bench-confirmed
+ * via LIMIT_PINS prints: holding a switch steady still toggled the raw
+ * reading). A bit only takes effect once the raw pin has held that value
+ * continuously for LIMIT_DEBOUNCE_MS.                                     */
+/* ----------------------------------------------------------------------- */
+#define LIMIT_DEBOUNCE_MS   10UL
+
+typedef struct { uint8_t stable; uint8_t lastRaw; uint32_t lastChangeMs; } Debounce_t;
+static Debounce_t azLim1Db, azLim2Db, elLim1Db, elLim2Db;
+
+static uint8_t Debounce(Debounce_t *d, uint8_t raw)
+{
+    uint32_t now = HAL_GetTick();
+    if (raw != d->lastRaw)
+    {
+        d->lastRaw = raw;
+        d->lastChangeMs = now;
+    }
+    else if (now - d->lastChangeMs >= LIMIT_DEBOUNCE_MS)
+    {
+        d->stable = raw;
+    }
+    return d->stable;
+}
 
 /* Called from HAL_GPIO_EXTI_Callback in stm32g4xx_it.c for ENC2_Z (PC3) */
 void Encoder_AZ_Z_Callback(void)
@@ -87,9 +116,13 @@ int32_t Encoder_GetAZ(void)
 
 int32_t Encoder_GetEL(void)
 {
-    /* Connector 1 / TIM2 is 32-bit — direct signed read with midpoint offset */
+    /* Connector 1 / TIM2 is 32-bit — direct signed read with midpoint offset.
+     * Negated: on the bench, CW motor rotation counts down here despite
+     * identical encoder wiring/timer config to AZ (TIM1/TIM2 IC polarity and
+     * mode are identical) — a mechanical asymmetry between the two axes.
+     * Flipped so CW increases position on both axes, matching AZ. */
     uint32_t raw = __HAL_TIM_GET_COUNTER(&htim2);
-    return (int32_t)(raw - 0x80000000UL);
+    return -(int32_t)(raw - 0x80000000UL);
 }
 
 void Encoder_ResetAZ(void)
@@ -115,10 +148,32 @@ void Encoder_Run(void)
 
     /* Read limit switches — active LOW, invert so 1=triggered.
      * Connector 2 (LIMIT2_*) is the AZ axis, connector 1 (LIMIT1_*) is EL. */
+    uint8_t azLim1Raw = (HAL_GPIO_ReadPin(LIMIT2_SW1_GPIO_Port, LIMIT2_SW1_Pin) == GPIO_PIN_RESET);
+    uint8_t azLim2Raw = (HAL_GPIO_ReadPin(LIMIT2_SW2_GPIO_Port, LIMIT2_SW2_Pin) == GPIO_PIN_RESET);
+    uint8_t elLim1Raw = (HAL_GPIO_ReadPin(LIMIT1_SW1_GPIO_Port, LIMIT1_SW1_Pin) == GPIO_PIN_RESET);
+    uint8_t elLim2Raw = (HAL_GPIO_ReadPin(LIMIT1_SW2_GPIO_Port, LIMIT1_SW2_Pin) == GPIO_PIN_RESET);
+
+    uint8_t azLim1 = Debounce(&azLim1Db, azLim1Raw);
+    uint8_t azLim2 = Debounce(&azLim2Db, azLim2Raw);
+    uint8_t elLim1 = Debounce(&elLim1Db, elLim1Raw);
+    uint8_t elLim2 = Debounce(&elLim2Db, elLim2Raw);
+
     uint16_t lim = 0;
-    if (HAL_GPIO_ReadPin(LIMIT2_SW1_GPIO_Port, LIMIT2_SW1_Pin) == GPIO_PIN_RESET) lim |= (1 << 0);
-    if (HAL_GPIO_ReadPin(LIMIT2_SW2_GPIO_Port, LIMIT2_SW2_Pin) == GPIO_PIN_RESET) lim |= (1 << 1);
-    if (HAL_GPIO_ReadPin(LIMIT1_SW1_GPIO_Port, LIMIT1_SW1_Pin) == GPIO_PIN_RESET) lim |= (1 << 2);
-    if (HAL_GPIO_ReadPin(LIMIT1_SW2_GPIO_Port, LIMIT1_SW2_Pin) == GPIO_PIN_RESET) lim |= (1 << 3);
+    if (azLim1) lim |= (1 << 0);
+    if (azLim2) lim |= (1 << 1);
+    if (elLim1) lim |= (1 << 2);
+    if (elLim2) lim |= (1 << 3);
     Modbus_SetReg(REG_LIMIT_SW, lim);
+
+    /* Print only on change — Encoder_Run() ticks every main-loop iteration,
+     * so printing unconditionally would flood the SWO console. A print per
+     * transition still catches a single-tick glitch (one line in, one line
+     * back out), which is exactly what a per-tick print would show anyway. */
+    static uint16_t lastPrinted = 0xFFFF;  /* force a print on the first tick */
+    if (lim != lastPrinted)
+    {
+        printf("LIMIT_PINS: AZ_LIM1=%u AZ_LIM2=%u EL_LIM1=%u EL_LIM2=%u\r\n",
+               azLim1, azLim2, elLim1, elLim2);
+        lastPrinted = lim;
+    }
 }

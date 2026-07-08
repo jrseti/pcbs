@@ -26,4 +26,17 @@ void PWM_Enable_EL(uint8_t en);
 void PWM_SetDir_AZ(uint8_t dir);
 void PWM_SetDir_EL(uint8_t dir);
 
+/* Homing — drives CW to LIMIT1, zeroes the encoder there, sets AXIS_STATUS_HOMED */
+void AZ_StartHoming(void);
+void EL_StartHoming(void);
+
+/* Position moves — target angle (degrees) is read from REG_AZ_CMD_POS_HI/LO
+ * (float32); converted to encoder counts via the LIM1/LIM2 calibration */
+void AZ_StartMove(void);
+void EL_StartMove(void);
+
+/* Abort any in-progress homing or position move (called on REG_AZ_CMD_STOP) */
+void PWM_AbortMotion_AZ(void);
+void PWM_AbortMotion_EL(void);
+
 #endif /* PWM_TEST_H */

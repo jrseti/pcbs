@@ -153,6 +153,43 @@ static void MB_HandleReadRegs(const uint8_t *frame)
 }
 
 /* ----------------------------------------------------------------------- */
+/* Shared write side effects — called per-register from both FC 0x06 and   */
+/* FC 0x10 handlers so multi-register writes (e.g. a float32 target angle) */
+/* get the same dispatch as single-register writes.                       */
+/* ----------------------------------------------------------------------- */
+static void MB_ApplyRegisterSideEffect(uint16_t addr, uint16_t value)
+{
+    if (addr == REG_SYS_FAN)
+        HAL_GPIO_WritePin(FAN_GPIO_Port, FAN_Pin,
+            value ? GPIO_PIN_SET : GPIO_PIN_RESET);
+
+    if (addr == REG_FLASH_CMD)
+        Flash_ExecCmd(value);
+
+    /* AZ motor control */
+    if (addr == REG_AZ_CMD_ENABLE) PWM_Enable_AZ(value);
+    if (addr == REG_AZ_CMD_STOP  && value) { PWM_AbortMotion_AZ(); PWM_Enable_AZ(0); regs[REG_AZ_CMD_ENABLE] = 0; }
+    if (addr == REG_AZ_CMD_HOME  && value) AZ_StartHoming();
+    if (addr == REG_AZ_CMD_POS_LO)         AZ_StartMove();
+
+    /* EL motor control */
+    if (addr == REG_EL_CMD_ENABLE) PWM_Enable_EL(value);
+    if (addr == REG_EL_CMD_STOP  && value) { PWM_AbortMotion_EL(); PWM_Enable_EL(0); regs[REG_EL_CMD_ENABLE] = 0; }
+    if (addr == REG_EL_CMD_HOME  && value) EL_StartHoming();
+    if (addr == REG_EL_CMD_POS_LO)         EL_StartMove();
+
+    /* PWM frequency — value==0 is a legitimate "stop pulsing" request
+     * (PWM_SetFreq_AZ/EL() handle hz==0 by stopping the timer output),
+     * not just nonzero frequencies. */
+    if (addr == REG_AZ_PWM_FREQ) PWM_SetFreq_AZ(value);
+    if (addr == REG_EL_PWM_FREQ) PWM_SetFreq_EL(value);
+
+    /* PWM direction */
+    if (addr == REG_AZ_PWM_DIR) PWM_SetDir_AZ(value);
+    if (addr == REG_EL_PWM_DIR) PWM_SetDir_EL(value);
+}
+
+/* ----------------------------------------------------------------------- */
 /* Handle FC 0x06 — Write Single Register                                  */
 /* ----------------------------------------------------------------------- */
 static void MB_HandleWriteSingle(const uint8_t *frame)
@@ -182,30 +219,7 @@ static void MB_HandleWriteSingle(const uint8_t *frame)
     }
 
     regs[addr] = value;
-
-    /* Side effects */
-    if (addr == REG_SYS_FAN)
-        HAL_GPIO_WritePin(FAN_GPIO_Port, FAN_Pin,
-            value ? GPIO_PIN_SET : GPIO_PIN_RESET);
-
-    if (addr == REG_FLASH_CMD)
-        Flash_ExecCmd(value);
-
-    /* AZ motor control */
-    if (addr == REG_AZ_CMD_ENABLE) PWM_Enable_AZ(value);
-    if (addr == REG_AZ_CMD_STOP  && value) { PWM_Enable_AZ(0); regs[REG_AZ_CMD_ENABLE] = 0; }
-
-    /* EL motor control */
-    if (addr == REG_EL_CMD_ENABLE) PWM_Enable_EL(value);
-    if (addr == REG_EL_CMD_STOP  && value) { PWM_Enable_EL(0); regs[REG_EL_CMD_ENABLE] = 0; }
-
-    /* PWM frequency */
-    if (addr == REG_AZ_PWM_FREQ && value > 0) PWM_SetFreq_AZ(value);
-    if (addr == REG_EL_PWM_FREQ && value > 0) PWM_SetFreq_EL(value);
-
-    /* PWM direction */
-    if (addr == REG_AZ_PWM_DIR) PWM_SetDir_AZ(value);
-    if (addr == REG_EL_PWM_DIR) PWM_SetDir_EL(value);
+    MB_ApplyRegisterSideEffect(addr, value);
 
     /* Echo frame as response (standard Modbus) */
     if (!isBroadcast)
@@ -240,12 +254,13 @@ static void MB_HandleWriteMulti(const uint8_t *frame)
     {
         uint16_t val = ((uint16_t)frame[7 + i*2] << 8) | frame[8 + i*2];
         regs[startAddr + i] = val;
-
-        /* Side effects per register */
-        if ((startAddr + i) == REG_SYS_FAN)
-            HAL_GPIO_WritePin(FAN_GPIO_Port, FAN_Pin,
-                val ? GPIO_PIN_SET : GPIO_PIN_RESET);
     }
+
+    /* Side effects after all registers are written, so a multi-register
+     * write (e.g. a float32 target angle spanning HI+LO) is fully in
+     * place before any handler (e.g. AZ_StartMove) reads it. */
+    for (uint16_t i = 0; i < qty; i++)
+        MB_ApplyRegisterSideEffect(startAddr + i, regs[startAddr + i]);
 
     if (!isBroadcast)
     {
@@ -342,15 +357,19 @@ void Modbus_Init(void)
     regs[REG_SYS_FW_VER] = MODBUS_FW_VERSION;
 
     /* Default axis config */
-    regs[REG_AZ_ENC_PPR]       = 2000;
-    regs[REG_AZ_GEAR_RATIO_LO] = 6000;
-    regs[REG_AZ_PULLEY_RATIO]  = 100;
-    regs[REG_AZ_PID_MAX]       = 1000;
+    Modbus_SetReg32(REG_AZ_GEAR_RATIO_HI, 20UL);
+    regs[REG_AZ_PID_MAX]      = 1000;
+    regs[REG_AZ_DRIVER_PPR]   = 400;
+    Modbus_SetRegFloat(REG_AZ_MAX_RPM_HI,    1.5f);
+    Modbus_SetRegFloat(REG_AZ_LIM1_ANGLE_HI, 0.0f);
+    Modbus_SetRegFloat(REG_AZ_LIM2_ANGLE_HI, 0.0f);  /* == LIM1_ANGLE until calibrated */
 
-    regs[REG_EL_ENC_PPR]       = 2000;
-    regs[REG_EL_GEAR_RATIO_LO] = 6000;
-    regs[REG_EL_PULLEY_RATIO]  = 100;
-    regs[REG_EL_PID_MAX]       = 1000;
+    Modbus_SetReg32(REG_EL_GEAR_RATIO_HI, 20UL);
+    regs[REG_EL_PID_MAX]      = 1000;
+    regs[REG_EL_DRIVER_PPR]   = 400;
+    Modbus_SetRegFloat(REG_EL_MAX_RPM_HI,    1.5f);
+    Modbus_SetRegFloat(REG_EL_LIM1_ANGLE_HI, 0.0f);
+    Modbus_SetRegFloat(REG_EL_LIM2_ANGLE_HI, 0.0f);  /* == LIM1_ANGLE until calibrated */
 
     /* Fan off */
     HAL_GPIO_WritePin(FAN_GPIO_Port, FAN_Pin, GPIO_PIN_RESET);
