@@ -74,6 +74,17 @@ REG_EL_LIM2_ANGLE_HI = 0x00CF
 REG_GPS_STATUS      = 0x00B0
 REG_GPS_UTC_HH_MM   = 0x00B1
 REG_GPS_UTC_SS      = 0x00B2
+REG_GPS_1PPS_COUNT_HI = 0x00B3
+REG_GPS_UTC_YEAR      = 0x00B5
+REG_GPS_UTC_MON_DAY   = 0x00B6
+REG_GPS_LAT_HI        = 0x00B7
+REG_GPS_LON_HI        = 0x00B9
+REG_GPS_ALT_HI        = 0x00BB
+REG_GPS_NUM_SATS      = 0x00BD
+REG_GPS_HDOP_HI       = 0x00BE
+
+REG_GPS_PPS_INTERVAL_HI = 0x00E4
+REG_GPS_PPS_PPM_HI      = 0x00E6
 
 REG_FLASH_CMD       = 0x00C0
 REG_FLASH_DATA      = 0x00C1
@@ -86,6 +97,23 @@ REG_EL_PWM_DIR      = 0x00C6
 REG_AZ_Z_COUNT      = 0x00C7
 REG_EL_Z_COUNT      = 0x00C8
 REG_LIMIT_SW        = 0x00C9
+
+REG_I2C_CMD         = 0x00D1
+REG_I2C_STATUS      = 0x00D2
+REG_I2C_PRESENT     = 0x00D3
+REG_I2C_LM75_TEMP_HI  = 0x00D4
+REG_I2C_SHT45_TEMP_HI = 0x00D6
+REG_I2C_SHT45_RH_HI   = 0x00D8
+REG_I2C_SHT31_TEMP_HI = 0x00DA
+REG_I2C_SHT31_RH_HI   = 0x00DC
+REG_I2C_ADXL_X_HI     = 0x00DE
+REG_I2C_ADXL_Y_HI     = 0x00E0
+REG_I2C_ADXL_Z_HI     = 0x00E2
+
+I2C_PRESENT_LM75B   = 1 << 0
+I2C_PRESENT_SHT45   = 1 << 1
+I2C_PRESENT_ADXL345 = 1 << 2
+I2C_PRESENT_SHT31   = 1 << 3
 
 FLASH_CMD_ERASE     = 1
 FLASH_CMD_WRITE     = 2
@@ -168,6 +196,11 @@ class ModbusClient:
         # (e.g. a direction change) can silently fail to reach the MCU while
         # the UI still believes it took effect.
         self._lock = threading.Lock()
+        # Exception code (2=illegal address, ...) from the last transaction,
+        # or None if the failure was a timeout/CRC error. Lets callers tell
+        # "board actively rejected this register" (stale firmware) apart
+        # from "board didn't answer at all" (wiring/power/address).
+        self.last_exception: int | None = None
         time.sleep(0.1)
 
     def close(self):
@@ -178,9 +211,13 @@ class ModbusClient:
             self.ser.reset_input_buffer()
             self.ser.write(frame)
             resp = self.ser.read(expected)
+        self.last_exception = None
         if len(resp) < 4 or not check_crc(resp):
             return None
-        if resp[0] != self.addr or resp[1] & 0x80:
+        if resp[0] != self.addr:
+            return None
+        if resp[1] & 0x80:
+            self.last_exception = resp[2]
             return None
         return resp
 
@@ -357,16 +394,217 @@ def action_monitor(mb: ModbusClient):
 
 def action_query_gps(mb: ModbusClient):
     print("\n[ GPS Status ]\n")
-    vals = mb.read_regs(REG_GPS_STATUS, 3)
+    vals = mb.read_regs(REG_GPS_STATUS, 16)   # whole GPS block 0x00B0-0x00BF
     if vals is None:
         print("  ERROR: No response from board")
         return
+
+    def f32(reg_hi: int) -> float:
+        i = reg_hi - REG_GPS_STATUS
+        return struct.unpack('>f', struct.pack('>I', (vals[i] << 16) | vals[i+1]))[0]
+
+    def i32(reg_hi: int) -> int:
+        i = reg_hi - REG_GPS_STATUS
+        return to_signed32((vals[i] << 16) | vals[i+1])
+
     gps_status = vals[0]
     hhmm       = vals[1]
     ss         = vals[2]
+    pps_count  = (vals[3] << 16) | vals[4]
+    year       = vals[5]
+    mon, day   = vals[6] >> 8, vals[6] & 0xFF
+    lat        = i32(REG_GPS_LAT_HI) / 1e7   # int32 deg*1e7, ~1cm resolution
+    lon        = i32(REG_GPS_LON_HI) / 1e7
+    alt        = f32(REG_GPS_ALT_HI)
+    num_sats   = vals[REG_GPS_NUM_SATS - REG_GPS_STATUS]
+    hdop       = f32(REG_GPS_HDOP_HI)
     status_str = {0: "No fix", 1: "Fix", 2: "Disciplined"}.get(gps_status, "Unknown")
-    print(f"  GPS status    : {status_str}")
-    print(f"  UTC time      : {hhmm // 100:02d}:{hhmm % 100:02d}:{ss:02d}")
+    print(f"  GPS status    : {status_str}   ({num_sats} sats, HDOP {hdop:.1f})")
+    print(f"  UTC date/time : {year:04d}-{mon:02d}-{day:02d}  "
+          f"{hhmm // 100:02d}:{hhmm % 100:02d}:{ss:02d}")
+    print(f"  Position      : {abs(lat):.7f}°{'N' if lat >= 0 else 'S'}  "
+          f"{abs(lon):.7f}°{'E' if lon >= 0 else 'W'}")
+    print(f"  Altitude      : {alt:.1f} m")
+    print(f"  1PPS count    : {pps_count}")
+
+    # TIM17 hardware-capture timing (needs two 1PPS edges before it reads)
+    interval = mb.read_int32(REG_GPS_PPS_INTERVAL_HI)
+    ppm      = mb.read_float(REG_GPS_PPS_PPM_HI)
+    if not interval:
+        print("  1PPS timing   : no interval measured yet")
+    else:
+        print(f"  1PPS interval : {interval} timer ticks")
+        print(f"  Clock error   : {ppm:+.3f} ppm vs GPS (+ = MCU clock fast)")
+
+def action_gps_test(mb: ModbusClient):
+    """Automated check of the 1PPS pulse train and NMEA date/time: watches
+    the board for ~10s and verifies the PPS counter ticks once per second,
+    UTC advances in lockstep with it, and the parsed datetime matches the
+    host clock (which assumes the host is NTP-synced)."""
+    import datetime
+
+    DURATION = 10.0
+    print(f"\n[ GPS 1PPS & Time Test — {int(DURATION)} seconds ]\n")
+
+    def snapshot():
+        vals = mb.read_regs(REG_GPS_STATUS, 7)
+        if vals is None:
+            return None
+        return {
+            'status': vals[0],
+            'hh': vals[1] // 100, 'mm': vals[1] % 100, 'ss': vals[2],
+            'count': (vals[3] << 16) | vals[4],
+            'year': vals[5], 'mon': vals[6] >> 8, 'day': vals[6] & 0xFF,
+        }
+
+    def board_dt(s):
+        try:
+            return datetime.datetime(s['year'], s['mon'], s['day'],
+                                     s['hh'], s['mm'], s['ss'],
+                                     tzinfo=datetime.timezone.utc)
+        except ValueError:
+            return None
+
+    s0 = snapshot()
+    if s0 is None:
+        print("  ERROR: No response from board")
+        return
+
+    print("  Sampling", end='', flush=True)
+    t_start = time.monotonic()
+    fix_seen       = s0['status'] >= 1
+    count_step_bad = None   # first bad step seen, as (prev, new)
+    utc_lockstep_bad = None # (pps_step, utc_step) that disagreed
+    prev = s0
+    while time.monotonic() - t_start < DURATION:
+        time.sleep(0.2)
+        s = snapshot()
+        if s is None:
+            continue
+        if s['status'] >= 1:
+            fix_seen = True
+
+        dc = s['count'] - prev['count']
+        if dc not in (0, 1):
+            count_step_bad = (prev['count'], s['count'])
+        # Whenever a PPS tick was observed, UTC should have moved with it
+        # (allow 0 because the RMC sentence for the new second may not
+        # have been parsed yet at the moment we polled).
+        d_utc = (s['hh']*3600 + s['mm']*60 + s['ss']
+                 - prev['hh']*3600 - prev['mm']*60 - prev['ss']) % 86400
+        if dc == 1 and d_utc not in (0, 1, 2):
+            utc_lockstep_bad = (dc, d_utc)
+        print(".", end='', flush=True)
+        prev = s
+    s1 = prev
+    elapsed = time.monotonic() - t_start
+    print("\n")
+
+    interval = mb.read_int32(REG_GPS_PPS_INTERVAL_HI)
+    ppm      = mb.read_float(REG_GPS_PPS_PPM_HI)
+
+    pps_delta = s1['count'] - s0['count']
+    utc_delta = ((s1['hh']*3600 + s1['mm']*60 + s1['ss'])
+                 - (s0['hh']*3600 + s0['mm']*60 + s0['ss'])) % 86400
+    dt  = board_dt(s1)
+    now = datetime.datetime.now(datetime.timezone.utc)
+    host_diff = abs((now - dt).total_seconds()) if dt else None
+
+    checks = []
+    checks.append(("GPS fix / time valid", fix_seen,
+                   "RMC status A seen" if fix_seen else "no valid fix during test"))
+    checks.append(("1PPS rate (1 per second)", abs(pps_delta - round(elapsed)) <= 1,
+                   f"{pps_delta} pulses in {elapsed:.1f}s"))
+    checks.append(("1PPS count monotonic +1", count_step_bad is None,
+                   "no missed/double counts" if count_step_bad is None else
+                   f"count jumped {count_step_bad[0]} -> {count_step_bad[1]}"))
+    if interval:
+        # Interval quality: a real GPS should be within a crystal
+        # tolerance (~±100ppm); the Pi simulator's software-toggled PPS
+        # can jitter by milliseconds, so only fail beyond ±10000ppm (1%).
+        prec = "precise" if abs(ppm) < 100 else "coarse (simulator-grade jitter?)"
+        checks.append(("1PPS capture interval", abs(ppm) < 10000,
+                       f"{interval} ticks, {ppm:+.3f} ppm — {prec}"))
+    else:
+        checks.append(("1PPS capture interval", False, "no interval measured"))
+    checks.append(("UTC advances with 1PPS", utc_lockstep_bad is None and
+                   abs(utc_delta - pps_delta) <= 2,
+                   f"UTC advanced {utc_delta}s over {pps_delta} pulses"))
+    checks.append(("Datetime plausible", dt is not None,
+                   dt.strftime("%Y-%m-%d %H:%M:%S UTC") if dt else
+                   f"invalid: {s1['year']}-{s1['mon']:02d}-{s1['day']:02d} "
+                   f"{s1['hh']:02d}:{s1['mm']:02d}:{s1['ss']:02d}"))
+    if host_diff is not None:
+        checks.append(("Matches host clock (needs NTP)", host_diff <= 2.0,
+                       f"off by {host_diff:.1f}s"))
+
+    passed = all(ok for _, ok, _ in checks)
+    for name, ok, detail in checks:
+        print(f"  {'PASS ✓' if ok else 'FAIL ✗'}  {name:<32} {detail}")
+    print()
+    print("  ALL CHECKS PASSED ✓" if passed else "  SOME CHECKS FAILED ✗")
+
+
+def action_query_i2c(mb: ModbusClient):
+    print("\n[ I2C Sensor Query ]\n")
+
+    if not mb.write_reg(REG_I2C_CMD, 1):
+        if mb.last_exception == 2:   # illegal address
+            print("  ERROR: Board rejected register 0x00D1 (illegal address).")
+            print("  The firmware on the board predates the I2C query feature —")
+            print("  rebuild and reflash:  make && make flash  (or make flashr)")
+        else:
+            print("  ERROR: No response from board")
+        return
+
+    # Firmware sweep takes ~20ms (SHT conversion time); poll briefly.
+    status = None
+    for _ in range(20):
+        time.sleep(0.05)
+        status = mb.read_reg(REG_I2C_STATUS)
+        if status == 2:   # DONE
+            break
+    if status != 2:
+        print(f"  ERROR: Query did not complete (status={status})")
+        return
+
+    # PRESENT bitmask + all result float pairs in one read (0x00D3-0x00E3)
+    vals = mb.read_regs(REG_I2C_PRESENT, 17)
+    if vals is None:
+        print("  ERROR: No response reading results")
+        return
+
+    present = vals[0]
+
+    def f32(reg_hi: int) -> float:
+        i = reg_hi - REG_I2C_PRESENT
+        return struct.unpack('>f', struct.pack('>I', (vals[i] << 16) | vals[i+1]))[0]
+
+    def show(name: str, addr: int, bit: int, reading: str):
+        if present & bit:
+            print(f"  {name:<22} (0x{addr:02X}) : {reading}")
+        else:
+            print(f"  {name:<22} (0x{addr:02X}) : NOT DETECTED ✗")
+
+    show("On-board LM75B temp", 0x49, I2C_PRESENT_LM75B,
+         f"{f32(REG_I2C_LM75_TEMP_HI):.1f} °C")
+    show("EL SHT45 temp/RH", 0x44, I2C_PRESENT_SHT45,
+         f"T={f32(REG_I2C_SHT45_TEMP_HI):.2f} °C  RH={f32(REG_I2C_SHT45_RH_HI):.1f} %")
+    show("EL ADXL345 accel", 0x53, I2C_PRESENT_ADXL345,
+         f"X={f32(REG_I2C_ADXL_X_HI):+.3f}g  Y={f32(REG_I2C_ADXL_Y_HI):+.3f}g  "
+         f"Z={f32(REG_I2C_ADXL_Z_HI):+.3f}g")
+    show("AZ SHT31 temp/RH", 0x45, I2C_PRESENT_SHT31,
+         f"T={f32(REG_I2C_SHT31_TEMP_HI):.2f} °C  RH={f32(REG_I2C_SHT31_RH_HI):.1f} %")
+
+    missing = [n for n, b in [("LM75B", I2C_PRESENT_LM75B), ("SHT45", I2C_PRESENT_SHT45),
+                              ("ADXL345", I2C_PRESENT_ADXL345), ("SHT31", I2C_PRESENT_SHT31)]
+               if not present & b]
+    print()
+    if missing:
+        print(f"  {4 - len(missing)}/4 sensors OK — missing: {', '.join(missing)}")
+    else:
+        print("  All 4 sensors OK ✓")
+
 
 def action_motor_control(mb: ModbusClient):
     print("\n[ Motor Control ]\n")
@@ -721,6 +959,29 @@ def action_limit_switches(mb: ModbusClient):
         time.sleep(0.1)
 
 
+def action_user_switch_monitor(mb: ModbusClient):
+    print("\n[ User Switch Monitor — press Enter to stop ]\n")
+
+    import threading
+    stop = threading.Event()
+
+    def wait_enter():
+        input()
+        stop.set()
+
+    threading.Thread(target=wait_enter, daemon=True).start()
+
+    prev = None
+    while not stop.is_set():
+        sw = mb.read_reg(REG_SYS_USER_SW)
+        if sw is not None and sw != prev:
+            states = "   ".join(
+                f"SW{i+1}: {'▣ ON ' if sw & (1 << i) else '□ off'}" for i in range(4))
+            print(f"  {states}")
+            prev = sw
+        time.sleep(0.1)
+
+
 def action_encoder_monitor(mb: ModbusClient):
     print("\n[ Encoder Monitor — press Enter to stop ]\n")
     import threading
@@ -961,6 +1222,8 @@ MENU = [
         mb, "EL", REG_EL_STATUS, REG_EL_POS_HI, REG_EL_POS_DEG_HI,
         REG_EL_RPM_HI, REG_EL_PID_OUT_HI, REG_EL_ERROR)),
     ("Query GPS status",                action_query_gps),
+    ("GPS 1PPS & time test",            action_gps_test),
+    ("Query I2C sensors",               action_query_i2c),
     ("Fan ON",                          action_fan_on),
     ("Fan OFF",                         action_fan_off),
     ("Motor control",                   action_motor_control),
@@ -969,6 +1232,7 @@ MENU = [
     ("Move to angle",                   action_move_to_angle),
     ("Encoder monitor",                 action_encoder_monitor),
     ("Limit switch monitor",            action_limit_switches),
+    ("User switch monitor",             action_user_switch_monitor),
     ("SPI flash write/read test",       action_flash_test),
     ("Live monitor (all, 1s refresh)",  action_monitor),
     ("Quit",                            None),

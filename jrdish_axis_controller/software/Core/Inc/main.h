@@ -133,7 +133,6 @@ void Error_Handler(void);
 #define RS485_1_RX_GPIO_Port GPIOB
 #define GPS_1PPS_Pin GPIO_PIN_9
 #define GPS_1PPS_GPIO_Port GPIOB
-#define GPS_1PPS_EXTI_IRQn EXTI9_5_IRQn
 
 /* USER CODE BEGIN Private defines */
 

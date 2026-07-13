@@ -12,6 +12,7 @@
 #include "main.h"
 #include "spi_flash_test.h"
 #include "pwm_test.h"
+#include "i2c_test.h"
 #include <string.h>
 #include <stdint.h>
 
@@ -165,6 +166,12 @@ static void MB_ApplyRegisterSideEffect(uint16_t addr, uint16_t value)
 
     if (addr == REG_FLASH_CMD)
         Flash_ExecCmd(value);
+
+    /* Only flag the request here — the sweep itself runs from
+     * I2C_Query_Run() in the main loop so the Modbus echo isn't delayed
+     * behind ~ms of I2C traffic. */
+    if (addr == REG_I2C_CMD && value)
+        I2C_Query_Trigger();
 
     /* AZ motor control */
     if (addr == REG_AZ_CMD_ENABLE) PWM_Enable_AZ(value);

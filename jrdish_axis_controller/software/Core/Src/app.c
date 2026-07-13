@@ -71,6 +71,7 @@ void App_Run(void)
     Encoder_Run();
     PWM_Test_Run();
     //I2C_Test_Run();
+    I2C_Query_Run();
     GPS_Run();
 
     if (HAL_GetTick() - lastLedToggle >= ledInterval)

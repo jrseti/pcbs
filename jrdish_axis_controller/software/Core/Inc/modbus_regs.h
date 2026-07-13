@@ -7,7 +7,7 @@
  * ----------------------------------------------------------------------- */
 
 /* Total register count */
-#define MODBUS_REG_COUNT        0x00D1
+#define MODBUS_REG_COUNT        0x00E8
 
 /* ----------------------------------------------------------------------- */
 /* System (0x0000 - 0x0007)                                                */
@@ -131,13 +131,24 @@
 #define REG_EL_ERROR            0x00A9
 
 /* ----------------------------------------------------------------------- */
-/* GPS / Timing (0x00B0 - 0x00B4)                                          */
+/* GPS / Timing (0x00B0 - 0x00BF)                                          */
 /* ----------------------------------------------------------------------- */
 #define REG_GPS_STATUS          0x00B0
 #define REG_GPS_UTC_HH_MM       0x00B1
 #define REG_GPS_UTC_SS          0x00B2
 #define REG_GPS_1PPS_COUNT_HI   0x00B3
 #define REG_GPS_1PPS_COUNT_LO   0x00B4
+#define REG_GPS_UTC_YEAR        0x00B5  /* e.g. 2026                       */
+#define REG_GPS_UTC_MON_DAY     0x00B6  /* month << 8 | day                */
+#define REG_GPS_LAT_HI          0x00B7  /* latitude, int32 deg*1e7, + = N  */
+#define REG_GPS_LAT_LO          0x00B8  /* (~1cm resolution)               */
+#define REG_GPS_LON_HI          0x00B9  /* longitude, int32 deg*1e7, + = E */
+#define REG_GPS_LON_LO          0x00BA
+#define REG_GPS_ALT_HI          0x00BB  /* altitude, float32 m (MSL)       */
+#define REG_GPS_ALT_LO          0x00BC
+#define REG_GPS_NUM_SATS        0x00BD  /* satellites used in fix          */
+#define REG_GPS_HDOP_HI         0x00BE  /* HDOP, float32                   */
+#define REG_GPS_HDOP_LO         0x00BF
 
 /* ----------------------------------------------------------------------- */
 /* SYS_STATUS bits                                                          */
@@ -220,6 +231,53 @@
 #define REG_EL_LIM1_ANGLE_LO    0x00CE
 #define REG_EL_LIM2_ANGLE_HI    0x00CF  /* Measured angle at LIMIT2, float32 HIGH */
 #define REG_EL_LIM2_ANGLE_LO    0x00D0
+
+/* ----------------------------------------------------------------------- */
+/* I2C sensor query (0x00D1 - 0x00E3)                                       */
+/* Write 1 to REG_I2C_CMD to sweep all four sensors; poll REG_I2C_STATUS    */
+/* until DONE, then read PRESENT + results in one FC 0x03 block.            */
+/* ----------------------------------------------------------------------- */
+#define REG_I2C_CMD             0x00D1  /* write 1 = start sensor sweep    */
+#define REG_I2C_STATUS          0x00D2  /* 0=idle, 1=busy, 2=done          */
+#define REG_I2C_PRESENT         0x00D3  /* bitmask, see I2C_PRESENT_*      */
+#define REG_I2C_LM75_TEMP_HI    0x00D4  /* on-board LM75B degC, float32    */
+#define REG_I2C_LM75_TEMP_LO    0x00D5
+#define REG_I2C_SHT45_TEMP_HI   0x00D6  /* EL axis SHT45 degC, float32     */
+#define REG_I2C_SHT45_TEMP_LO   0x00D7
+#define REG_I2C_SHT45_RH_HI     0x00D8  /* EL axis SHT45 %RH, float32      */
+#define REG_I2C_SHT45_RH_LO     0x00D9
+#define REG_I2C_SHT31_TEMP_HI   0x00DA  /* AZ axis SHT31 degC, float32     */
+#define REG_I2C_SHT31_TEMP_LO   0x00DB
+#define REG_I2C_SHT31_RH_HI     0x00DC  /* AZ axis SHT31 %RH, float32      */
+#define REG_I2C_SHT31_RH_LO     0x00DD
+#define REG_I2C_ADXL_X_HI       0x00DE  /* EL axis ADXL345 g, float32      */
+#define REG_I2C_ADXL_X_LO       0x00DF
+#define REG_I2C_ADXL_Y_HI       0x00E0
+#define REG_I2C_ADXL_Y_LO       0x00E1
+#define REG_I2C_ADXL_Z_HI       0x00E2
+#define REG_I2C_ADXL_Z_LO       0x00E3
+
+/* ----------------------------------------------------------------------- */
+/* GPS 1PPS precision timing (0x00E4 - 0x00E7)                              */
+/* TIM17_CH1 latches its counter in hardware on the 1PPS rising edge        */
+/* (±1 tick at the timer clock, ~5.9ns @ 170MHz), so these are immune to    */
+/* interrupt latency. Updated once per second after the second 1PPS edge.   */
+/* ----------------------------------------------------------------------- */
+#define REG_GPS_PPS_INTERVAL_HI 0x00E4  /* timer ticks between last two    */
+#define REG_GPS_PPS_INTERVAL_LO 0x00E5  /* 1PPS edges, uint32              */
+#define REG_GPS_PPS_PPM_HI      0x00E6  /* MCU clock error vs GPS, float32 */
+#define REG_GPS_PPS_PPM_LO      0x00E7  /* ppm; + = MCU clock runs fast    */
+
+/* REG_I2C_STATUS values */
+#define I2C_QUERY_IDLE          0x0000
+#define I2C_QUERY_BUSY          0x0001
+#define I2C_QUERY_DONE          0x0002
+
+/* REG_I2C_PRESENT bits */
+#define I2C_PRESENT_LM75B       (1u << 0)  /* on-board temp, addr 0x49    */
+#define I2C_PRESENT_SHT45       (1u << 1)  /* EL temp/RH,    addr 0x44    */
+#define I2C_PRESENT_ADXL345     (1u << 2)  /* EL accel,      addr 0x53    */
+#define I2C_PRESENT_SHT31       (1u << 3)  /* AZ temp/RH,    addr 0x45    */
 
 /* ----------------------------------------------------------------------- */
 /* Modbus constants                                                         */
