@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "User Switches")
-		(date "2026-04-30")
-		(rev "1.0")
+		(date "2026-07-11")
+		(rev "1.1")
 		(company "JRSeti")
 	)
 	(lib_symbols
@@ -2832,6 +2832,17 @@
 				)
 			)
 		)
+		(property "Field4" "${REFERENCE}"
+			(at 134.62 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "8158326c-2004-49b8-9805-1b7e24b64a8e")
 		)
@@ -3651,6 +3662,17 @@
 				)
 			)
 		)
+		(property "Field4" "${REFERENCE}"
+			(at 128.27 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "95e7cb77-f987-4d58-b744-260a7456fe01")
 		)
@@ -3987,6 +4009,17 @@
 			)
 		)
 		(property "Temperature Coefficient" "±200ppm/°C"
+			(at 135.89 140.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Field4" "${REFERENCE}"
 			(at 135.89 140.97 0)
 			(hide yes)
 			(show_name no)
@@ -4541,6 +4574,17 @@
 				)
 			)
 		)
+		(property "Field4" "${REFERENCE}"
+			(at 129.54 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "e9cbc80a-d241-40cc-88db-081cd9e6a212")
 		)
@@ -4899,6 +4943,17 @@
 				)
 			)
 		)
+		(property "Field4" "${REFERENCE}"
+			(at 134.62 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "6a934c77-8b3a-41eb-8266-70db58b23c41")
 		)
@@ -5155,6 +5210,17 @@
 			)
 		)
 		(property "Temperature Coefficient" "±200ppm/°C"
+			(at 134.62 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Field4" "${REFERENCE}"
 			(at 134.62 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -5658,6 +5724,17 @@
 			)
 		)
 		(property "Temperature Coefficient" "±100ppm/°C"
+			(at 128.27 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Field4" "${REFERENCE}"
 			(at 128.27 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -6241,6 +6318,17 @@
 			)
 		)
 		(property "Temperature Coefficient" "±100ppm/°C"
+			(at 128.27 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Field4" "${REFERENCE}"
 			(at 128.27 43.18 0)
 			(hide yes)
 			(show_name no)

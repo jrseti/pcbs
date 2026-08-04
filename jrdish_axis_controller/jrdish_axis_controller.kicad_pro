@@ -224,7 +224,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": "1.0"
+      "sch_revision": "1.1"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -857,7 +857,7 @@
     ],
     [
       "005a8950-9739-403f-9896-26bcf992d086",
-      "GPS RS232"
+      "GPS"
     ],
     [
       "4e86d230-6896-4d8d-a4af-088ba322fa83",

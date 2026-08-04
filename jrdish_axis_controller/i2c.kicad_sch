@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "I2C and I2C Flash")
-		(date "2026-04-30")
-		(rev "1.0")
+		(date "2026-07-11")
+		(rev "1.1")
 		(company "JRSeti")
 	)
 	(lib_symbols
@@ -5046,7 +5046,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0402WGF1002TCE_C25744.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0402WGF1002TCE_C173683.pdf"
 			(at 134.62 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -5068,7 +5068,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C25744"
+		(property "LCSC" "C173683"
 			(at 134.62 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -5255,6 +5255,17 @@
 				)
 			)
 		)
+		(property "Field4" "${REFERENCE}"
+			(at 134.62 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "c373e3e8-0164-4390-8fd2-e8bace399974")
 		)
@@ -5418,7 +5429,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C160404.pdf?spm=wm.sxq.inf.ggs&lcsc_vid=FFBaV1wHQFldUVICFgBfBVJTQVJWXgBfEQRYBAFQE1YxVlNRQFRYVVZVTllcVDtW"
+		(property "Datasheet" "https://lcsc.com/product-detail/Others_JST-Sales-America__JST-Sales-America-SM04B-SRSS-TB-LF-SN_C160404.html"
 			(at 208.28 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -6463,6 +6474,17 @@
 			)
 		)
 		(property "Temperature Coefficient" "±100ppm/°C"
+			(at 228.6 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Field4" "${REFERENCE}"
 			(at 228.6 120.65 0)
 			(hide yes)
 			(show_name no)
@@ -7650,6 +7672,17 @@
 				)
 			)
 		)
+		(property "Field4" "${REFERENCE}"
+			(at 177.8 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "cc3d549d-bce3-45c2-a4b3-afef7ff627f4")
 		)
@@ -7708,7 +7741,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0402WGF1002TCE_C25744.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0402WGF1002TCE_C173683.pdf"
 			(at 72.39 120.65 0)
 			(hide yes)
 			(show_name no)
@@ -7730,7 +7763,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C25744"
+		(property "LCSC" "C173683"
 			(at 72.39 120.65 0)
 			(hide yes)
 			(show_name no)
@@ -7907,6 +7940,17 @@
 			)
 		)
 		(property "Temperature Coefficient" "±100ppm/°C"
+			(at 72.39 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Field4" "${REFERENCE}"
 			(at 72.39 120.65 0)
 			(hide yes)
 			(show_name no)
@@ -8341,7 +8385,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0402WGF1002TCE_C25744.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0402WGF1002TCE_C173683.pdf"
 			(at 87.63 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -8363,7 +8407,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C25744"
+		(property "LCSC" "C173683"
 			(at 87.63 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -8844,7 +8888,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0402WGF1002TCE_C25744.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0402WGF1002TCE_C173683.pdf"
 			(at 92.71 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -8866,7 +8910,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C25744"
+		(property "LCSC" "C173683"
 			(at 92.71 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -9043,6 +9087,17 @@
 			)
 		)
 		(property "Temperature Coefficient" "±100ppm/°C"
+			(at 92.71 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Field4" "${REFERENCE}"
 			(at 92.71 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -9280,7 +9335,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0402WGF1002TCE_C25744.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0402WGF1002TCE_C173683.pdf"
 			(at 212.09 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -9302,7 +9357,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C25744"
+		(property "LCSC" "C173683"
 			(at 212.09 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -9911,6 +9966,17 @@
 				)
 			)
 		)
+		(property "Field4" "${REFERENCE}"
+			(at 177.8 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "28528fbb-44a2-4997-9014-8d8f48537d8e")
 		)
@@ -10177,6 +10243,17 @@
 				)
 			)
 		)
+		(property "Field4" "${REFERENCE}"
+			(at 228.6 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "2aa6fec0-0a7b-4333-9f62-505ab4219daa")
 		)
@@ -10237,7 +10314,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/C160404.pdf?spm=wm.sxq.inf.ggs&lcsc_vid=FFBaV1wHQFldUVICFgBfBVJTQVJWXgBfEQRYBAFQE1YxVlNRQFRYVVZVTllcVDtW"
+		(property "Datasheet" "https://lcsc.com/product-detail/Others_JST-Sales-America__JST-Sales-America-SM04B-SRSS-TB-LF-SN_C160404.html"
 			(at 259.08 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -10574,7 +10651,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0402WGF1002TCE_C25744.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0402WGF1002TCE_C173683.pdf"
 			(at 212.09 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -10596,7 +10673,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C25744"
+		(property "LCSC" "C173683"
 			(at 212.09 62.23 0)
 			(hide yes)
 			(show_name no)

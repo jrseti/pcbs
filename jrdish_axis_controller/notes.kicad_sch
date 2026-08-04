@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "Notes")
-		(date "2026-04-30")
-		(rev "1.0")
+		(date "2026-07-11")
+		(rev "1.1")
 		(company "JRSeti")
 	)
 	(lib_symbols)
@@ -32,6 +32,17 @@
 			(justify left)
 		)
 		(uuid "5e94f6af-6242-483e-96b4-dd7da6174902")
+	)
+	(text "Changes for V1.1\n\n- Encoder RC values need changing for tighter timing - DONE\n- On/Off switch label reversed - DONE\n- Direct plugin for MAX-M10S GPS - DONE\n- Programming cable changed to 14 pins for STLINK-V3MINIE -DONE\n- Clearer Text on board - Done"
+		(exclude_from_sim no)
+		(at 28.194 155.194 0)
+		(effects
+			(font
+				(size 2.032 2.032)
+			)
+			(justify left)
+		)
+		(uuid "93e6b977-318f-4557-be53-c601c1c70544")
 	)
 	(text "NOTES"
 		(exclude_from_sim no)
