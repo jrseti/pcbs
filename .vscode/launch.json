@@ -1,19 +1,31 @@
 {
     "version": "0.2.0",
     "configurations": [
-
         {
             "name": "Debug STM32 (J-Link)",
             "type": "cortex-debug",
             "request": "launch",
             "servertype": "jlink",
-            "device": "STM32G431KB",
+            "device": "STM32G474RE",
             "interface": "SWD",
             "speed": 4000,
-            "executable": "${workspaceFolder}/mcu_test_board/software/build/STM32_MCU_TEST_32PIN.elf",
+            "executable": "${workspaceFolder}/build/axis_controller_lqfp64_rev10.elf",
             "runToEntryPoint": "main",
-            "svdFile": "${workspaceFolder}/STM32G431.svd",
-            "showDevDebugOutput": "none"
+            "svdFile": "${workspaceFolder}/STM32G474.svd",
+            "showDevDebugOutput": "none",
+            "swoConfig": {
+                "enabled": true,
+                "cpuFrequency": 170000000,
+                "swoFrequency": 2000000,
+                "source": "probe",
+                "decoders": [
+                    {
+                        "type": "console",
+                        "label": "ITM",
+                        "port": 0
+                    }
+                ]
+            }
         }
     ]
 }
